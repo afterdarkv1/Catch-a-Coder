@@ -1,0 +1,27 @@
+:root {
+    --blanco: #ffff;
+    --morado: #8d166f;
+    --verder: #37a967;
+}
+
+.container {
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  #selectedName {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
