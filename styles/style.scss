@@ -121,14 +121,13 @@ header {
 }
 
 
-.squares__andrea{
+.squares__andrea, .squares__jaime, .squares__sophia, .squares__geovanny, .squares__bryan, .squares__ainhoa, .squares__diego-b, .squares__victor{
     width: 15vw;
     height: 8vh;
     justify-self: center;
-    
 }
 
-.squares__andrea-name {
+.squares__andrea-name, .squares__jaime-name, .squares__sophia-name, .squares__geovanny-name, .squares__bryan-name, .squares__ainhoa-name, .squares__diego-b-name, .squares__victor-name{
     text-align: center;
     align-self: center;
     font-size: 0.8em;
