@@ -1,6 +1,7 @@
 $background-header-button: rgba(239, 171, 48, 1); 
 $background-text: rgba(132, 147, 208, 1);
-
+$box-shadow: rgba(129, 129, 129, 1);
+$white-text-button: #ffffff;
 
 * {
     padding: 0;
@@ -90,12 +91,12 @@ header {
     background-color: $background-header-button;
     width: 40%;
     height: 30%;
-    border: white;
+    border: $white-text-button;
     border-radius: 15vh;
     align-self: center;
-    color: white;
+    color: $white-text-button;
     font-weight: 900;
-    box-shadow: 2px 2px 5px 1px grey;
+    box-shadow: 2px 2px 5px 1px $box-shadow;
 }
 
 #game {
@@ -120,7 +121,7 @@ header {
 }
 
 
-.squares__andrea  {
+.squares__andrea{
     width: 15vw;
     height: 8vh;
     justify-self: center;
@@ -150,7 +151,7 @@ header {
 }
 
 .home__div-button-modifier {
-    background-color: white;
+    background-color: $white-text-button;
     color: $background-text;
     border: solid 3px $background-text;
     height: 6vh;
@@ -169,3 +170,4 @@ header {
     grid-column: 1/5;
     justify-self: center;
 }
+
