@@ -11,8 +11,18 @@ body {
   background-color: white;
 }
 
-html {
-  scroll-behavior: smooth;
+.buttons__top {
+  display: flex;
+  justify-content: center;
+}
+.buttons__top--addremove {
+  color: rgb(132, 147, 208);
+  border-color: rgb(132, 147, 208);
+  border-radius: 5rem;
+  height: 3rem;
+  width: 6rem;
+  margin: 1rem;
+  font-weight: bold;
 }
 
 .nav {

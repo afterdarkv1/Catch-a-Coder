@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
   
 body {
@@ -28,26 +27,18 @@ html {
   }
 }
 
-.home {
-    &__div {
+.buttons__top {
+    display: flex;
+    justify-content: center;
+    &--addremove {
+        color: $background-text;
+        border-color: $background-text;
+        border-radius: 5rem;
+        height: 3rem;
+        width: 6rem;
+        margin: 1rem;
+        font-weight: bold;
     }
-    &__div-button {
-    }
-    &__div-coach {
-    }
-    &__div-img {
-    }
-    &__div-modifier {
-    }
-    &__div-modifier2 {
-    }
-    &__div-modifier3 {
-    }
-    &__div-text {
-    }
-}
-.game {
-    
 }
 .coders {
     display: grid;
@@ -65,7 +56,9 @@ html {
     &__name {
         text-align: center;
     }
-    &__person {
+
+    &-second-modifier {
+        background-color: $background-text;
     }
 }
 
