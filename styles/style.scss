@@ -1,6 +1,7 @@
-$color-background-button: #8493d0;
-$fill-button: #f5f5f5;
-$background-button: #efab30;
+$background-header-button: rgba(239, 171, 48, 1);
+$background-text: rgba(132, 147, 208, 1);
+$box-shadow: rgba(129, 129, 129, 1);
+$white-text-button: #ffffff;
 
 .coders {
     display: grid;
@@ -18,9 +19,9 @@ $background-button: #efab30;
 .buttons__top {
     display: flex;
     justify-content: center;
-    .home__div-button-modifier {
-        color: $color-background-button;
-        border-color: $color-background-button;
+    &--addremove {
+        color: $background-text;
+        border-color: $background-text;
         border-radius: 5rem;
         height: 3rem;
         width: 6rem;
@@ -33,9 +34,9 @@ $background-button: #efab30;
     display: flex;
     justify-content: center;
 
-    .home__div-button-modifier2 {
+    &--first {
         color: #fff;
-        background-color: $background-button;
+        background-color: $background-header-button;
         border-radius: 5rem;
         height: 3rem;
         width: 6rem;
@@ -43,7 +44,7 @@ $background-button: #efab30;
         font-weight: bold;
     }
 
-    &home__div-button-modifier3 {
-        background-color: $color-background-button;
+    &-second-modifier {
+        background-color: $background-text;
     }
 }

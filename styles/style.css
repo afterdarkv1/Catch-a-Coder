@@ -15,9 +15,9 @@
   display: flex;
   justify-content: center;
 }
-.buttons__top .home__div-button-modifier {
-  color: #8493d0;
-  border-color: #8493d0;
+.buttons__top--addremove {
+  color: rgb(132, 147, 208);
+  border-color: rgb(132, 147, 208);
   border-radius: 5rem;
   height: 3rem;
   width: 6rem;
@@ -29,15 +29,15 @@
   display: flex;
   justify-content: center;
 }
-.buttons__bottom .home__div-button-modifier2 {
+.buttons__bottom--first {
   color: #fff;
-  background-color: #efab30;
+  background-color: rgb(239, 171, 48);
   border-radius: 5rem;
   height: 3rem;
   width: 6rem;
   margin: 1rem;
   font-weight: bold;
 }
-.buttons__bottomhome__div-button-modifier3 {
-  background-color: #8493d0;
+.buttons__bottom-second-modifier {
+  background-color: rgb(132, 147, 208);
 }/*# sourceMappingURL=style.css.map */
