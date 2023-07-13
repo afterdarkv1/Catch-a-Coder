@@ -90,10 +90,10 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
-    margin-top: 40px;
+    gap: 1rem;
+    margin-top: 2rem;
     &__img {
         height: 7vh;
         width: 7vh;
@@ -122,37 +122,35 @@ html {
 }
 
 
-.buttons {
-    display: grid;
-    height: 100%;
-    width: 100%;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    justify-items: center;
-    align-items: center;
-    gap: 10px;
-    &__div-button {
-        background-color: #F5F5F5;
-        height: 30px;
-        width: 85px;
-        border-radius: 20px;
-        border: solid #8493D0;
+.buttons__top {
+    display: flex;
+    justify-content: center;
+    &--addremove {
+        color: $background-text;
+        border-color: $background-text;
+        border-radius: 5rem;
+        height: 3rem;
+        width: 8rem;
+        margin: 1rem;
         font-weight: bold;
-        font-size: 0.6rem;
     }
-    &__div-button-modifier {
-        background-color: #F5F5F5;
-        border: solid #8493D0;
+}
+
+.buttons__bottom {
+    display: flex;
+    justify-content: center;
+
+    &--first {
+        color: #ffffff;
+        background-color: $background-header-button;
+        border-radius: 5rem;
+        height: 3rem;
+        width: 8rem;
+        margin: 1rem;
+        font-weight: bold;
     }
-    &__div-button-modifier2 {
-        background-color: #EFAB30;
-        border: solid #FFFFFF;
-        color: white;
+
+    &-second-modifier {
+        background-color: $background-text;
     }
-    &__div-button-modifier3 {
-        background-color: #8493D0;
-        border: solid #FFFFFF;
-        color: white;
-    }
-  }
- 
+}
