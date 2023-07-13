@@ -3,20 +3,60 @@ $background-text: rgba(132, 147, 208, 1);
 $box-shadow: rgba(129, 129, 129, 1);
 $white-text-button: #ffffff;
 
-/*DESKTOP CODERS*/
-@media(min-width: 800px){
-.coders {
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
-    place-items: center;
-    text-align: center;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+  
+html {
+    scroll-behavior: smooth;
 }
 
-.coders__img {
-    width: 4rem;
-    height: 4rem;
+
+//CODERS-PHONE
+
+.coders {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    &__img {
+        height: 7vh;
+        width: 7vh;
+
+    }
+    &__name {
+        text-align: center;
+    }
+
+    &-second-modifier {
+        background-color: $background-text;
+    }
 }
+
+.coder-only {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.only-coder{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
 
 .buttons__top {
     display: flex;
@@ -26,7 +66,7 @@ $white-text-button: #ffffff;
         border-color: $background-text;
         border-radius: 5rem;
         height: 3rem;
-        width: 6rem;
+        width: 8rem;
         margin: 1rem;
         font-weight: bold;
     }
@@ -37,11 +77,11 @@ $white-text-button: #ffffff;
     justify-content: center;
 
     &--first {
-        color: #fff;
+        color: #ffffff;
         background-color: $background-header-button;
         border-radius: 5rem;
         height: 3rem;
-        width: 6rem;
+        width: 8rem;
         margin: 1rem;
         font-weight: bold;
     }
@@ -50,4 +90,55 @@ $white-text-button: #ffffff;
         background-color: $background-text;
     }
 }
+
+/*DESKTOP CODERS*/
+@media(min-width: 800px){
+    .coders {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: 20% 20% 20% 20% 20%;
+        place-items: center;
+        text-align: center;
+    }
+    
+    
+   
+    
+    .coders__img {
+        width: 4rem;
+        height: 4rem;
+    }
+    
+    .buttons__top {
+        display: flex;
+        justify-content: center;
+        &--addremove {
+            color: $background-text;
+            border-color: $background-text;
+            border-radius: 5rem;
+            height: 3rem;
+            width: 6rem;
+            margin: 1rem;
+            font-weight: bold;
+        }
+    }
+    
+    .buttons__bottom {
+        display: flex;
+        justify-content: center;
+    
+        &--first {
+            color: #fff;
+            background-color: $background-header-button;
+            border-radius: 5rem;
+            height: 3rem;
+            width: 6rem;
+            margin: 1rem;
+            font-weight: bold;
+        }
+    
+        &-second-modifier {
+            background-color: $background-text;
+        }
+    }
 }
