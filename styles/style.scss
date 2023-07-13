@@ -4,7 +4,7 @@ $box-shadow: rgba(129, 129, 129, 1);
 $white-text-button: #ffffff;
 
 /*DESKTOP CODERS*/
-
+@media(min-width: 800px){
 .coders {
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
@@ -49,4 +49,5 @@ $white-text-button: #ffffff;
     &-second-modifier {
         background-color: $background-text;
     }
+}
 }
