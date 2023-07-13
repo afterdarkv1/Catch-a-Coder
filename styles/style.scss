@@ -33,7 +33,7 @@ $background-button: #efab30;
     display: flex;
     justify-content: center;
 
-    %home__div-button-modifier2 {
+    .home__div-button-modifier2 {
         color: #fff;
         background-color: $background-button;
         border-radius: 5rem;
@@ -43,9 +43,7 @@ $background-button: #efab30;
         font-weight: bold;
     }
 
-    .home__div-button-modifier3 {
-        @extend %home__div-button-modifier2;
+    &home__div-button-modifier3 {
         background-color: $color-background-button;
-        
     }
 }

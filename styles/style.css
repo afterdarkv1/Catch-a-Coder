@@ -29,7 +29,7 @@
   display: flex;
   justify-content: center;
 }
-.buttons__bottom .home__div-button-modifier3 {
+.buttons__bottom .home__div-button-modifier2 {
   color: #fff;
   background-color: #efab30;
   border-radius: 5rem;
@@ -38,6 +38,6 @@
   margin: 1rem;
   font-weight: bold;
 }
-.buttons__bottom .home__div-button-modifier3 {
+.buttons__bottomhome__div-button-modifier3 {
   background-color: #8493d0;
 }/*# sourceMappingURL=style.css.map */
