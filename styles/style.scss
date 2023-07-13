@@ -1,7 +1,14 @@
+$background-header-button: rgba(239, 171, 48, 1); 
+$background-text: rgba(132, 147, 208, 1);
+$box-shadow: rgba(129, 129, 129, 1);
+$white-text-button: #ffffff;
+$font-family: 'Roboto', sans-serif;
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: $font-family;
 }
   
 body {
