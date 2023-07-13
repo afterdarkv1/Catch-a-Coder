@@ -26,24 +26,37 @@ html {
   }
   &__logo1 {
   }
+$background-header-button: rgba(239, 171, 48, 1);
+$background-text: rgba(132, 147, 208, 1);
+$box-shadow: rgba(129, 129, 129, 1);
+$white-text-button: #ffffff;
+
+/*DESKTOP CODERS*/
+
+.coders {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    place-items: center;
+    text-align: center;
 }
 
-.home {
-    &__div {
-    }
-    &__div-button {
-    }
-    &__div-coach {
-    }
-    &__div-img {
-    }
-    &__div-modifier {
-    }
-    &__div-modifier2 {
-    }
-    &__div-modifier3 {
-    }
-    &__div-text {
+.coders__img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.buttons__top {
+    display: flex;
+    justify-content: center;
+    &--addremove {
+        color: $background-text;
+        border-color: $background-text;
+        border-radius: 5rem;
+        height: 3rem;
+        width: 6rem;
+        margin: 1rem;
+        font-weight: bold;
     }
 }
 .game {
@@ -110,3 +123,22 @@ html {
     }
   }
  
+
+.buttons__bottom {
+    display: flex;
+    justify-content: center;
+
+    &--first {
+        color: #fff;
+        background-color: $background-header-button;
+        border-radius: 5rem;
+        height: 3rem;
+        width: 6rem;
+        margin: 1rem;
+        font-weight: bold;
+    }
+
+    &-second-modifier {
+        background-color: $background-text;
+    }
+}
