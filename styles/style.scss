@@ -1,13 +1,51 @@
-<<<<<<< HEAD
-$color-azul: green;
-=======
->>>>>>> 877c145fa59c7a8707e7b3efaa1f81062d6d7a26
+$color-background-button: #8493d0;
+$fill-button: #f5f5f5;
+$background-button: #efab30;
 
-
-<<<<<<< HEAD
-p {
-    font-size: 10em;
+.coders {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    place-items: center;
+    text-align: center;
 }
-=======
 
->>>>>>> 877c145fa59c7a8707e7b3efaa1f81062d6d7a26
+.coders__img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.buttons__top {
+    display: flex;
+    justify-content: center;
+    .home__div-button-modifier {
+        color: $color-background-button;
+        border-color: $color-background-button;
+        border-radius: 5rem;
+        height: 3rem;
+        width: 6rem;
+        margin: 1rem;
+        font-weight: bold;
+    }
+}
+
+.buttons__bottom {
+    display: flex;
+    justify-content: center;
+
+    %home__div-button-modifier2 {
+        color: #fff;
+        background-color: $background-button;
+        border-radius: 5rem;
+        height: 3rem;
+        width: 6rem;
+        margin: 1rem;
+        font-weight: bold;
+    }
+
+    .home__div-button-modifier3 {
+        @extend %home__div-button-modifier2;
+        background-color: $color-background-button;
+        
+    }
+}
