@@ -24,7 +24,7 @@ html {
 .coders {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
     gap: 1rem;
@@ -40,19 +40,9 @@ html {
     &-second-modifier {
         background-color: $background-text;
     }
-}
-
-.coder-only {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-}
-
-.only-coder {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
+    &__person-modifier {
+        grid-column: 2/4;
+    }
 }
 
 .buttons__top {
@@ -97,9 +87,16 @@ html {
         grid-template-rows: 20% 20% 20% 20% 20%;
         place-items: center;
         text-align: center;
-        &--img {
+        gap: 0;
+        &__img {
             width: 4rem;
             height: 4rem;
+        }
+        &__person {
+            margin: 1rem;
+        }
+        &__person-modifier {
+            grid-column: 5/6;
         }
     }
 
