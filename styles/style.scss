@@ -85,6 +85,9 @@ html {
         place-items: center;
         text-align: center;
         gap: 0;
+    &__person {
+        margin: 1rem;
+    }
     &__person-modifier {
         grid-column: 5/6;
     }

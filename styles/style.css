@@ -75,10 +75,9 @@ html {
     place-items: center;
     text-align: center;
     gap: 0;
-    gap: 0;
   }
-  .coders__person-modifier {
-    grid-column: 5/6;
+  .coders__person {
+    margin: 1rem;
   }
   .coders__person-modifier {
     grid-column: 5/6;
@@ -112,6 +111,4 @@ html {
   .buttons__bottom-second-modifier {
     background-color: rgb(132, 147, 208);
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
