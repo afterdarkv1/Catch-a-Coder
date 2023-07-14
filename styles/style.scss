@@ -26,7 +26,7 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
     gap: 1rem;
     margin-top: 2rem;
@@ -89,6 +89,10 @@ html {
         grid-template-rows: 20% 20% 20% 20% 20%;
         place-items: center;
         text-align: center;
+        gap: 0;
+    &__person-modifier {
+        grid-column: 5/6;
+    }
     }
     
     
