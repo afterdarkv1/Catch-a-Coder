@@ -1,73 +1,131 @@
-$background-header-button: rgba(239, 171, 48, 1); 
+$background-header-button: rgba(239, 171, 48, 1);
 $background-text: rgba(132, 147, 208, 1);
 $box-shadow: rgba(129, 129, 129, 1);
 $white-text-button: #ffffff;
-$font-family: 'Roboto', sans-serif;
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: $font-family;
 }
   
 body {
     width: 100%;
     height: 100%;
+    background-color: white;
 }
   
 html {
     scroll-behavior: smooth;
 }
-.header {
-  
-}
-.nav {
-  &__img {
-  }
-  &__logo1 {
-  }
-}
 
-.home {
-    &__div {
-    }
-    &__div-button {
-    }
-    &__div-coach {
-        width: 412px;
-        height: 412px;
-    }
-    &__div-img {
-    }
-    &__div-modifier {
-    }
-    &__div-modifier2 {
-    }
-    &__div-modifier3 {
-    }
-    &__div-text {
-    }
-}
-.game {
-    
-}
+
+//CODERS-PHONE
+
 .coders {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
     &__img {
+        height: 7vh;
+        width: 7vh;
+
     }
     &__name {
+        text-align: center;
     }
-    &__person {
+    &__div-coach {
+    }
+    &__person-modifier {
+        grid-column: 2/4;
     }
 }
-.buttons {
-    &__div-button {
+
+.buttons__top {
+    display: flex;
+    justify-content: center;
+    &--addremove {
+        color: $background-text;
+        border-color: $background-text;
+        border-radius: 5rem;
+        height: 3rem;
+        width: 8rem;
+        margin: 1rem;
+        font-weight: bold;
     }
-    &__div-button-modifier {
+}
+
+.buttons__bottom {
+    display: flex;
+    justify-content: center;
+
+    &--first {
+        color: #ffffff;
+        background-color: $background-header-button;
+        border-radius: 5rem;
+        height: 3rem;
+        width: 8rem;
+        margin: 1rem;
+        font-weight: bold;
     }
-    &__div-button-modifier2 {
+
+    &-second-modifier {
+        background-color: $background-text;
     }
-    &__div-button-modifier3 {
+}
+
+/*DESKTOP CODERS*/
+@media(min-width: 800px){
+    .coders {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: 20% 20% 20% 20% 20%;
+        place-items: center;
+        text-align: center;
     }
-  }
- 
+    
+    
+   
+    
+    .coders__img {
+        width: 4rem;
+        height: 4rem;
+    }
+    
+    .buttons__top {
+        display: flex;
+        justify-content: center;
+        &--addremove {
+            color: $background-text;
+            border-color: $background-text;
+            border-radius: 5rem;
+            height: 3rem;
+            width: 6rem;
+            margin: 1rem;
+            font-weight: bold;
+        }
+    }
+    
+    .buttons__bottom {
+        display: flex;
+        justify-content: center;
+    
+        &--first {
+            color: #fff;
+            background-color: $background-header-button;
+            border-radius: 5rem;
+            height: 3rem;
+            width: 6rem;
+            margin: 1rem;
+            font-weight: bold;
+        }
+    
+        &-second-modifier {
+            background-color: $background-text;
+        }
+    }
+}
