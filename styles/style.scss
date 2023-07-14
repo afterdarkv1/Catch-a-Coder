@@ -3,16 +3,6 @@ $background-text: rgba(132, 147, 208, 1);
 $box-shadow: rgba(129, 129, 129, 1);
 $white-text-button: #ffffff;
 
-/*DESKTOP CODERS*/
-
-.coders {
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
-    place-items: center;
-    text-align: center;
-}
-
 * {
     padding: 0;
     margin: 0;
@@ -28,61 +18,7 @@ body {
 html {
     scroll-behavior: smooth;
 }
-.header {
-}
-.nav {
-    background-color: #EFAB30;
-    height: 45px;
-    width: 100%;
-  &__img {
-    height: 35px;
-    width: 220px;
-  }
-  &__logo1 {
-  }
-}
 
-.coders__img {
-    width: 4rem;
-    height: 4rem;
-}
-
-.buttons__top {
-    display: flex;
-    justify-content: center;
-    &--addremove {
-        color: $background-text;
-        border-color: $background-text;
-        border-radius: 5rem;
-        height: 3rem;
-        width: 6rem;
-        margin: 1rem;
-        font-weight: bold;
-    }
-}
-
-.buttons__bottom {
-    display: flex;
-    justify-content: center;
-
-    &--first {
-        color: #fff;
-        background-color: $background-header-button;
-        border-radius: 5rem;
-        height: 3rem;
-        width: 6rem;
-        margin: 1rem;
-        font-weight: bold;
-    }
-
-    &-second-modifier {
-        background-color: $background-text;
-    }
-}
-
-.game {
-    
-}
 
 //CODERS-PHONE
 
@@ -141,5 +77,57 @@ html {
 
     &-second-modifier {
         background-color: $background-text;
+    }
+}
+
+/*DESKTOP CODERS*/
+@media(min-width: 800px){
+    .coders {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: 20% 20% 20% 20% 20%;
+        place-items: center;
+        text-align: center;
+    }
+    
+    
+   
+    
+    .coders__img {
+        width: 4rem;
+        height: 4rem;
+    }
+    
+    .buttons__top {
+        display: flex;
+        justify-content: center;
+        &--addremove {
+            color: $background-text;
+            border-color: $background-text;
+            border-radius: 5rem;
+            height: 3rem;
+            width: 6rem;
+            margin: 1rem;
+            font-weight: bold;
+        }
+    }
+    
+    .buttons__bottom {
+        display: flex;
+        justify-content: center;
+    
+        &--first {
+            color: #fff;
+            background-color: $background-header-button;
+            border-radius: 5rem;
+            height: 3rem;
+            width: 6rem;
+            margin: 1rem;
+            font-weight: bold;
+        }
+    
+        &-second-modifier {
+            background-color: $background-text;
+        }
     }
 }
