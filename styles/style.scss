@@ -18,18 +18,20 @@ body {
 html {
     scroll-behavior: smooth;
 }
-.header {
-  
-}
-.nav {
-  &__img {
-  }
-  &__logo1 {
-  }
-}
 
-.home {
-    &__div {
+//CODERS-PHONE
+
+.coders {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    &__img {
+        height: 7vh;
+        width: 7vh;
     }
     &__name {
         text-align: center;
@@ -37,10 +39,6 @@ html {
     &__person-modifier {
         grid-column: 2/4;
         justify-self: center;
-        width: 20vw;
-        height: 20vh;
-        border: 50%;
-        
     }
 }
 
