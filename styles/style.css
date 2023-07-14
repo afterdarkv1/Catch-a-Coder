@@ -71,7 +71,7 @@ html {
 .coders {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   justify-content: center;
   align-items: center;
   gap: 1rem;
@@ -87,18 +87,8 @@ html {
 .coders-second-modifier {
   background-color: rgb(132, 147, 208);
 }
-
-.coder-only {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
-}
-
-.only-coder {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
+.coders__person-modifier {
+  grid-column: 2/4;
 }
 
 .buttons__top {

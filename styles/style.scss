@@ -89,7 +89,7 @@ html {
 .coders {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
     gap: 1rem;
@@ -106,21 +106,10 @@ html {
     &-second-modifier {
         background-color: $background-text;
     }
+    &__person-modifier {
+        grid-column: 2/4;
+    }
 }
-
-.coder-only {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-}
-
-.only-coder{
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-}
-
 
 .buttons__top {
     display: flex;
