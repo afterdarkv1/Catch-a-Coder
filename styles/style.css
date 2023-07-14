@@ -2,20 +2,103 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
 }
 
 body {
   width: 100%;
   height: 100%;
+  background-color: white;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-.home__div-coach {
+.home__name {
+  text-align: center;
+}
+.home__person-modifier {
+  grid-column: 2/4;
+  justify-self: center;
   width: 20vw;
   height: 20vh;
   border: 50%;
+}
+
+.buttons__top {
+  display: flex;
+  justify-content: center;
+}
+.buttons__top--addremove {
+  color: rgb(132, 147, 208);
+  border-color: rgb(132, 147, 208);
+  border-radius: 5rem;
+  height: 3rem;
+  width: 8rem;
+  margin: 1rem;
+  font-weight: bold;
+}
+
+.buttons__bottom {
+  display: flex;
+  justify-content: center;
+}
+.buttons__bottom--first {
+  color: #ffffff;
+  background-color: rgb(239, 171, 48);
+  border-radius: 5rem;
+  height: 3rem;
+  width: 8rem;
+  margin: 1rem;
+  font-weight: bold;
+}
+.buttons__bottom-second-modifier {
+  background-color: rgb(132, 147, 208);
+}
+
+/*DESKTOP CODERS*/
+@media (min-width: 800px) {
+  .coders {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    place-items: center;
+    text-align: center;
+    gap: 0;
+  }
+  .coders__person {
+    margin: 1rem;
+  }
+  .coders__person-modifier {
+    grid-column: 5/6;
+  }
+  .buttons__top {
+    display: flex;
+    justify-content: center;
+  }
+  .buttons__top--addremove {
+    color: rgb(132, 147, 208);
+    border-color: rgb(132, 147, 208);
+    border-radius: 5rem;
+    height: 3rem;
+    width: 6rem;
+    margin: 1rem;
+    font-weight: bold;
+  }
+  .buttons__bottom {
+    display: flex;
+    justify-content: center;
+  }
+  .buttons__bottom--first {
+    color: #fff;
+    background-color: rgb(239, 171, 48);
+    border-radius: 5rem;
+    height: 3rem;
+    width: 6rem;
+    margin: 1rem;
+    font-weight: bold;
+  }
+  .buttons__bottom-second-modifier {
+    background-color: rgb(132, 147, 208);
+  }
 }/*# sourceMappingURL=style.css.map */
