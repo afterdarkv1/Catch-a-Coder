@@ -14,4 +14,8 @@ html {
   scroll-behavior: smooth;
 }
 
-/*# sourceMappingURL=style.css.map */
+.home__div-coach {
+  width: 20vw;
+  height: 20vh;
+  border: 50%;
+}/*# sourceMappingURL=style.css.map */

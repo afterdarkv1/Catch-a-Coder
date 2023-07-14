@@ -29,12 +29,16 @@ html {
   }
 }
 
-.home {
+.home { 
     &__div {
     }
     &__div-button {
     }
     &__div-coach {
+        width: 20vw;
+        height: 20vh;
+        border: 50%;
+        
     }
     &__div-img {
     }
