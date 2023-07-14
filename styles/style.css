@@ -30,9 +30,6 @@ html {
 .coders__name {
   text-align: center;
 }
-.coders-second-modifier {
-  background-color: rgb(132, 147, 208);
-}
 .coders__person-modifier {
   grid-column: 2/4;
   justify-self: center;
@@ -78,13 +75,13 @@ html {
     place-items: center;
     text-align: center;
     gap: 0;
+    gap: 0;
   }
   .coders__person-modifier {
     grid-column: 5/6;
   }
-  .coders__img {
-    width: 4rem;
-    height: 4rem;
+  .coders__person-modifier {
+    grid-column: 5/6;
   }
   .buttons__top {
     display: flex;
