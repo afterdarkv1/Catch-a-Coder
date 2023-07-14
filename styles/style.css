@@ -30,9 +30,6 @@ html {
 .coders__name {
   text-align: center;
 }
-.coders-second-modifier {
-  background-color: rgb(132, 147, 208);
-}
 .coders__person-modifier {
   grid-column: 2/4;
 }
