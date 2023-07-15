@@ -46,7 +46,8 @@ html {
   font-size: 2rem;
 }
 .home__div-coach {
-  width: 40%;
+  width: 40vw;
+  height: 18vh;
   border-radius: 50%;
 }
 .home__div-button {
