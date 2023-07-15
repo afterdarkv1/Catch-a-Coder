@@ -1,50 +1,50 @@
-# Catch a coder
+# catch a coder
 
-![Catch a coder Logo](assets/logo.png)
+![Catch a coder's logo](assets/logo.png)
 
-## Descripción
+## Description
 
-La app es una herramienta interactiva que permite a los entrenadores seleccionar aleatoriamente diferentes especies de Pokémon para agregar emoción y diversidad a sus equipos. Los usuarios pueden personalizar las reglas del sorteo, como el número de Pokémon a seleccionar participaran en el sorteo.
+The app is an interactive tool that allows trainers to randomly select different species of Pokémon to add excitement and diversity to their teams. Users can customize the draw rules, such as the number of Pokémon to select to participate in the draw.
 
-## Configuración
+## Setting
 
-Sigue estos pasos para configurar correctamente el proyecto:
+Follow these steps to correctly configure the project:
 
-1. Clona este repositorio en tu máquina local.
-2. Abre el archivo index.html en tu navegador web.
+1. Clone this repository to your local machine.
+2. Open the index.html file in your web browser.
 
-## Diseño en Figma
+## Design in Figma
 
-Puedes ver el diseño del sitio web en Figma haciendo clic en el siguiente enlace: [Catch a coder en Figma](https://www.figma.com/file/KJLN8lWWDOmyR4tuXsUYxc/Catch-a-coder?type=design&node-id=0-1&mode=design&t=hlyum0ExAdvnXc6D-0)
+You can view the website design on Figma by clicking the following link: [Catch a coder on Figma](https://www.figma.com/file/KJLN8lWWDOmyR4tuXsUYxc/Catch-a-coder?type=design&node-id= 0-1&mode=design&t=hlyum0ExAdvnXc6D-0)
 
-## Estructura de archivos
+## File structure
 
-- `index.html`: Este es el archivo principal que contiene el código HTML de la página.
-- `reset.css`: Este archivo contiene estilos CSS para restablecer los estilos predeterminados del navegador.
-- `style.css`: Este archivo contiene estilos CSS personalizados para la aplicación.
-- `style.scss`: Este archivo es una hoja de estilo escrita en Sass que se compila en style.css.
-- `script.js`: Este archivo contiene el código JavaScript para la funcionalidad de la aplicación.
-## Dependencias externas
+- `index.html`: This is the main file that contains the HTML code of the page.
+- `reset.css`: This file contains CSS styles to restore the default styles of the browser.
+- `style.css`: This file contains custom CSS styles for the application.
+- `style.scss`: This file is a style sheet written in Sass that is compiled into style.css.
+- `script.js`: This file contains the JavaScript code for the functionality of the application.
+## External dependencies
 
-El proyecto utiliza las siguientes dependencias externas:
+The project uses the following external dependencies:
 
-- **Roboto**: Fuente utilizada en la página. Se carga desde Google Fonts.
+- **Roboto**: Font used on the page. It is loaded from Google Fonts.
 
-Asegúrate de tener una conexión a internet activa para cargar correctamente estas dependencias.
+Make sure you have an active internet connection to successfully load these dependencies.
 
-## Contribución
+## Contribution
 
-Si deseas contribuir a este proyecto, puedes seguir los siguientes pasos:
+If you want to contribute to this project, you can follow the steps below:
 
-1. Haz un fork del repositorio.
-2. Realiza tus modificaciones en tu propio fork.
-3. Envía una solicitud pull para que se revisen tus cambios.
+1. Fork the repository.
+2. Make your modifications to your own fork.
+3. Submit a pull request to have your changes reviewed.
 
-## Contacto
+## Contact
 
-Si tienes alguna pregunta o sugerencia sobre este proyecto, puedes contactar a Catch a Coder a través del siguiente correo electrónico: contacto@Catchacoder.com
+If you have any questions or suggestions about this project, you can contact Catch a Coder through the following email: contacto@Catchacoder.com
 
-## Estado del proyecto
+## Project status
 
-- Versión: 1.0.0
-- Estado de desarrollo: Activo
+- Version: 1.0.0
+- Development status: Active. defame
