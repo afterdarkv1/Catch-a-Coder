@@ -21,7 +21,7 @@ html {
 
 .header{
     width: 100%;
-    height: 20%;
+    height: 6vh;
     background-color: $background-header-button;
     position: sticky;
     top: 0;
@@ -30,8 +30,8 @@ html {
 .nav{
     width: 100%;
     &__img{
-        width:30vw;
-        height: 3vh;
+        width:60vw;
+        height: 5vh;
         margin-top: 0.75%;
     }
 }
@@ -46,18 +46,27 @@ html {
     grid-template-columns: 100%;
     grid-template-rows: 30vh 21vh 15vh 25vh;
     &__div-modifier{
-        align-self: center;
+        color: $background-text;
+        font-size: 2rem;
     }
     &__div-coach{
         width: 40%;
         border-radius: 50%;
-        justify-self: center;
     }
-    &__div-modifier2{
-        display: grid;
+    &__div-button{
+        background-color: $background-header-button;
+        border-radius: 5rem;
+        height: 3rem;
+        width: 8rem;
+        margin: 1rem;
+        font-weight: bold;
+        color:white;
     }
-    &__div-modifier3{
-        align-self: center;
+    &__div{
+        width: 100%;
+    }
+    &__div-img{
+        width: 100%;
     }
 }
 
