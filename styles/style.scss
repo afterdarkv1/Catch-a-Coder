@@ -21,18 +21,20 @@ html {
 
 .header{
     width: 100%;
-    height: 6vh;
+    height: 8vh;
     background-color: $background-header-button;
     position: sticky;
     top: 0;
+    display: flex;
+    align-items: center;
 }
 
 .nav{
     width: 100%;
+    
     &__img{
         width:60vw;
-        height: 5vh;
-        margin-top: 0.75%;
+        height: 6vh;
     }
 }
 
@@ -143,6 +145,7 @@ html {
             display: flex;
             height:5vh;
             width: 5vh;
+            margin-top: -0.3%;
           }
           .home{
             &__div{
@@ -184,6 +187,7 @@ html {
                       font-weight: 900;
                       color: $white-text-button;
                       border-color:$white-text-button;
+                      box-shadow: 1px 1px 5px 1px $box-shadow;
                  
                   }
           }
@@ -217,6 +221,7 @@ html {
             width: 6rem;
             margin: 1rem;
             font-weight: bold;
+            box-shadow: 1px 1px 5px 1px $box-shadow;
         }
     }
 
@@ -232,6 +237,8 @@ html {
             width: 6rem;
             margin: 1rem;
             font-weight: bold;
+            border: $white-text-button;
+            box-shadow: 1px 1px 5px 1px $box-shadow;
         }
 
         &-second-modifier {
