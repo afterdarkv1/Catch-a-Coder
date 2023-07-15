@@ -71,8 +71,6 @@ html {
         width: 100%;
     }
 }
-
-
 //CODERS-PHONE
 
 .coders {
@@ -129,9 +127,70 @@ html {
     }
 }
 
+
+// Media query para pantallas de escritorio
+@media screen and (min-width: 720px) {
+
+    .header {
+      display: flex;
+      padding: 0%;
+      width: 100%;
+      height: 12vh;
+      background-color: $background-header-button;
+      align-items: center;
+          }
+          .nav__logo1 {
+            display: flex;
+            height:5vh;
+            width: 5vh;
+          }
+      .home__div{
+      display: flex;
+      align-content: center;
+      justify-content: center;
+        
+      .home__div_image{
+        width: 60%;
+        height: 60%;
+        margin-top: 50%;
+        align-content: center;
+        }
+    }
+        .home__div-text{
+            font-size: 1.5rem;
+            margin-top: 5%;
+            text-align: center;
+            color:$background-text
+        }
+        .home__div-coach{
+            display: flex;
+            width: 10vh;
+            height: 10vh;
+            align-content: center;
+            justify-content: center;
+            margin-top: 3%;
+            border-radius: 7.5vh;
+        }
+        .home__div-button{
+            display: flex;
+            margin-top: 2%;
+            width: 18rem;
+            height: 3.5rem;
+            border-radius: 1.7rem;
+            background-color: $background-header-button;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            font-weight: 900;
+            color: $white-text-button;
+            border-color:$white-text-button;
+            margin-bottom: 20%;
+       
+        }
+   
+
 /*DESKTOP CODERS*/
 
-@media (min-width: 800px) {
     .coders {
         display: grid;
         grid-template-columns: 20% 20% 20% 20% 20%;
@@ -179,4 +238,4 @@ html {
             background-color: $background-text;
         }
     }
-}
+} 
