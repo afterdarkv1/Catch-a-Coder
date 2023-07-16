@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -52,6 +53,7 @@ html {
   border-radius: 50%;
 }
 .home__div-button {
+  cursor: pointer;
   background-color: rgb(239, 171, 48);
   border-radius: 5rem;
   height: 3rem;
@@ -59,6 +61,7 @@ html {
   margin: 1rem;
   font-weight: bold;
   color: white;
+  box-shadow: 1px 1px 5px 1px rgb(129, 129, 129);
 }
 .home__div {
   width: 100%;
@@ -100,6 +103,7 @@ html {
   width: 8rem;
   margin: 1rem;
   font-weight: bold;
+  box-shadow: 1px 1px 5px 1px rgb(129, 129, 129);
 }
 
 .buttons__bottom {
@@ -114,6 +118,7 @@ html {
   width: 8rem;
   margin: 1rem;
   font-weight: bold;
+  box-shadow: 1px 1px 5px 1px rgb(129, 129, 129);
 }
 .buttons__bottom-second-modifier {
   background-color: rgb(132, 147, 208);
@@ -129,10 +134,12 @@ html {
     align-items: center;
   }
   .nav__logo1 {
-    display: flex;
-    height: 5vh;
-    width: 5vh;
+    height: 100%;
+    width: 100%;
     margin-top: -0.3%;
+  }
+  .nav__img {
+    width: 20%;
   }
   .home__div {
     display: flex;
@@ -173,7 +180,9 @@ html {
     font-weight: 900;
     color: #ffffff;
     border-color: #ffffff;
-    box-shadow: 1px 1px 5px 1px rgb(129, 129, 129);
+  }
+  .home__game-link {
+    text-decoration: none;
   }
   /*DESKTOP CODERS*/
   .coders {
@@ -202,7 +211,6 @@ html {
     width: 6rem;
     margin: 1rem;
     font-weight: bold;
-    box-shadow: 1px 1px 5px 1px rgb(129, 129, 129);
   }
   .buttons__bottom {
     display: flex;
@@ -217,7 +225,6 @@ html {
     margin: 1rem;
     font-weight: bold;
     border: #ffffff;
-    box-shadow: 1px 1px 5px 1px rgb(129, 129, 129);
   }
   .buttons__bottom-second-modifier {
     background-color: rgb(132, 147, 208);

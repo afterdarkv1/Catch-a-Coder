@@ -7,6 +7,7 @@ $white-text-button: #ffffff;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -58,6 +59,7 @@ html {
         
     }
     &__div-button{
+        cursor: pointer;
         background-color: $background-header-button;
         border-radius: 5rem;
         height: 3rem;
@@ -65,6 +67,7 @@ html {
         margin: 1rem;
         font-weight: bold;
         color:white;
+        box-shadow: 1px 1px 5px 1px $box-shadow;
     }
     &__div{
         width: 100%;
@@ -107,6 +110,7 @@ html {
         width: 8rem;
         margin: 1rem;
         font-weight: bold;
+        box-shadow: 1px 1px 5px 1px $box-shadow;
     }
 }
 
@@ -122,13 +126,13 @@ html {
         width: 8rem;
         margin: 1rem;
         font-weight: bold;
+        box-shadow: 1px 1px 5px 1px $box-shadow;
     }
 
     &-second-modifier {
         background-color: $background-text;
     }
 }
-
 
 // Media query para pantallas de escritorio
 @media screen and (min-width: 720px) {
@@ -142,11 +146,14 @@ html {
       align-items: center;
           }
           .nav__logo1 {
-            display: flex;
-            height:5vh;
-            width: 5vh;
+            height: 100%;
+            width: 100%;
             margin-top: -0.3%;
           }
+          .nav__img {
+            width: 20%;
+        }
+        
           .home{
             &__div{
                 display: flex;
@@ -175,24 +182,25 @@ html {
                       border-radius: 7.5vh;
                   }
                   &__div-button{
-                      display: flex;
-                      margin-top: 2%;
-                      width: 18rem;
-                      height: 3.5rem;
-                      border-radius: 1.7rem;
-                      background-color: $background-header-button;
-                      align-items: center;
-                      justify-content: center;
-                      font-size: 1rem;
-                      font-weight: 900;
-                      color: $white-text-button;
-                      border-color:$white-text-button;
-                      box-shadow: 1px 1px 5px 1px $box-shadow;
-                 
-                  }
+                    display: flex;
+                    margin-top: 2%;
+                    width: 18rem;
+                    height: 3.5rem;
+                    border-radius: 1.7rem;
+                    background-color: $background-header-button;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1rem;
+                    font-weight: 900;
+                    color: $white-text-button;
+                    border-color:$white-text-button;
+               
+                }
+                &__game-link {
+                    text-decoration: none;
+                }
           }
       
-
 /*DESKTOP CODERS*/
 
     .coders {
@@ -221,7 +229,6 @@ html {
             width: 6rem;
             margin: 1rem;
             font-weight: bold;
-            box-shadow: 1px 1px 5px 1px $box-shadow;
         }
     }
 
@@ -238,7 +245,7 @@ html {
             margin: 1rem;
             font-weight: bold;
             border: $white-text-button;
-            box-shadow: 1px 1px 5px 1px $box-shadow;
+            
         }
 
         &-second-modifier {
@@ -246,3 +253,5 @@ html {
         }
     }
 } 
+
+
