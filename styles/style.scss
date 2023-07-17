@@ -58,11 +58,16 @@ html {
     &__div-button{
         background-color: $background-header-button;
         border-radius: 5rem;
-        height: 3rem;
-        width: 8rem;
+        height: 3.5rem;
+        width: 12rem;
         margin: 1rem;
-        font-weight: bold;
-        color:white;
+        font-weight: 700;
+        color:$white-text-button;
+        font-size: 1.1rem;
+        border: $white-text-button;
+        box-shadow: 1px 1px 5px 1px $box-shadow;
+
+
     }
     &__div{
         width: 100%;
@@ -79,8 +84,8 @@ html {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
-    gap: 1rem;
-    margin-top: 2rem;
+    gap: 0.6rem;
+    margin-top: 1.7rem;
     &__img {
         height: 7vh;
         width: 7vh;
@@ -184,6 +189,7 @@ html {
                       font-weight: 900;
                       color: $white-text-button;
                       border-color:$white-text-button;
+                      box-shadow: 1px 1px 5px 1px $box-shadow;
                  
                   }
           }
@@ -212,6 +218,7 @@ html {
         &--addremove {
             color: $background-text;
             border-color: $background-text;
+            border: 1px;
             border-radius: 5rem;
             height: 3rem;
             width: 6rem;
@@ -225,13 +232,15 @@ html {
         justify-content: center;
 
         &--first {
-            color: #fff;
+            color:$white-text-button;
             background-color: $background-header-button;
             border-radius: 5rem;
             height: 3rem;
             width: 6rem;
             margin: 1rem;
             font-weight: bold;
+            border-color: $white-text-button;
+            box-shadow: 1px 1px 5px 1px $box-shadow ;
         }
 
         &-second-modifier {
