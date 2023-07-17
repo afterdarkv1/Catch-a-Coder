@@ -1,7 +1,23 @@
-$background-header-button: rgba(239, 171, 48, 1);
-$background-text: rgba(132, 147, 208, 1);
-$box-shadow: rgba(129, 129, 129, 1);
-$white-text-button: #ffffff;
+
+$colors: (
+"orange": rgba(239, 171, 48, 1),
+"blue": rgba(132, 147, 208, 1),
+"grey": #F5F5F5,
+"grey-shadow": rgba(129, 129, 129, 1),
+"white": #fff
+);
+
+@mixin stylesButton ($arg1, $arg2, $arg3, $arg4, $arg5, $arg6, $arg7, $arg8, $arg9) {
+    color: $arg1;
+    background-color: $arg2;
+    border: $arg3;
+    border-radius: $arg4;
+    height: $arg5;
+    width: $arg6;
+    margin: $arg7;
+    font-weight: $arg8;
+    box-shadow: $arg9;
+}
 
 * {
     padding: 0;
@@ -12,7 +28,7 @@ $white-text-button: #ffffff;
 body {
     width: 100%;
     height: 100%;
-    background-color: white;
+    background-color: map-get($colors, "white");
 }
 
 html {
@@ -38,7 +54,7 @@ html {
     }
 
     &-second-modifier {
-        background-color: $background-text;
+        background-color: map-get($colors, "blue");
     }
     &__person-modifier {
         grid-column: 2/4;
@@ -49,13 +65,7 @@ html {
     display: flex;
     justify-content: center;
     &--addremove {
-        color: $background-text;
-        border-color: $background-text;
-        border-radius: 5rem;
-        height: 3rem;
-        width: 8rem;
-        margin: 1rem;
-        font-weight: bold;
+        @include stylesButton (rgba(132, 147, 208, 1), white, rgba(132, 147, 208, 1), 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px rgba(129, 129, 129, 1));
     }
 }
 
@@ -64,17 +74,11 @@ html {
     justify-content: center;
 
     &--first {
-        color: #ffffff;
-        background-color: $background-header-button;
-        border-radius: 5rem;
-        height: 3rem;
-        width: 8rem;
-        margin: 1rem;
-        font-weight: bold;
+        @include stylesButton (#fff, rgba(239, 171, 48, 1), #fff, 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px rgba(129, 129, 129, 1));
     }
 
     &-second-modifier {
-        background-color: $background-text;
+        background-color: map-get($colors, "blue");
     }
 }
 
@@ -104,13 +108,7 @@ html {
         display: flex;
         justify-content: center;
         &--addremove {
-            color: $background-text;
-            border-color: $background-text;
-            border-radius: 5rem;
-            height: 3rem;
-            width: 6rem;
-            margin: 1rem;
-            font-weight: bold;
+            @include stylesButton (rgba(132, 147, 208, 1), #f5f5f5, rgba(132, 147, 208, 1), 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px rgba(129, 129, 129, 1));
         }
     }
 
@@ -119,17 +117,11 @@ html {
         justify-content: center;
 
         &--first {
-            color: #fff;
-            background-color: $background-header-button;
-            border-radius: 5rem;
-            height: 3rem;
-            width: 6rem;
-            margin: 1rem;
-            font-weight: bold;
+            @include stylesButton (#fff, rgba(239, 171, 48, 1), #fff, 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px rgba(129, 129, 129, 1));
         }
 
         &-second-modifier {
-            background-color: $background-text;
+            background-color: map-get($colors, "blue");
         }
     }
 }
