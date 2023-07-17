@@ -43,6 +43,7 @@ html {
     top: 0;
     display: flex;
     align-items: center;
+    z-index: 70;
 }
 
 .nav {
@@ -93,6 +94,10 @@ html {
 
     &__div-img {
         width: 100%;
+    }
+    &__div-modifier3{
+        display: grid;
+        justify-content: center;
     }
 }
 
@@ -247,6 +252,7 @@ button:hover .go {
         height: 12vh;
         background-color: map-get($colors, "orange");
         align-items: center;
+        z-index: 7;
     }
 
     .nav__logo1 {
@@ -355,5 +361,6 @@ button:hover .go {
         &-second-modifier {
             background-color: map-get($colors, "blue");
         }
+    }
     }
 }
