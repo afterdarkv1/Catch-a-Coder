@@ -3,7 +3,7 @@ $colors: (
 "blue": rgba(132, 147, 208, 1),
 "grey": #F5F5F5,
 "grey-shadow": rgba(129, 129, 129, 1),
-"white":white
+"white": #fff
 );
 
 @mixin stylesButton ($arg1, $arg2, $arg3, $arg4, $arg5, $arg6, $arg7, $arg8, $arg9) {
@@ -90,6 +90,85 @@ html {
         width: 100%;
     }
 }
+//PiKACHU ANIMACIONES
+.buttons__bottom--first, .home__div-button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 150px;
+    height: 60px;
+    overflow: hidden;
+    border: 1px solid map-get($colors, "white");
+    border-radius: 50px;
+    padding-left: 35px;
+    box-shadow: 2.9px 2.9px 2.2px rgba(0, 0, 0, 0.019),
+      5.2px 5.2px 5.3px rgba(0, 0, 0, 0.023),
+      7px 7px 10px rgba(0, 0, 0, 0.025),
+      8.7px 8.7px 17.9px rgba(0, 0, 0, 0.024),
+      11.3px 11.3px 33.4px rgba(0, 0, 0, 0.023),
+      20px 20px 80px rgba(0, 0, 0, 0.02);
+  }
+  
+  .pika {
+    position: absolute;
+    top: -160%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: auto;
+    transition: 0.5s all;
+    animation: tilt 1.1s infinite ease-in-out;
+  }
+  
+  button:hover .pika {
+    top: 0%;
+  }
+  
+  
+  @keyframes tilt {
+    0% {
+      transform: translateX(-50%)  scale(1);
+    }
+    50% {
+      transform: translateX(-50%)  scale(1.1);
+    }
+    100% {
+      transform: translateX(-50%)  scale(1);
+    }
+  }
+  
+  .go {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 1;
+    z-index: 2;
+  }
+  
+  button:hover .go{
+  visibility: hidden;
+  }
+  @keyframes pulse-animation_0011 {
+    0% {
+      transform:  scale(1);
+    }
+    50% {
+      transform:  scale(1.1);
+    }
+    100% {
+      transform:  scale(1);
+    }
+  }
+  .buttons__bottom-second-modifier {
+    padding-left: 0;
+  }
 //CODERS-PHONE
 
 .coders {
@@ -101,11 +180,15 @@ html {
     gap: 1rem;
     margin-top: 2rem;
     &__img {
-        height: 7vh;
-        width: 7vh;
+        height: 5.8vh;
+        width: 13vw;
     }
     &__name {
         text-align: center;
+    }
+
+    &-second-modifier {
+        background-color: map-get($colors, "blue");
     }
     &__person-modifier {
         grid-column: 2/4;
@@ -117,14 +200,8 @@ html {
     display: flex;
     justify-content: center;
     &--addremove {
-        color: $background-text;
-        border-color: $background-text;
-        border-radius: 5rem;
-        height: 3rem;
-        width: 8rem;
-        margin: 1rem;
-        font-weight: bold;
-        box-shadow: 1px 1px 5px 1px $box-shadow;
+        @include stylesButton (rgba(132, 147, 208, 1), white, rgba(132, 147, 208, 1), 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px rgba(129, 129, 129, 1));
+        cursor: pointer 
     }
 }
 
@@ -133,18 +210,11 @@ html {
   justify-content: center;
 
     &--first {
-        color: #ffffff;
-        background-color: $background-header-button;
-        border-radius: 5rem;
-        height: 3rem;
-        width: 8rem;
-        margin: 1rem;
-        font-weight: bold;
-        box-shadow: 1px 1px 5px 1px $box-shadow;
+        @include stylesButton (#fff, rgba(239, 171, 48, 1), #fff, 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px rgba(129, 129, 129, 1));
     }
 
     &-second-modifier {
-        background-color: $background-text;
+        background-color: map-get($colors, "blue");
     }
 }
 
@@ -153,48 +223,48 @@ html {
 @media screen and (min-width: 720px) {
 
     .header {
-      display: flex;
-      padding: 0%;
-      width: 100%;
-      height: 12vh;
-      background-color: $background-header-button;
-      align-items: center;
-          }
-          .nav__logo1 {
-            height: 100%;
-            width: 100%;
-            margin-top: -0.3%;
-          }
-          .nav__img {
+		display: flex;
+		padding: 0%;
+		width: 100%;
+		height: 12vh;
+		background-color: map-get($colors, "orange");
+		align-items: center;
+    }
+        .nav__logo1 {
+			height: 100%;
+			width: 100%;
+			margin-right: 0.3%;
+        }
+        .nav__img {
             width: 20%;
         }
         
-          .home{
+        .home{
             &__div{
-                display: flex;
-                align-content: center;
-                justify-content: center;
+				display: flex;
+				align-content: center;
+				justify-content: center;
             } 
-                &__div-img{
-                  width: 60%;
+            &__div-img{
+            width: 60%;
                   height: 60%;
                   margin-top: 5%;
                   align-content: center;
                   }
                   &__div-text{
-                      font-size: 1.5rem;
-                      margin-top: 5%;
-                      text-align: center;
-                      color:$background-text
+                    font-size: 1.5rem;
+                    margin-top: 5%;
+                    text-align: center;
+                    color: map-get($colors, "blue");
                   }
                   &__div-coach{
-                      display: flex;
-                      width: 10vh;
-                      height: 10vh;
-                      align-content: center;
-                      justify-content: center;
-                      margin-top: 3%;
-                      border-radius: 7.5vh;
+                    display: flex;
+                    width: 10vh;
+                    height: 10vh;
+                    align-content: center;
+                    justify-content: center;
+                    margin-top: 3%;
+                    border-radius: 7.5vh;
                   }
                   &__div-button{
                     display: flex;
@@ -202,13 +272,13 @@ html {
                     width: 18rem;
                     height: 3.5rem;
                     border-radius: 1.7rem;
-                    background-color: $background-header-button;
+                    background-color: map-get($colors, "orange");
                     align-items: center;
                     justify-content: center;
                     font-size: 1rem;
                     font-weight: 900;
-                    color: $white-text-button;
-                    border-color:$white-text-button;
+                    color: map-get($colors, "white");
+                    border-color: map-get($colors, "white");
                
                 }
                 &__game-link {
@@ -241,13 +311,7 @@ html {
         display: flex;
         justify-content: center;
         &--addremove {
-            color: $background-text;
-            border-color: $background-text;
-            border-radius: 5rem;
-            height: 3rem;
-            width: 6rem;
-            margin: 1rem;
-            font-weight: bold;
+            @include stylesButton (rgba(132, 147, 208, 1), #f5f5f5, rgba(132, 147, 208, 1), 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px rgba(129, 129, 129, 1));
         }
     }
 
@@ -256,19 +320,11 @@ html {
     justify-content: center;
 
         &--first {
-            color: #fff;
-            background-color: $background-header-button;
-            border-radius: 5rem;
-            height: 3rem;
-            width: 6rem;
-            margin: 1rem;
-            font-weight: bold;
-            border: $white-text-button;
-            
+            @include stylesButton (#fff, rgba(239, 171, 48, 1), #fff, 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px rgba(129, 129, 129, 1));
         }
 
         &-second-modifier {
-            background-color: $background-text;
+            background-color: map-get($colors, "blue");
         }
     }
 } 
