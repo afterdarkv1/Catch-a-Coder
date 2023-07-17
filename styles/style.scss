@@ -1,7 +1,22 @@
-$background-header-button: rgba(239, 171, 48, 1);
-$background-text: rgba(132, 147, 208, 1);
-$box-shadow: rgba(129, 129, 129, 1);
-$white-text-button: #ffffff;
+$colors: (
+"orange": rgba(239, 171, 48, 1),
+"blue": rgba(132, 147, 208, 1),
+"grey": #F5F5F5,
+"grey-shadow": rgba(129, 129, 129, 1),
+"white":white
+);
+
+@mixin stylesButton ($arg1, $arg2, $arg3, $arg4, $arg5, $arg6, $arg7, $arg8, $arg9) {
+    color: $arg1;
+    background-color: $arg2;
+    border: $arg3;
+    border-radius: $arg4;
+    height: $arg5;
+    width: $arg6;
+    margin: $arg7;
+    font-weight: $arg8;
+    box-shadow: $arg9;
+}
 
 * {
   padding: 0;
@@ -11,23 +26,23 @@ $white-text-button: #ffffff;
 }
 
 body {
-  width: 100%;
-  height: 100%;
-  background-color: white;
+    width: 100%;
+    height: 100%;
+    background-color: map-get($colors, "white");
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-.header {
-  width: 100%;
-  height: 8vh;
-  background-color: $background-header-button;
-  position: sticky;
-  top: 0;
-  display: flex;
-  align-items: center;
+.header{
+    width: 100%;
+    height: 8vh;
+    background-color: map-get($colors, "orange");
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
 }
 
 .nav {
@@ -39,162 +54,169 @@ html {
   }
 }
 
-.home {
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  grid-template-columns: 100%;
-  grid-template-rows: 30vh 21vh 15vh 25vh;
-  &__div-modifier {
-    color: $background-text;
-    font-size: 2rem;
-  }
-  &__div-coach {
-    width: 40vw;
-    height: 18vh;
-    border-radius: 50%;
-  }
-  &__div-button {
-    cursor: pointer;
-    background-color: $background-header-button;
-    border-radius: 5rem;
-    height: 3.5rem;
-    width: 12rem;
-    margin: 1rem;
-    font-weight: bold;
-    color: white;
-  }
-  &__div {
+.home{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
     width: 100%;
-  }
-  &__div-img {
-    width: 100%;
-  }
+    height: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 30vh 21vh 15vh 25vh;
+    &__div-modifier{
+        color: map-get($colors, "blue");
+        font-size: 2rem;
+    }
+    &__div-coach{
+        width: 40vw;
+        height: 18vh;
+        border-radius: 50%; 
+    }
+    &__div-button{
+        cursor: pointer;
+        background-color: map-get($colors, "orange");
+        border-radius: 5rem;
+        height: 3rem;
+        width: 8rem;
+        margin: 1rem;
+        font-weight: bold;
+        color:white;
+        box-shadow: 1px 1px 5px 1px;
+    }
+    &__div{
+        width: 100%;
+    }
+    &__div-img{
+        width: 100%;
+    }
 }
 //CODERS-PHONE
 
 .coders {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  justify-items: center;
-  align-items: center;
-  gap: 0.6rem;
-  margin-top: 1.7rem;
-  &__img {
-    height: 7vh;
-    width: 7vh;
-  }
-  &__name {
-    text-align: center;
-  }
-  &__person-modifier {
-    grid-column: 2/4;
-    justify-self: center;
-  }
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    &__img {
+        height: 7vh;
+        width: 7vh;
+    }
+    &__name {
+        text-align: center;
+    }
+    &__person-modifier {
+        grid-column: 2/4;
+        justify-self: center;
+    }
 }
 
 .buttons__top {
-  display: flex;
-  justify-content: center;
-  &--addremove {
-    color: $background-text;
-    border-color: $background-text;
-    border-radius: 5rem;
-    height: 3rem;
-    width: 8rem;
-    margin: 1rem;
-    font-weight: bold;
-    box-shadow: 1px 1px 5px 1px $box-shadow;
-  }
+    display: flex;
+    justify-content: center;
+    &--addremove {
+        color: $background-text;
+        border-color: $background-text;
+        border-radius: 5rem;
+        height: 3rem;
+        width: 8rem;
+        margin: 1rem;
+        font-weight: bold;
+        box-shadow: 1px 1px 5px 1px $box-shadow;
+    }
 }
 
 .buttons__bottom {
   display: flex;
   justify-content: center;
 
-  &--first {
-    color: #ffffff;
-    background-color: $background-header-button;
-    border-radius: 5rem;
-    height: 3rem;
-    width: 8rem;
-    margin: 1rem;
-    font-weight: bold;
-    box-shadow: 1px 1px 5px 1px $box-shadow;
-  }
+    &--first {
+        color: #ffffff;
+        background-color: $background-header-button;
+        border-radius: 5rem;
+        height: 3rem;
+        width: 8rem;
+        margin: 1rem;
+        font-weight: bold;
+        box-shadow: 1px 1px 5px 1px $box-shadow;
+    }
 
-  &-second-modifier {
-    background-color: $background-text;
-  }
+    &-second-modifier {
+        background-color: $background-text;
+    }
 }
 
-// Media query para pantallas de escritorio
-@media screen and (min-width: 720px) {
-  .header {
-    display: flex;
-    padding: 0%;
-    width: 100%;
-    height: 12vh;
-    background-color: $background-header-button;
-    align-items: center;
-  }
-  .nav__logo1 {
-    height: 100%;
-    width: 100%;
-    margin-top: -0.3%;
-  }
-  .nav__img {
-    width: 20%;
-  }
+// Media query for desktop
 
-  .home {
-    &__div {
+@media screen and (min-width: 720px) {
+
+    .header {
       display: flex;
-      align-content: center;
-      justify-content: center;
-    }
-    &__div-img {
-      width: 60%;
-      height: 60%;
-      margin-top: 5%;
-      align-content: center;
-    }
-    &__div-text {
-      font-size: 1.5rem;
-      margin-top: 5%;
-      text-align: center;
-      color: $background-text;
-    }
-    &__div-coach {
-      display: flex;
-      width: 10vh;
-      height: 10vh;
-      align-content: center;
-      justify-content: center;
-      margin-top: 3%;
-      border-radius: 7.5vh;
-    }
-    &__div-button {
-      display: flex;
-      margin-top: 2%;
-      width: 18rem;
-      height: 3.5rem;
-      border-radius: 1.7rem;
+      padding: 0%;
+      width: 100%;
+      height: 12vh;
       background-color: $background-header-button;
       align-items: center;
-      justify-content: center;
-      font-size: 1rem;
-      font-weight: 900;
-      color: $white-text-button;
-      border-color: $white-text-button;
-    }
-  }
-
-  /*DESKTOP CODERS*/
+          }
+          .nav__logo1 {
+            height: 100%;
+            width: 100%;
+            margin-top: -0.3%;
+          }
+          .nav__img {
+            width: 20%;
+        }
+        
+          .home{
+            &__div{
+                display: flex;
+                align-content: center;
+                justify-content: center;
+            } 
+                &__div-img{
+                  width: 60%;
+                  height: 60%;
+                  margin-top: 5%;
+                  align-content: center;
+                  }
+                  &__div-text{
+                      font-size: 1.5rem;
+                      margin-top: 5%;
+                      text-align: center;
+                      color:$background-text
+                  }
+                  &__div-coach{
+                      display: flex;
+                      width: 10vh;
+                      height: 10vh;
+                      align-content: center;
+                      justify-content: center;
+                      margin-top: 3%;
+                      border-radius: 7.5vh;
+                  }
+                  &__div-button{
+                    display: flex;
+                    margin-top: 2%;
+                    width: 18rem;
+                    height: 3.5rem;
+                    border-radius: 1.7rem;
+                    background-color: $background-header-button;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1rem;
+                    font-weight: 900;
+                    color: $white-text-button;
+                    border-color:$white-text-button;
+               
+                }
+                &__game-link {
+                    text-decoration: none;
+                }
+          }
+      
+/*DESKTOP CODERS*/
 
   .coders {
     display: grid;
@@ -206,42 +228,49 @@ html {
     &__person {
       margin: 1rem;
     }
+    &__img {
+        height: 6vh;
+        width: 3vw;
+    }
     &__person-modifier {
       grid-column: 5/6;
     }
   }
 
-  .buttons__top {
-    display: flex;
-    justify-content: center;
-    &--addremove {
-      color: $background-text;
-      border-color: $background-text;
-      border: 1px;
-      border-radius: 5rem;
-      height: 3rem;
-      width: 6rem;
-      margin: 1rem;
-      font-weight: bold;
+    .buttons__top {
+        display: flex;
+        justify-content: center;
+        &--addremove {
+            color: $background-text;
+            border-color: $background-text;
+            border-radius: 5rem;
+            height: 3rem;
+            width: 6rem;
+            margin: 1rem;
+            font-weight: bold;
+        }
     }
-  }
 
   .buttons__bottom {
     display: flex;
     justify-content: center;
 
-    &--first {
-      color: $white-text-button;
-      background-color: $background-header-button;
-      border-radius: 5rem;
-      height: 3rem;
-      width: 6rem;
-      margin: 1rem;
-      font-weight: bold;
-    }
+        &--first {
+            color: #fff;
+            background-color: $background-header-button;
+            border-radius: 5rem;
+            height: 3rem;
+            width: 6rem;
+            margin: 1rem;
+            font-weight: bold;
+            border: $white-text-button;
+            
+        }
 
-    &-second-modifier {
-      background-color: $background-text;
+        &-second-modifier {
+            background-color: $background-text;
+        }
     }
-  }
-}
+} 
+
+
