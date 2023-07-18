@@ -229,6 +229,237 @@ html {
 
 @media screen and (min-width: 720px) {
 
+    $colors: (
+"orange": rgba(239, 171, 48, 1),
+"blue": rgba(132, 147, 208, 1),
+"grey": #F5F5F5,
+"grey-shadow": rgba(129, 129, 129, 1),
+"white": #fff
+);
+
+@mixin stylesButton ($arg1, $arg2, $arg3, $arg4, $arg5, $arg6, $arg7, $arg8, $arg9) {
+    color: $arg1;
+    background-color: $arg2;
+    border: $arg3;
+    border-radius: $arg4;
+    height: $arg5;
+    width: $arg6;
+    margin: $arg7;
+    font-weight: $arg8;
+    box-shadow: $arg9;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: map-get($colors, "white");
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.header{
+    width: 100%;
+    height: 8vh;
+    background-color: map-get($colors, "orange");
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    z-index: 70;
+}
+
+.nav{
+    width: 100%;
+    
+    &__img{
+        width:60vw;
+        height: 6vh;
+    }
+}
+
+.home{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 30vh 21vh 15vh 25vh;
+    &__div-modifier{
+        color: map-get($colors, "blue");
+        font-size: 2rem;
+    }
+    &__div-coach{
+        width: 40vw;
+        height: 18vh;
+        border-radius: 50%; 
+    }
+    &__div-button{
+        cursor: pointer;
+        background-color: map-get($colors, "orange");
+        border-radius: 5rem;
+        height: 3rem;
+        width: 8rem;
+        margin: 1rem;
+        font-weight: bold;
+        color:white;
+        box-shadow: 1px 1px 5px 1px;
+    }
+    &__div{
+        width: 100%;
+    }
+    &__div-img{
+        width: 100%;
+    }
+    &__div-modifier3{
+        display: grid;
+        justify-content: center;
+    }
+}
+
+//PIKACHU ANIMATIONS
+
+.buttons__bottom--first, .home__div-button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 150px;
+    height: 60px;
+    overflow: hidden;
+    border: 1px solid map-get($colors, "white");
+    border-radius: 50px;
+    padding-left: 35px;
+    box-shadow: 2.9px 2.9px 2.2px rgba(0, 0, 0, 0.019),
+      5.2px 5.2px 5.3px rgba(0, 0, 0, 0.023),
+      7px 7px 10px rgba(0, 0, 0, 0.025),
+      8.7px 8.7px 17.9px rgba(0, 0, 0, 0.024),
+      11.3px 11.3px 33.4px rgba(0, 0, 0, 0.023),
+      20px 20px 80px rgba(0, 0, 0, 0.02);
+  }
+  
+  .pika {
+    position: absolute;
+    top: -160%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: auto;
+    transition: 0.5s all;
+    animation: tilt 1.1s infinite ease-in-out;
+  }
+  
+  button:hover .pika {
+    top: 0%;
+  }
+  
+  
+  @keyframes tilt {
+    0% {
+      transform: translateX(-50%)  scale(1);
+    }
+    50% {
+      transform: translateX(-50%)  scale(1.1);
+    }
+    100% {
+      transform: translateX(-50%)  scale(1);
+    }
+  }
+  
+  .go {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 1;
+    z-index: 2;
+  }
+  
+  button:hover .go{
+  visibility: hidden;
+  }
+  @keyframes pulse-animation_0011 {
+    0% {
+      transform:  scale(1);
+    }
+    50% {
+      transform:  scale(1.1);
+    }
+    100% {
+      transform:  scale(1);
+    }
+  }
+  .buttons__bottom-second-modifier {
+    padding-left: 0;
+  }
+//CODERS-PHONE
+
+.coders {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    &__img {
+        height: 5.8vh;
+        width: 13vw;
+    }
+    &__name {
+        text-align: center;
+    }
+
+    &-second-modifier {
+        background-color: map-get($colors, "blue");
+    }
+    &__person-modifier {
+        grid-column: 2/4;
+        justify-self: center;
+    }
+}
+
+.buttons__top {
+    display: flex;
+    justify-content: center;
+    &--addremove {
+        @include stylesButton (rgba(132, 147, 208, 1), white, rgba(132, 147, 208, 1), 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px rgba(129, 129, 129, 1));
+        cursor: pointer 
+    }
+}
+
+.buttons__bottom {
+    display: flex;
+    justify-content: center;
+
+    &--first {
+        @include stylesButton (#fff, rgba(239, 171, 48, 1), #fff, 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px rgba(129, 129, 129, 1));
+    }
+
+    &-second-modifier {
+        background-color: map-get($colors, "blue");
+    }
+}
+
+// Media query for desktop
+
+@media screen and (min-width: 720px) {
+
     .header {
 		display: flex;
 		padding: 0%;
@@ -336,5 +567,5 @@ html {
         }
     }
 } 
-
+} 
 

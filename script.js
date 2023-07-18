@@ -36,12 +36,21 @@ console.log(random);
 coders.splice(randomIndex, 1);
 console.log(coders);
 }
-
 let buttonCatch = document.getElementById("buttons__bottom--first");
 let eventButton = () => randomCoders();
 buttonCatch.addEventListener("click", eventButton);
 
 
+function removeCoder() {
+    const indexToRemove = prompt('Ingresa el índice del coder que quieres borrar (empezando desde 0):');
+    const index = parseInt(indexToRemove);
 
+    coders.splice(index, 1); // Elimina 1 elemento en la posición 'index' del array
 
+    // ... Resto de tu código para mostrar los coders ...
 
+}
+
+let buttonRemove = document.getElementById("remove");
+buttonRemove.addEventListener("click", removeCoder);
+console.log(removeCoder);
