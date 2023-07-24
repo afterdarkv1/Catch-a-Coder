@@ -24,10 +24,22 @@
                 <img class="nav__img" src="assets/logo.png" alt="Catch a CODER" />
               </a>
             </div>
+             <div class="nav__music">
+              <audio id="cancion" src="audios/pokemon-intro.mp3"></audio>
+
+              <button id="music" class="paused">Music</button>
+            </div>
         </nav>
     </header>
 
     <main>
+        <div class="modal">
+            <!-- Contenido de la ventana modal -->
+            <div class="modal-content">
+              <!-- Aquí se mostrará el nombre del ganador -->
+              <h2></h2>
+            </div>
+          </div>
         <section id="home" class="home">
             <div class="home__div">
                 <img class="home__div-img" src="assets/imagen-inicial.gif" />
@@ -50,118 +62,118 @@
         <section id="game" class="game">
             <div class="coders">
                 <div class="coders__person" id="coder1">
-                    <image class="coders__img" src="assets/eevee.png"></image>
+                    <image class="coders__img" src="assets/coders/eevee.png"></image>
                     <p class="coders__name">Andrea</p>
                 </div>
                 <div class="coders__person" id="coder2">
-                    <image class="coders__img" src="assets/meowth.png"></image>
+                    <image class="coders__img" src="assets/coders/meowth.png"></image>
                     <p class="coders__name">Jaime</p>
                 </div>
                 <div class="coders__person">
-                    <image class="coders__img" src="assets/psyduck.png"></image>
+                    <image class="coders__img" src="assets/coders/psyduck.png"></image>
                     <p class="coders__name">Sophia</p>
                 </div>
                 <div class="coders__person">
-                    <image class="coders__img" src="assets/squirtle.png"></image>
+                    <image class="coders__img" src="assets/coders/squirtle.png"></image>
                     <p class="coders__name">Geovanny</p>
                 </div>
                 <div class="coders__person">
-                    <image class="coders__img" src="assets/charmander.png"></image>
+                    <image class="coders__img" src="assets/coders/charmander.png"></image>
                     <p class="coders__name">Bryan</p>
                 </div>
                 <div class="coders__person">
-                    <image class="coders__img" src="assets/caterpie.png"></image>
+                    <image class="coders__img" src="assets/coders/caterpie.png"></image>
                     <p class="coders__name">Diego B.</p>
                 </div>
                 <div class="coders__person">
-                    <image class="coders__img" src="assets/jigglypuff.png"></image>
+                    <image class="coders__img" src="assets/coders/jigglypuff.png"></image>
                     <p class="coders__name">Ainhoa</p>
                 </div>
                 <div class="coders__person">
-                    <image class="coders__img" src="assets/bullbasaur.png"></image>
+                    <image class="coders__img" src="assets/coders/bullbasaur.png"></image>
                     <p class="coders__name">Víctor</p>
                 </div>
                 <div class="coders__person">
-                    <image class="coders__img" src="assets/abra.png"></image>
+                    <image class="coders__img" src="assets/coders/abra.png"></image>
                     <p class="coders__name">Jassed</p>
                 </div>
                 <div class="coders__person">
-                    <image class="coders__img" src="assets/avatar4.png"></image>
+                    <image class="coders__img" src="assets/coders/avatar4.png"></image>
                     <p class="coders__name">Fernando</p>
                 </div>
                 <div class="coders__person">
-                    <image class="coders__img" src="assets/avatar5.png"></image>
+                    <image class="coders__img" src="assets/coders/avatar5.png"></image>
                     <p class="coders__name">Emily</p>
                 </div>
                 <div class="coders__person">
-                    <image class="coders__img" src="assets/bellsprout.png"></image>
+                    <image class="coders__img" src="assets/coders/bellsprout.png"></image>
                     <p class="coders__name">Virginia</p>
                 </div>
                 <div class="coders__person">
-                    <image class="coders__img" src="assets/dratini.png"></image>
+                    <image class="coders__img" src="assets/coders/dratini.png"></image>
                     <p class="coders__name">Diego A.</p>
                 </div>
                 <div class="coders__person">
-                    <image class="coders__img" src="assets/mankey.png"></image>
+                    <image class="coders__img" src="assets/coders/mankey.png"></image>
                     <p class="coders__name">Raúl</p>
                 </div>
                 <div class="coders__person">
-                    <image class="coders__img" src="assets/mew.png"></image>
+                    <image class="coders__img" src="assets/coders/mew.png"></image>
                     <p class="coders__name">Gisela</p>
                 </div>
                 <div class="coders__person">
-                    <image class="coders__img" src="assets/pidgey.png"></image>
+                    <image class="coders__img" src="assets/coders/pidgey.png"></image>
                     <p class="coders__name">Luis</p>
                 </div>
                 <div class="coders__person">
-                    <image class="coders__img" src="assets/pikachu.png"></image>
+                    <image class="coders__img" src="assets/coders/pikachu.png"></image>
                     <p class="coders__name">Adriana</p>
                 </div>
                 <div class="coders__person">
-                    <image class="coders__img" src="assets/weedle.png"></image>
+                    <image class="coders__img" src="assets/coders/weedle.png"></image>
                     <p class="coders__name">Pedro</p>
                 </div>
                 <div class="coders__person">
-                    <image class="coders__img" src="assets/zubat.png"></image>
+                    <image class="coders__img" src="assets/coders/zubat.png"></image>
                     <p class="coders__name">Jimmy</p>
                 </div>
                 <div class="coders__person">
-                    <image class="coders__img" src="assets/avatar 2.png"></image>
+                    <image class="coders__img" src="assets/coders/avatar 2.png"></image>
                     <p class="coders__name">Thuanny</p>
                 </div>
                 <div class="coders__person">
-                    <image class="coders__img" src="assets/avatar6.png"></image>
+                    <image class="coders__img" src="assets/coders/avatar6.png"></image>
                     <p class="coders__name">Cynthia</p>
                 </div>
                 <div class="coders__person">
-                    <image class="coders__img" src="assets/avatar 3.png"></image>
+                    <image class="coders__img" src="assets/coders/avatar 3.png"></image>
                     <p class="coders__name">Wanda</p>
                 </div>
                 <div class="coders__person">
-                    <image class="coders__img" src="assets/avatar.png"></image>
+                    <image class="coders__img" src="assets/coders/avatar.png"></image>
                     <p class="coders__name">Rubén</p>
                 </div>
                 <div class="coders__person">
-                    <image class="coders__img" src="assets/venonat.png"></image>
+                    <image class="coders__img" src="assets/coders/venonat.png"></image>
                     <p class="coders__name">Jorge</p>
                 </div>
-                <div class="coders__person coders__person-modifier">
-                    <image class="coders__img" src="assets/snorlax.png"></image>
+                <div class="coders__person">
+                    <image class="coders__img" src="assets/coders/snorlax.png"></image>
                     <p class="coders__name">Jes</p>
                 </div>
             </div>
             <div class="buttons">
                 <div class="buttons__top">
                     <button class="buttons__top--addremove" id="buttons__top--add">ADD</button>
-                    <section class="add-modal">            
-                        <div class="add-modal-content">              
-                            <span id="add-modal-close">&times;</span>              
-                            <h2>Add Coder</h2>              
-                            <div class="available-images-container">              
-                            </div>              
-                            <input type="text" id="add-name" placeholder="Name" />                                             
-                            <button id="add-button">Add</button>              
-                        </div>        
+                    <section class="add__modal">            
+                        <div class="add__modal--content">              
+                            <span class="add__modal--close">&times;</span>
+                            <div class="add__coder">              
+                            <h2>Add Coder</h2>
+                        </div>
+                            <div class="available__images--container"></div>                                  
+                            <input type="text" id="add__name" placeholder="Name" />                                             
+                            <button id="add__button">Add</button>                      
                     </section>
                     <button class="buttons__top--addremove">REMOVE</button>
                 </div>
