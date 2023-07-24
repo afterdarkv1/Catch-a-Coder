@@ -34,12 +34,12 @@ callToAction.addEventListener('click', () => {
 });
 
 let catchButton = document.getElementById("buttons__bottom--first");
-let sound = new Audio ('audios/baracus-pokemon-cut-marito.mp3');
+let sound = new Audio ('audios/pokemon-3.mp3');
 catchButton.addEventListener('click', () => {
     sound.play();
 });
 
-let addButton = document.getElementById("buttons__top--add");
+/*let addButton = document.getElementById("buttons__top--add");
 addButton.addEventListener('click', () => {
     modal__container.style.display = "block";
 });
@@ -53,7 +53,7 @@ form.addEventListener('submit', (event) => {
     coders.push({ image: imageForm, name: nameForm });
     console.log(coders);
 });
-}
+}*/
 
 function randomCoders() {
     let randomIndex = Math.floor(Math.random() * coders.length);
@@ -66,5 +66,26 @@ function randomCoders() {
 
 let eventButton = () => randomCoders();
 catchButton.addEventListener("click", eventButton);
+
+//Add Button
+
+let addButton = document.getElementById("buttons__top--add");
+let addModal = document.querySelector(".add-modal");
+let addModalContent = document.querySelector(".add-modal-content");
+let nameInput = document.getElementById("add-name");
+let enter = document.getElementById("add-button");
+
+addButton.addEventListener("click", () => {
+    addModal.style.display = "block";
+});
+
+
+let modalClose = document.getElementById("add-modal-close");
+
+let closeModal = () => {
+    addModal.style.display = "none";
+    nameInput.value = ""; 
+}
+
 
 

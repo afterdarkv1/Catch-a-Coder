@@ -153,21 +153,16 @@
             <div class="buttons">
                 <div class="buttons__top">
                     <button class="buttons__top--addremove" id="buttons__top--add">ADD</button>
-                <div class="modal__container" id="modal__container">
-                <form id="form__content">
-                    <div id="form__name">
-                    <label for="name">NOMBRE DEL CODER</label>
-                    <input type="text" id="name" name="name" required>
-                    </div>
-                    <div id="form__image">
-                    <label for="image">ELIGE UNA IMAGEN</label>
-                    <input type="file" id="image" name="image" required>
-                    </div>
-                    <div id="form__submit">
-                    <input onclick="addCoder()" id="form__submit--input" type="submit" value="Añadir Coder">
-                    </div>
-                </form>
-                </div>
+                    <section class="add-modal">            
+                        <div class="add-modal-content">              
+                            <span id="add-modal-close">&times;</span>              
+                            <h2>Add Coder</h2>              
+                            <div class="available-images-container">              
+                            </div>              
+                            <input type="text" id="add-name" placeholder="Name" />                                             
+                            <button id="add-button">Add</button>              
+                        </div>        
+                    </section>
                     <button class="buttons__top--addremove">REMOVE</button>
                 </div>
                 <div class="buttons__bottom">
