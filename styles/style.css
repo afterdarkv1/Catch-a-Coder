@@ -76,7 +76,8 @@ html {
   justify-content: center;
 }
 
-.buttons__bottom--first, .home__div-button {
+.buttons__bottom--first,
+.home__div-button {
   cursor: pointer;
   display: flex;
   justify-content: center;
