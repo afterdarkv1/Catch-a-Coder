@@ -24,10 +24,22 @@
                 <img class="nav__img" src="assets/logo.png" alt="Catch a CODER" />
               </a>
             </div>
+             <div class="nav__music">
+              <audio id="cancion" src="audios/musica-fondo.mp3"></audio>
+
+              <button id="music" class="paused">Music</button>
+            </div>
         </nav>
     </header>
 
     <main>
+        <div class="modal">
+            <!-- Contenido de la ventana modal -->
+            <div class="modal-content">
+              <!-- Aquí se mostrará el nombre del ganador -->
+              <h2></h2>
+            </div>
+          </div>
         <section id="home" class="home">
             <div class="home__div">
                 <img class="home__div-img" src="assets/imagen-inicial.gif" />
@@ -145,7 +157,7 @@
                     <image class="coders__img" src="assets/venonat.png"></image>
                     <p class="coders__name">Jorge</p>
                 </div>
-                <div class="coders__person coders__person-modifier">
+                <div class="coders__person">
                     <image class="coders__img" src="assets/snorlax.png"></image>
                     <p class="coders__name">Jes</p>
                 </div>
