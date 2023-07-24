@@ -207,7 +207,7 @@ html {
     display: flex;
     justify-content: center;
     &--addremove {
-        @include stylesButton (rgba(132, 147, 208, 1), white, rgba(132, 147, 208, 1), 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px rgba(129, 129, 129, 1));
+        @include stylesButton (map-get($colors, "blue"), map-get($colors, "white"), map-get($colors, "blue"), 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px map-get($colors, "grey-shadow"));
         cursor: pointer 
     }
 }
@@ -231,7 +231,7 @@ html {
     justify-content: center;
 
     &--first {
-        @include stylesButton (#fff, rgba(239, 171, 48, 1), #fff, 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px rgba(129, 129, 129, 1));
+        @include stylesButton (map-get($colors, "white"), map-get($colors, "orange"), map-get($colors, "white"), 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px map-get($colors, "grey-shadow"));
     }
 
     &-second-modifier {
@@ -333,7 +333,7 @@ html {
         display: flex;
         justify-content: center;
         &--addremove {
-            @include stylesButton (rgba(132, 147, 208, 1), #f5f5f5, rgba(132, 147, 208, 1), 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px rgba(129, 129, 129, 1));
+            @include stylesButton (map-get($colors,"blue"), map-get($colors,"white"), map-get($colors,"blue"), 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px map-get($colors,"grey-shadow"));
         }
     }
 
@@ -384,7 +384,7 @@ html {
         justify-content: center;
 
         &--first {
-            @include stylesButton (#fff, rgba(239, 171, 48, 1), #fff, 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px rgba(129, 129, 129, 1));
+            @include stylesButton (map-get($colors, "white"), map-get($colors,"orange"), map-get($colors, "white"), 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px map-get($colors, "grey-shadow"));
         }
 
         &-second-modifier {
