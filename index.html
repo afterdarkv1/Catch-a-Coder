@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header>
         <nav class="nav">
             <div class="nav__logo1">
               <a href="#">
@@ -60,7 +60,7 @@
             </div>
         </section>
         <section id="game" class="game">
-            <div class="coders">
+            <div class="coders" id="coders__id">
                 <div class="coders__person" id="coder1">
                     <image class="coders__img" src="assets/coders/eevee.png"></image>
                     <p class="coders__name">Andrea</p>
@@ -165,13 +165,13 @@
             <div class="buttons">
                 <div class="buttons__top">
                     <button class="buttons__top--addremove" id="buttons__top--add">ADD</button>
-                    <section class="add__modal">            
-                        <div class="add__modal--content">              
-                            <span class="add__modal--close">&times;</span>
+                    <section class="add__modal" id="add__modal--id">            
+                        <div class="add__modal--content" id="add__modal--content--id">              
+                            <span class="add__modal--close" id="add__modal--close">&times;</span>
                             <div class="add__coder">              
                             <h2>Add Coder</h2>
                         </div>
-                            <div class="available__images--container"></div>                                  
+                            <div class="available__images--container" id="available__images--container"></div>                                  
                             <input type="text" id="add__name" placeholder="Name" />                                             
                             <button id="add__button">Add</button>                      
                     </section>

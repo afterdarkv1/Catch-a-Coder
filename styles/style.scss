@@ -52,7 +52,7 @@ html {
     scroll-behavior: smooth;
 }
 
-.header {
+header {
     width: 100%;
     height: 8vh;
     background-color: map-get($colors, "orange");
@@ -148,7 +148,8 @@ html {
     }
 }
 
-//PiKACHU ANIMACIONES
+//PiKACHU ANIMATIONS
+
 .buttons__bottom--first,
 .home__div-button {
     cursor: pointer;
@@ -385,7 +386,7 @@ button:hover .go {
 @media screen and (min-width: 720px) {
 
 
-.header {
+header {
     display: flex;
     padding: 0%;
     width: 100%;

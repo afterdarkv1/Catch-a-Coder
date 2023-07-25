@@ -87,8 +87,8 @@ buttonCatch.addEventListener("click", () => {
 
         // Show the selected coder in a modal windows
 
-        const modal = document.querySelector(".modal");
-        const modalContent = document.querySelector(".modal-content");
+        const modal = document.getElementById("modal");
+        const modalContent = document.getElementById("modal-content");
 
         // Create and add the image element
 
@@ -126,26 +126,25 @@ buttonCatch.addEventListener("click", () => {
 });
 
 //Add Button
+
 let addButton = document.getElementById("buttons__top--add");
-let addModal = document.querySelector(".add__modal");
-let addModalContent = document.querySelector(".add__modal--content");
+let addModal = document.getElementById("add__modal--id");
+let addModalContent = document.getElementById("add__modal--content--id");
 let nameInput = document.getElementById("add__name");
 let enter = document.getElementById("add__button");
 let selectedImage = "";
-let availableImagesContainer = document.querySelector(".available__images--container");
+let availableImagesContainer = document.getElementById("available__images--container");
 
-// Abrir el modal al hacer clic en el botón "Add"
 addButton.addEventListener("click", () => {
     addModal.style.display = "block";
 });
 
-// Cerrar el modal
 let closeModal = () => {
     addModal.style.display = "none";
     nameInput.value = "";
 };
 
-let closeAddModal = document.querySelector(".add__modal--close");
+let closeAddModal = document.getElementById("add__modal--close");
 closeAddModal.addEventListener("click", closeModal);
 
 // Oyente de eventos para imágenes disponibles para seleccionar
@@ -172,6 +171,7 @@ newCoders.forEach((coder) => {
 });
 
 // Agregar evento al botón "Add"
+
 enter.addEventListener("click", () => {
     let name = nameInput.value.trim();
     if (name !== "" && selectedImage !== "") {
@@ -181,6 +181,7 @@ enter.addEventListener("click", () => {
         closeModal();
         
         // Crear elementos para mostrar el nuevo coder agregado
+
         let newCoderDiv = document.createElement("div");
         newCoderDiv.classList.add("coders__person");
 
@@ -195,13 +196,15 @@ enter.addEventListener("click", () => {
         newCoderDiv.appendChild(newCoderImage);
         newCoderDiv.appendChild(newCoderName);
 
-        let codersContainer = document.querySelector(".coders");
+        let codersContainer = document.getElementById("coders__id");
         codersContainer.appendChild(newCoderDiv);
 
         // Eliminar la imagen seleccionada de newCoders
+
         newCoders = newCoders.filter(coder => coder.image !== selectedImage);
 
         // Actualizar las imágenes disponibles en el modal
+
         availableImagesContainer.innerHTML = ""; // Limpiar las imágenes disponibles existentes
 
         newCoders.forEach(coder => {
