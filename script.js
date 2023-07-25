@@ -214,23 +214,23 @@ enter.addEventListener("click", () => {
             imageContainer.classList.add("available__image--container");
 
             // Crear el elemento de imagen con dimensiones más pequeñas
-            let smallImage = document.createElement("img");
-            smallImage.classList.add("available__images");
-            smallImage.src = coder.image;
-            smallImage.style.maxWidth = "90%";
+            let imageNewCoder = document.createElement("img");
+            imageNewCoder.classList.add("available__images");
+            imageNewCoder.src = coder.image;
+            imageNewCoder.style.maxWidth = "90%";
 
             // Oyente de eventos para seleccionar una imagen
-            smallImage.addEventListener("click", () => {
+            imageNewCoder.addEventListener("click", () => {
                 selectedImage = coder.image;
                 let allImages = document.querySelectorAll(".available__images");
                 allImages.forEach(image => {
                     image.style.border = "none"; // Remove border from all images
                 });
-                smallImage.style.border = "2px solid green"; // Add border to the selected image
+                imageNewCoder.style.border = "2px solid green"; // Add border to the selected image
             });
 
             // Append the smaller image to the container and add it to the modal
-            imageContainer.appendChild(smallImage);
+            imageContainer.appendChild(imageNewCoder);
             availableImagesContainer.appendChild(imageContainer);
         });
     } else {
