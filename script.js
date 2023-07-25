@@ -214,58 +214,26 @@ enter.addEventListener("click", () => {
             imageContainer.classList.add("available__image--container");
 
             // Crear el elemento de imagen con dimensiones más pequeñas
-            let smallImage = document.createElement("img");
-            smallImage.classList.add("available__images");
-            smallImage.src = coder.image;
-            smallImage.style.maxWidth = "90%";
+            let imageNewCoder = document.createElement("img");
+            imageNewCoder.classList.add("available__images");
+            imageNewCoder.src = coder.image;
+            imageNewCoder.style.maxWidth = "90%";
 
             // Oyente de eventos para seleccionar una imagen
-            smallImage.addEventListener("click", () => {
+            imageNewCoder.addEventListener("click", () => {
                 selectedImage = coder.image;
                 let allImages = document.querySelectorAll(".available__images");
                 allImages.forEach(image => {
                     image.style.border = "none"; // Remove border from all images
                 });
-                smallImage.style.border = "2px solid green"; // Add border to the selected image
+                imageNewCoder.style.border = "2px solid green"; // Add border to the selected image
             });
 
             // Append the smaller image to the container and add it to the modal
-            imageContainer.appendChild(smallImage);
+            imageContainer.appendChild(imageNewCoder);
             availableImagesContainer.appendChild(imageContainer);
         });
     } else {
         alert("Please enter a name and select an image before adding.");
     }
 });
-
-const removeModal = document.getElementById('remove-modal-id');
-const modalClose = document.getElementById('remove-modal-close-id');
-const removeButton = document.getElementById('remove');
-const modalButton = document.getElementById('remove-button');
-const modalInput = document.getElementById('remove-name').value;
-
-
-removeButton.addEventListener('click', () => removeModal.style.display = "block");
-modalClose.addEventListener('click', () => {
-removeModal.style.display = "none";
-modalInput.value = "";
-});
-
-function removeCoder() {
-    const modalInputValue = document.getElementById('remove-name').value;
-    console.log(modalInput);
-    // Remove from coders array
-    let removedCoders = coders.filter(coder => coder.name.toLowerCase() !== modalInputValue.toLowerCase());
-    if (removedCoders.length < coders.length) {
-      coders = removedCoders;
-      console.log('Coders:', coders);
-    }
-    // Remove from newCoders array
-    let removedNewCoders = newCoders.filter(coder => coder.name.toLowerCase() !== modalInputValue.toLowerCase());
-    if (removedNewCoders.length < newCoders.length) {
-      newCoders = removedNewCoders;
-      console.log('Coders:', newCoders);
-    }
-  }
-  //let buttonRemove = document.getElementById('remove-button');
-  modalButton.addEventListener('click', removeCoder);
