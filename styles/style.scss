@@ -1,9 +1,9 @@
 $colors: (
-  "orange": rgba(239, 171, 48, 1),
-  "blue": rgba(132, 147, 208, 1),
-  "grey": #F5F5F5,
-  "grey-shadow": rgba(129, 129, 129, 1),
-  "white": #fff
+    "orange": rgba(239, 171, 48, 1),
+    "blue": rgba(132, 147, 208, 1),
+    "grey": #F5F5F5,
+    "grey-shadow": rgba(129, 129, 129, 1),
+    "white": #fff
 );
 
 @mixin stylesButton($arg1, $arg2, $arg3, $arg4, $arg5, $arg6, $arg7, $arg8, $arg9) {
@@ -26,198 +26,283 @@ $colors: (
 }
 
 body {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: map-get($colors, "white");
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: #e2d2bb; 
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.9); /* Add a subtle box shadow */
+  }
+  
+  /* On hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #e4c79d;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.9); 
+  }
+  
 html {
   scroll-behavior: smooth;
 }
 
 .header {
-  width: 100%;
-  height: 8vh;
-  background-color: map-get($colors, "orange");
-  position: sticky;
-  top: 0;
-  display: flex;
-  align-items: center;
-  z-index: 7;
-}
-
-.nav {
-  width: 100%;
-
-  &__img {
-    width: 60vw;
-    height: 6vh;
-  }
-}
-
-.home {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  background-image: url(/assets/catch-background.jpg);
-  background-repeat: no-repeat;
-
-  &__div-modifier {
-    color: map-get($colors, "blue");
-    font-size: 2rem;
-  }
-  &__div-coach {
-    width: 20vw;
-    height: 15vh;
-    border-radius: 50%;
-  }
-  &__div-button {
-    cursor: pointer;
-    background-color: map-get($colors, "orange");
-    border-radius: 5rem;
-    height: 3rem;
-    width: 8rem;
-    margin: 1rem;
-    font-weight: bold;
-    color: white;
-    box-shadow: 1px 1px 5px 1px;
-  }
-  &__div {
     width: 100%;
-  }
-  &__div-img {
+    height: 8vh;
+    background-color: map-get($colors, "orange");
+    position: sticky;
+    top: 0;
     display: flex;
-    width: 30vh;
-    height: 20vh;
-  }
-  &__div-modifier3 {
+    align-items: center;
+    z-index: 7;
+}
+// MUSICA PRINCIPAL HEADER
+#music { 
+    position: relative;
+    background-color: map-get($colors, "orange");
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 10px;
+    border: 1px solid map-get($colors, "orange");
+    box-shadow: 0px 0px 2px 1px white;
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
+    animation: pulse-animation_0011 1.1s infinite ease-in-out;
+    }
+    
+    #music.paused::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 2px;
+        height: 65px;
+        background-color: rgb(255, 0, 0);
+        transform: translate(-50%, -50%) rotate(67deg);
+      }
+
+      .nav {
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    
+        &__img {
+            width: 50vw;
+            height: 6vh;
+            margin-right: 5em;
+        }
+    }
+    
+.home {
     display: grid;
-    justify-content: center;
-  }
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 30vh 21vh 15vh 25vh;
+
+    &__div-modifier {
+        color: map-get($colors, "blue");
+        font-size: 2rem;
+    }
+
+    &__div-coach {
+        width: 40vw;
+        height: 18vh;
+        border-radius: 50%;
+    }
+
+    &__div-button {
+        cursor: pointer;
+        background-color: map-get($colors, "orange");
+        border-radius: 5rem;
+        height: 3rem;
+        width: 8rem;
+        margin: 1rem;
+        font-weight: bold;
+        color: white;
+        box-shadow: 1px 1px 5px 1px;
+    }
+
+    &__div {
+        width: 100%;
+    }
+
+    &__div-img {
+        width: 100%;
+    }
+    &__div-modifier3{
+        display: grid;
+        justify-content: center;
+    }
 }
 
-//PIKACHU ANIMATIONS
-
+//PiKACHU ANIMACIONES
 .buttons__bottom--first,
 .home__div-button {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 150px;
-  height: 60px;
-  overflow: hidden;
-  border: 1px solid map-get($colors, "white");
-  border-radius: 50px;
-  padding-left: 35px;
-  box-shadow: 2.9px 2.9px 2.2px rgba(0, 0, 0, 0.019),
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 150px;
+    height: 60px;
+    overflow: hidden;
+    border: 1px solid map-get($colors, "white");
+    border-radius: 50px;
+    padding-left: 35px;
+    box-shadow: 2.9px 2.9px 2.2px rgba(0, 0, 0, 0.019),
     5.2px 5.2px 5.3px rgba(0, 0, 0, 0.023),
     7px 7px 10px rgba(0, 0, 0, 0.025),
     8.7px 8.7px 17.9px rgba(0, 0, 0, 0.024),
     11.3px 11.3px 33.4px rgba(0, 0, 0, 0.023),
     20px 20px 80px rgba(0, 0, 0, 0.02);
-}
+    }
 
 .pika {
-  position: absolute;
-  top: -160%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 150px;
-  height: auto;
-  transition: 0.5s all;
-  animation: tilt 1.1s infinite ease-in-out;
+    position: absolute;
+    top: -160%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: auto;
+    transition: 0.5s all;
+    animation: tilt 1.1s infinite ease-in-out;
 }
 
 button:hover .pika {
-  top: 0%;
+    top: 0%;
 }
 
+.modal {
+    display: none; /* Oculta la ventana modal por defecto */
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    overflow: auto;
+  }
+
+.modal-content {
+    background-color: #fff;
+    margin: 60% auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .modal-content img {
+    max-width: 100%;
+    max-height: 150px;
+    animation: fade-in 3s ease-in-out;
+  }
+  
+ 
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 @keyframes tilt {
-  0% {
-    transform: translateX(-50%) scale(1);
-  }
-  50% {
-    transform: translateX(-50%) scale(1.1);
-  }
-  100% {
-    transform: translateX(-50%) scale(1);
-  }
+    0% {
+        transform: translateX(-50%) scale(1);
+    }
+
+    50% {
+        transform: translateX(-50%) scale(1.1);
+    }
+
+    100% {
+        transform: translateX(-50%) scale(1);
+    }
 }
 
 .go {
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 15px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  line-height: 1;
-  z-index: 2;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 1;
+    z-index: 2;
 }
 
 button:hover .go {
-  visibility: hidden;
+    visibility: hidden;
 }
 
 @keyframes pulse-animation_0011 {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .buttons__bottom-second-modifier {
-  padding-left: 0;
+    padding-left: 0;
 }
 
 //CODERS-PHONE
 
 .coders {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  justify-items: center;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
 
-  &__img {
-    height: 5.8vh;
-    width: 13vw;
-  }
-  &__name {
-    text-align: center;
-  }
+    &__img {
+        height: 5.8vh;
+        width: 13vw;
+    }
 
-  &-second-modifier {
-    background-color: map-get($colors, "blue");
-  }
-  &__person-modifier {
-    grid-column: 2/4;
-    justify-self: center;
-  }
+    &__name {
+        text-align: center;
+    }
+
+    &-second-modifier {
+        background-color: map-get($colors, "blue");
+    }
 }
 
 .buttons__top {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 
-  &--addremove {
-    @include stylesButton(rgba(132, 147, 208, 1), map-get($colors, "white"), rgba(132, 147, 208, 1), 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px rgba(129, 129, 129, 1));
-    cursor: pointer;
-  }
+    &--addremove {
+        @include stylesButton (map-get($colors, "blue"), map-get($colors, "white"), map-get($colors, "blue"), 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px map-get($colors, "grey-shadow"));
+        cursor: pointer 
+    }
 }
 
 .modal__container {
@@ -235,9 +320,9 @@ button:hover .go {
   display: flex;
   justify-content: center;
 
-  &--first {
-    @include stylesButton(#fff, rgba(239, 171, 48, 1), #fff, 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px rgba(129, 129, 129, 1));
-  }
+    &--first {
+        @include stylesButton (map-get($colors, "white"), map-get($colors, "orange"), map-get($colors, "white"), 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px map-get($colors, "grey-shadow"));
+    }
 
   &-second-modifier {
     background-color: map-get($colors, "blue");
@@ -247,7 +332,9 @@ button:hover .go {
 // Media query for desktop
 
 @media screen and (min-width: 720px) {
-  .header {
+
+
+.header {
     display: flex;
     padding: 0%;
     width: 100%;
@@ -255,147 +342,155 @@ button:hover .go {
     background-color: map-get($colors, "orange");
     align-items: center;
     z-index: 7;
-  }
-  .nav__logo1 {
+}
+
+.nav__logo1 {
     height: 100%;
-    width: 100%;
+    width: 90%;
     margin-right: 0.3%;
-  }
-  .nav__img {
+}
+
+.nav__img {
     width: 20%;
-  }
+}
 
-  .home {
+.home {
     &__div {
-      display: flex;
-      align-content: center;
-      justify-content: center;
-      width: 100%;
-      height: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
     }
+
     &__div-img {
-      display: flex;
-      width: 100%;
-      height: 100vh;
-      align-content: center;
+        width: 60%;
+        height: 60%;
+        margin-top: 5%;
+        align-content: center;
     }
+
     &__div-text {
-      font-size: 1.5rem;
-      margin-top:0%;
-      text-align: center;
-      color: map-get($colors, "blue");
-      margin-bottom: 70%;
+        font-size: 1.5rem;
+        margin-top: 5%;
+        text-align: center;
+        color: map-get($colors, "blue");
     }
+
     &__div-coach {
-      display: flex;
-      width: 7vh;
-      height: 7vh;
-      align-content: center;
-      justify-content: center;
-      margin-top: 0%;
-      border-radius: 7.5vh;
+        display: flex;
+        width: 10vh;
+        height: 10vh;
+        align-content: center;
+        justify-content: center;
+        margin-top: 3%;
+        border-radius: 7.5vh;
     }
+
     &__div-button {
-      display: flex;
-      margin-top: 2%;
-      width: 18rem;
-      height: 3.5rem;
-      border-radius: 1.7rem;
-      background-color: map-get($colors, "orange");
-      align-items: center;
-      justify-content: center;
-      font-size: 1rem;
-      font-weight: 900;
-      color: map-get($colors, "white");
-      border-color: map-get($colors, "white");
+        display: flex;
+        margin-top: 2%;
+        width: 18rem;
+        height: 3.5rem;
+        border-radius: 1.7rem;
+        background-color: map-get($colors, "orange");
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        font-weight: 900;
+        color: map-get($colors, "white");
+        border-color: map-get($colors, "white");
+
     }
+
     &__game-link {
-      text-decoration: none;
+        text-decoration: none;
     }
-  }
+}
+    /*DESKTOP CODERS*/
+    .modal-content {
+        margin: 16% auto;
+       
+      }
 
-  /*DESKTOP CODERS*/
+    .coders {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: 20% 20% 20% 20% 20%;
+        place-items: center;
+        text-align: center;
+        gap: 0;
 
-  .coders {
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
-    place-items: center;
-    text-align: center;
-    gap: 0;
-    &__person {
-      margin: 1rem;
+        &__person {
+            margin: 1rem;
+        }
+
+        &__img {
+            height: 6vh;
+            width: 3vw;
+        }
+
     }
-    &__img {
-      height: 6vh;
-      width: 3vw;
+
+    .buttons__top {
+        display: flex;
+        justify-content: center;
+
+        &--addremove {
+            @include stylesButton (map-get($colors,"blue"), map-get($colors,"white"), map-get($colors,"blue"), 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px map-get($colors,"grey-shadow"));
+        }
     }
-    &__person-modifier {
-      grid-column: 5/6;
+
+    .modal__container {
+        display: none;
+        position: fixed; 
+        z-index: 10;
+        background-color: map-get($colors, "orange");
+        margin-left: 25%;
+        margin-top: 10%;
+        height: 50%;
+        width: 50%;
     }
-  }
 
-  .buttons__top {
-    display: flex;
-    justify-content: center;
-
-    &--addremove {
-      @include stylesButton(rgba(132, 147, 208, 1), #f5f5f5, rgba(132, 147, 208, 1), 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px rgba(129, 129, 129, 1));
+    #form__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 0%;
+        margin-left: 2%;
     }
-  }
 
-  .modal__container {
-    display: none;
-    position: fixed;
-    z-index: 10;
-    background-color: map-get($colors, "orange");
-    margin-left: 25%;
-    margin-top: 10%;
-    height: 50%;
-    width: 50%;
-  }
+    #form__name {
+        padding-bottom: 3rem;
+    }
 
-  #form__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 0%;
-    margin-left: 2%;
-  }
+    #form__image {
+        padding-bottom: 3rem;
+        margin-left: 15%;
+    }
 
-  #form__name {
-    padding-bottom: 3rem;
-  }
+    #form__submit--input {
+        height: 3rem;
+        width: 10rem;
+        border: map-get($colors, "white");
+        box-shadow: 1px 1px 5px 1px;
+    }
 
-  #form__image {
-    padding-bottom: 3rem;
-    margin-left: 15%;
-  }
-
-  #form__submit--input {
-    height: 3rem;
-    width: 10rem;
-    border: map-get($colors, "white");
-    box-shadow: 1px 1px 5px 1px;
-  }
-
-  input {
-    height: 100%;
-    width: 100%;
-    border: map-get($colors, "white");
-  }
+    input {
+        height: 100%;
+        width: 100%;
+        border: map-get($colors, "white");
+    }
 
   .buttons__bottom {
     display: flex;
     justify-content: center;
 
-    &--first {
-      @include stylesButton(#fff, rgba(239, 171, 48, 1), #fff, 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px rgba(129, 129, 129, 1));
-    }
+        &--first {
+            @include stylesButton (map-get($colors, "white"), map-get($colors,"orange"), map-get($colors, "white"), 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px map-get($colors, "grey-shadow"));
+        }
 
-    &-second-modifier {
-      background-color: map-get($colors, "blue");
+        &-second-modifier {
+            background-color: map-get($colors, "blue");
+        }
     }
-  }
-}
+    }

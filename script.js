@@ -1,4 +1,3 @@
-
 let coders = [
     {"image": "assets/eevee.png", "name": "Andrea"},
     {"image": "assets/meowth.png", "name": "Jaime"},
@@ -26,30 +25,100 @@ let coders = [
     {"image": "assets/venonat.png", "name": "Jorge"},
     {"image": "assets/snorlax.png", "name": "Jes"},
 ]
-console.log(coders);
+const button = document.getElementById('music');
+const cancion = document.getElementById('cancion');
+let isPlaying = false;
 
-function randomCoders () {
-let randomIndex = Math.floor(Math.random() * coders.length);
-console.log(randomIndex);
-let random = coders[randomIndex];
-console.log(random);
-coders.splice(randomIndex, 1);
-console.log(coders);
-}
+const toggleMusic = () => {
+  isPlaying ? cancion.pause() : cancion.play();
+  isPlaying = !isPlaying;
+  button.classList.toggle('paused', !isPlaying);
+  button.style.animation = isPlaying ? 'pulse-animation_0011 1.1s infinite ease-in-out' : 'none';
+};
+
+button.addEventListener('click', toggleMusic);
+
+
+//BOTON DE CATCH
 let buttonCatch = document.getElementById("buttons__bottom--first");
+buttonCatch.addEventListener("click", () => {
+if (coders.length > 0) {
+  let randomIndex = Math.floor(Math.random() * coders.length);
+  let random = coders[randomIndex];
+  console.log(random);
+  coders.splice(randomIndex, 1);
+  console.log(coders);
+
+  // Mostrar el ganador en una ventana modal
+  const modal = document.querySelector(".modal");
+  const modalContent = document.querySelector(".modal-content");
+
+ // Crear y agregar el elemento de imagen
+
+  const winnerImage = document.createElement("img");
+  winnerImage.src = random.image;
+  modalContent.appendChild(winnerImage);
+
+  // Crear y agregar el elemento de nombre
+  const winnerName = document.createElement("h2");
+  winnerName.textContent = random.name;
+  modalContent.appendChild(winnerName);
+
+  modal.style.display = "block";
+
+  // Cerrar la ventana modal después de 5 segundos
+  setTimeout(() => {
+    modal.style.display = "none";
+    modalContent.removeChild(winnerImage);
+    modalContent.removeChild(winnerName);
+  }, 5000);
+} else {
+  alert("Todos los coders han sido seleccionados");
+
+  // Navegar a la sección con id "home" RESTANDOLE EL HEADER
+  const section = document.getElementById("home");
+  const headerHeight = document.querySelector("header").offsetHeight;
+  const offset = headerHeight > 0 ? headerHeight : 0;
+  window.location.hash = "#home";
+  window.scrollBy({ top: section.getBoundingClientRect().top - offset, behavior: "smooth" });
+}
+});
+
+let callToAction = document.getElementById('home__div-button');
+let soundHome = new Audio ('audios/caught-a-pokemon.mp3');
+callToAction.addEventListener('click', () => {
+    soundHome.play();
+});
+
+let catchButton = document.getElementById("buttons__bottom--first");
+let sound = new Audio ('audios/baracus-pokemon-cut-marito.mp3');
+catchButton.addEventListener('click', () => {
+    sound.play();
+});
+
+let addButton = document.getElementById("buttons__top--add");
+addButton.addEventListener('click', () => {
+    modal__container.style.display = "block";
+});
+
+function addCoder(){
+let form = document.getElementById('form__content');
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    let nameForm = document.getElementById("name").value;
+    let imageForm = document.getElementById("image").value;
+    coders.push({ image: imageForm, name: nameForm });
+    console.log(coders);
+});
+}
+///pendiente saber que hace
 let eventButton = () => randomCoders();
 buttonCatch.addEventListener("click", eventButton);
 
 
-function removeCoder() {
-    const indexToRemove = prompt("__container")('Ingresa el índice del coder que quieres borrar (empezando desde 0):');
-    const index = parseInt(indexToRemove);
 
-    coders.splice(index, 1); // Elimina 1 elemento en la posición 'index' del array
 
-    // ... Resto de tu código para mostrar los coders ...
 
-}
 
 let buttonRemove = document.getElementById("remove");
 buttonRemove.addEventListener("click", removeCoder);
