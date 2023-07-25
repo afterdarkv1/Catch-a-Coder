@@ -64,7 +64,7 @@ html {
   top: 50%;
   left: 50%;
   width: 2px;
-  height: 65px;
+  height: 10vh;
   background-color: rgb(255, 0, 0);
   transform: translate(-50%, -50%) rotate(67deg);
 }
@@ -122,8 +122,7 @@ html {
   justify-content: center;
 }
 
-.buttons__bottom--first,
-.home__div-button {
+.buttons__bottom--first, .home__div-button {
   cursor: pointer;
   display: flex;
   justify-content: center;

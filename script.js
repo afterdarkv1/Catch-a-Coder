@@ -87,8 +87,8 @@ buttonCatch.addEventListener("click", () => {
 
         // Show the selected coder in a modal windows
 
-        const modal = document.querySelector(".modal");
-        const modalContent = document.querySelector(".modal-content");
+        const modal = document.getElementById("modal");
+        const modalContent = document.getElementById("modal-content");
 
         // Create and add the image element
 
