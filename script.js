@@ -42,7 +42,7 @@ buttonCatch.addEventListener("click", eventButton);
 
 
 function removeCoder() {
-    const indexToRemove = prompt('Ingresa el índice del coder que quieres borrar (empezando desde 0):');
+    const indexToRemove = prompt("__container")('Ingresa el índice del coder que quieres borrar (empezando desde 0):');
     const index = parseInt(indexToRemove);
 
     coders.splice(index, 1); // Elimina 1 elemento en la posición 'index' del array
@@ -53,4 +53,4 @@ function removeCoder() {
 
 let buttonRemove = document.getElementById("remove");
 buttonRemove.addEventListener("click", removeCoder);
-console.log(removeCoder);
+console.log(coders);
