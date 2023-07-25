@@ -1,9 +1,9 @@
 $colors: (
-"orange": rgba(239, 171, 48, 1),
-"blue": rgba(132, 147, 208, 1),
-"grey": #F5F5F5,
-"grey-shadow": rgba(129, 129, 129, 1),
-"white": #fff
+    "orange": rgba(239, 171, 48, 1),
+    "blue": rgba(132, 147, 208, 1),
+    "grey": #F5F5F5,
+    "grey-shadow": rgba(129, 129, 129, 1),
+    "white": #fff
 );
 
 @mixin stylesButton ($arg1, $arg2, $arg3, $arg4, $arg5, $arg6, $arg7, $arg8, $arg9) {
@@ -31,11 +31,28 @@ body {
     background-color: map-get($colors, "white");
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: #e2d2bb; 
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.9); /* Add a subtle box shadow */
+  }
+  
+  /* On hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #e4c79d;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.9); 
+  }
+  
 html {
   scroll-behavior: smooth;
 }
 
-.header{
+header {
     width: 100%;
     height: 8vh;
     background-color: map-get($colors, "orange");
@@ -43,19 +60,49 @@ html {
     top: 0;
     display: flex;
     align-items: center;
-    z-index: 70;
+    z-index: 7;
 }
+// MUSICA PRINCIPAL HEADER
+#music { 
+    position: relative;
+    background-color: map-get($colors, "orange");
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 10px;
+    border: 1px solid map-get($colors, "orange");
+    box-shadow: 0px 0px 2px 1px white;
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
+    animation: pulse-animation_0011 1.1s infinite ease-in-out;
+    }
+    
+    #music.paused::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 2px;
+        height: 65px;
+        background-color: rgb(255, 0, 0);
+        transform: translate(-50%, -50%) rotate(67deg);
+      }
 
-.nav {
-  width: 100%;
-
-  &__img {
-    width: 60vw;
-    height: 6vh;
-  }
-}
-
-.home{
+      .nav {
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    
+        &__img {
+            width: 50vw;
+            height: 6vh;
+            margin-right: 5em;
+        }
+    }
+    
+.home {
     display: grid;
     justify-items: center;
     align-items: center;
@@ -64,16 +111,19 @@ html {
     height: 100%;
     grid-template-columns: 100%;
     grid-template-rows: 30vh 21vh 15vh 25vh;
-    &__div-modifier{
+
+    &__div-modifier {
         color: map-get($colors, "blue");
         font-size: 2rem;
     }
-    &__div-coach{
+
+    &__div-coach {
         width: 40vw;
         height: 18vh;
-        border-radius: 50%; 
+        border-radius: 50%;
     }
-    &__div-button{
+
+    &__div-button {
         cursor: pointer;
         background-color: map-get($colors, "orange");
         border-radius: 5rem;
@@ -81,13 +131,15 @@ html {
         width: 8rem;
         margin: 1rem;
         font-weight: bold;
-        color:white;
+        color: white;
         box-shadow: 1px 1px 5px 1px;
     }
-    &__div{
+
+    &__div {
         width: 100%;
     }
-    &__div-img{
+
+    &__div-img {
         width: 100%;
     }
     &__div-modifier3{
@@ -95,8 +147,11 @@ html {
         justify-content: center;
     }
 }
-//PiKACHU ANIMACIONES
-.buttons__bottom--first, .home__div-button {
+
+//PiKACHU ANIMATIONS
+
+.buttons__bottom--first,
+.home__div-button {
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -109,14 +164,14 @@ html {
     border-radius: 50px;
     padding-left: 35px;
     box-shadow: 2.9px 2.9px 2.2px rgba(0, 0, 0, 0.019),
-      5.2px 5.2px 5.3px rgba(0, 0, 0, 0.023),
-      7px 7px 10px rgba(0, 0, 0, 0.025),
-      8.7px 8.7px 17.9px rgba(0, 0, 0, 0.024),
-      11.3px 11.3px 33.4px rgba(0, 0, 0, 0.023),
-      20px 20px 80px rgba(0, 0, 0, 0.02);
-  }
-  
-  .pika {
+    5.2px 5.2px 5.3px rgba(0, 0, 0, 0.023),
+    7px 7px 10px rgba(0, 0, 0, 0.025),
+    8.7px 8.7px 17.9px rgba(0, 0, 0, 0.024),
+    11.3px 11.3px 33.4px rgba(0, 0, 0, 0.023),
+    20px 20px 80px rgba(0, 0, 0, 0.02);
+    }
+
+.pika {
     position: absolute;
     top: -160%;
     left: 50%;
@@ -125,26 +180,63 @@ html {
     height: auto;
     transition: 0.5s all;
     animation: tilt 1.1s infinite ease-in-out;
-  }
-  
-  button:hover .pika {
+}
+
+button:hover .pika {
     top: 0%;
+}
+
+.modal {
+    display: none; /* Oculta la ventana modal por defecto */
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    overflow: auto;
+  }
+
+.modal-content {
+    background-color: #fff;
+    margin: 60% auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 300px;
+    text-align: center;
   }
   
+  .modal-content img {
+    max-width: 100%;
+    max-height: 150px;
+    animation: fade-in 3s ease-in-out;
+  }
   
-  @keyframes tilt {
+ 
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+@keyframes tilt {
     0% {
-      transform: translateX(-50%)  scale(1);
+        transform: translateX(-50%) scale(1);
     }
+
     50% {
-      transform: translateX(-50%)  scale(1.1);
+        transform: translateX(-50%) scale(1.1);
     }
+
     100% {
-      transform: translateX(-50%)  scale(1);
+        transform: translateX(-50%) scale(1);
     }
-  }
-  
-  .go {
+}
+
+.go {
     position: absolute;
     width: 100%;
     top: 50%;
@@ -155,25 +247,30 @@ html {
     letter-spacing: 1px;
     line-height: 1;
     z-index: 2;
-  }
-  
-  button:hover .go{
-  visibility: hidden;
-  }
-  @keyframes pulse-animation_0011 {
+}
+
+button:hover .go {
+    visibility: hidden;
+}
+
+@keyframes pulse-animation_0011 {
     0% {
-      transform:  scale(1);
+        transform: scale(1);
     }
+
     50% {
-      transform:  scale(1.1);
+        transform: scale(1.1);
     }
+
     100% {
-      transform:  scale(1);
+        transform: scale(1);
     }
-  }
-  .buttons__bottom-second-modifier {
+}
+
+.buttons__bottom-second-modifier {
     padding-left: 0;
-  }
+}
+
 //CODERS-PHONE
 
 .coders {
@@ -184,10 +281,12 @@ html {
     align-items: center;
     gap: 1rem;
     margin-top: 2rem;
+
     &__img {
         height: 5.8vh;
         width: 13vw;
     }
+
     &__name {
         text-align: center;
     }
@@ -195,18 +294,77 @@ html {
     &-second-modifier {
         background-color: map-get($colors, "blue");
     }
-    &__person-modifier {
-        grid-column: 2/4;
-        justify-self: center;
-    }
 }
 
 .buttons__top {
     display: flex;
     justify-content: center;
+
     &--addremove {
-        @include stylesButton (rgba(132, 147, 208, 1), white, rgba(132, 147, 208, 1), 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px rgba(129, 129, 129, 1));
+        @include stylesButton (map-get($colors, "blue"), map-get($colors, "white"), map-get($colors, "blue"), 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px map-get($colors, "grey-shadow"));
         cursor: pointer 
+    }
+    .add__modal {
+        display: none;     
+        position: fixed;    
+        z-index: 30;    
+        top: 0;    
+        left: 0;    
+        width: 100%;    
+        height: 100%;    
+        background-color: rgba(0, 0, 0, 0.5);     
+        overflow: auto;   
+        
+        &--content {    
+            background-color: #fff;    
+            margin: 60% auto;    
+            padding: 20px;    
+            border: 1px solid #ccc;    
+            width: 300px;    
+            text-align: center; 
+        }    
+    
+        &--close {    
+            position: relative;    
+            top: 0%;    
+            left: 50%;   
+            font-size: 1.5rem;
+            cursor: pointer;  
+        }    
+        
+        &--close:hover {    
+            color: red; 
+        }    
+        
+        &--content input {    
+            display: block;    
+            margin-bottom: 10px;    
+            width: 100%;    
+            padding: 5px;  
+        }    
+        
+        &--content button {    
+            background-color: #4caf50;    
+            color: white;    
+            padding: 10px 20px;    
+            border: none;    
+            cursor: pointer;  
+        }    
+        
+        &--content button:hover {    
+            background-color: #45a049;  
+        }
+    }
+
+    .available__images--container {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+    }
+    
+    .add__coder {
+    position: relative;
+    top: 0%;
+    bottom: 50%;
     }
 }
 
@@ -215,109 +373,199 @@ html {
   justify-content: center;
 
     &--first {
-        @include stylesButton (#fff, rgba(239, 171, 48, 1), #fff, 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px rgba(129, 129, 129, 1));
+        @include stylesButton (map-get($colors, "white"), map-get($colors, "orange"), map-get($colors, "white"), 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px map-get($colors, "grey-shadow"));
     }
 
     &-second-modifier {
         background-color: map-get($colors, "blue");
     }
 }
+.remove-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+}
 
+.remove-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+.remove-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+remove-modal-close:hover {
+    color: #ff0000;
+}
+
+.remove-modal h2 {
+    margin-bottom: 10px;
+}
+
+.remove-modal input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.remove-modal button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.remove-modal button:hover {
+    background-color: #0056b3;
+}
+.remove-modal-content {
+background-image: url(/assets/backgroundremove.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+}
 // Media query for desktop
 
 @media screen and (min-width: 720px) {
 
-    .header {
-		display: flex;
-		padding: 0%;
-		width: 100%;
-		height: 12vh;
-		background-color: map-get($colors, "orange");
-		align-items: center;
-        z-index: 7;    }
-        .nav__logo1 {
-			height: 100%;
-			width: 100%;
-			margin-right: 0.3%;
-        }
-        .nav__img {
-            width: 20%;
-        }
-        
-        .home{
-            &__div{
-				display: flex;
-				align-content: center;
-				justify-content: center;
-            } 
-            &__div-img{
-            width: 60%;
-                  height: 60%;
-                  margin-top: 5%;
-                  align-content: center;
-                  }
-                  &__div-text{
-                    font-size: 1.5rem;
-                    margin-top: 5%;
-                    text-align: center;
-                    color: map-get($colors, "blue");
-                  }
-                  &__div-coach{
-                    display: flex;
-                    width: 10vh;
-                    height: 10vh;
-                    align-content: center;
-                    justify-content: center;
-                    margin-top: 3%;
-                    border-radius: 7.5vh;
-                  }
-                  &__div-button{
-                    display: flex;
-                    margin-top: 2%;
-                    width: 18rem;
-                    height: 3.5rem;
-                    border-radius: 1.7rem;
-                    background-color: map-get($colors, "orange");
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 1rem;
-                    font-weight: 900;
-                    color: map-get($colors, "white");
-                    border-color: map-get($colors, "white");
-               
-                }
-                &__game-link {
-                    text-decoration: none;
-                }
-          }
-      
-/*DESKTOP CODERS*/
 
-  .coders {
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
-    place-items: center;
-    text-align: center;
-    gap: 0;
-    &__person {
-      margin: 1rem;
+header {
+    display: flex;
+    padding: 0%;
+    width: 100%;
+    height: 12vh;
+    background-color: map-get($colors, "orange");
+    align-items: center;
+    z-index: 7;
+}
+
+.nav__logo1 {
+    height: 100%;
+    width: 90%;
+    margin-right: 0.3%;
+}
+
+.nav__img {
+    width: 20%;
+}
+
+.home {
+    &__div {
+        display: flex;
+        align-content: center;
+        justify-content: center;
     }
-    &__img {
-        height: 6vh;
-        width: 3vw;
+
+    &__div-img {
+        width: 60%;
+        height: 60%;
+        margin-top: 5%;
+        align-content: center;
     }
-    &__person-modifier {
-      grid-column: 5/6;
+
+    &__div-text {
+        font-size: 1.5rem;
+        margin-top: 5%;
+        text-align: center;
+        color: map-get($colors, "blue");
     }
-  }
+
+    &__div-coach {
+        display: flex;
+        width: 10vh;
+        height: 10vh;
+        align-content: center;
+        justify-content: center;
+        margin-top: 3%;
+        border-radius: 7.5vh;
+    }
+
+    &__div-button {
+        display: flex;
+        margin-top: 2%;
+        width: 18rem;
+        height: 3.5rem;
+        border-radius: 1.7rem;
+        background-color: map-get($colors, "orange");
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        font-weight: 900;
+        color: map-get($colors, "white");
+        border-color: map-get($colors, "white");
+
+    }
+
+    &__game-link {
+        text-decoration: none;
+    }
+}
+    /*DESKTOP CODERS*/
+    .modal-content {
+        margin: 16% auto;
+       
+      }
+
+    .coders {
+        min-height: 80vh;
+        max-height: 150vh;
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        place-items: center;
+        text-align: center;
+        gap: 0;
+
+        &__person {
+            margin: 1rem;
+        }
+
+        &__img {
+            height: 6vh;
+            width: 3vw;
+        }
+
+    }
 
     .buttons__top {
         display: flex;
         justify-content: center;
+
         &--addremove {
-            @include stylesButton (rgba(132, 147, 208, 1), #f5f5f5, rgba(132, 147, 208, 1), 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px rgba(129, 129, 129, 1));
+            @include stylesButton (map-get($colors,"blue"), map-get($colors,"white"), map-get($colors,"blue"), 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px map-get($colors,"grey-shadow"));
         }
+        
+        .add__modal {
+   
+            
+            &--content {      
+                margin: 10% auto;    
+                
+            }    
+        
+    }
+
     }
 
   .buttons__bottom {
@@ -325,13 +573,12 @@ html {
     justify-content: center;
 
         &--first {
-            @include stylesButton (#fff, rgba(239, 171, 48, 1), #fff, 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px rgba(129, 129, 129, 1));
+            @include stylesButton (map-get($colors, "white"), map-get($colors,"orange"), map-get($colors, "white"), 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px map-get($colors, "grey-shadow"));
         }
 
         &-second-modifier {
             background-color: map-get($colors, "blue");
         }
-    }
-} 
-
-
+  
+}
+}
