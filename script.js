@@ -84,17 +84,6 @@ buttonCatch.addEventListener("click", () => {
         coders.splice(randomIndex, 1);
         console.log(coders);
 
-        function randomCoders() {
-            let randomIndex = Math.floor(Math.random() * coders.length);
-            console.log(randomIndex);
-            let random = coders[randomIndex];
-            console.log(random);
-            coders.splice(randomIndex, 1);
-            console.log(coders);
-        }
-
-        let eventButton = () => randomCoders();
-        catchButton.addEventListener("click", eventButton);
 
         // Show the selected coder in a modal windows
 
@@ -137,17 +126,20 @@ buttonCatch.addEventListener("click", () => {
 });
 
 //Add Button
-
 let addButton = document.getElementById("buttons__top--add");
 let addModal = document.querySelector(".add__modal");
 let addModalContent = document.querySelector(".add__modal--content");
 let nameInput = document.getElementById("add__name");
 let enter = document.getElementById("add__button");
+let selectedImage = "";
+let availableImagesContainer = document.querySelector(".available__images--container");
 
+// Abrir el modal al hacer clic en el botón "Add"
 addButton.addEventListener("click", () => {
     addModal.style.display = "block";
 });
 
+// Cerrar el modal
 let closeModal = () => {
     addModal.style.display = "none";
     nameInput.value = "";
@@ -156,11 +148,7 @@ let closeModal = () => {
 let closeAddModal = document.querySelector(".add__modal--close");
 closeAddModal.addEventListener("click", closeModal);
 
-let selectedImage = "";
-let availableImagesContainer = document.querySelector(
-    ".available__images--container"
-);
-
+// Oyente de eventos para imágenes disponibles para seleccionar
 newCoders.forEach((coder) => {
     let imageContainer = document.createElement("div");
     imageContainer.classList.add("available__image--container");
@@ -174,27 +162,25 @@ newCoders.forEach((coder) => {
         selectedImage = coder.image;
         let allImages = document.querySelectorAll(".available__images");
         allImages.forEach((image) => {
-            image.style.background = "white"; // Remove border from all images
+            image.style.border = "none"; // Remove border from all images
         });
-        imageNewCoder.style.background = "green";
+        imageNewCoder.style.border = "2px solid green"; // Add border to the selected image
     });
 
     imageContainer.appendChild(imageNewCoder);
     availableImagesContainer.appendChild(imageContainer);
 });
 
-enter.addEventListener("click", () => {
-    addModal.style.display = "block";
-});
-
+// Agregar evento al botón "Add"
 enter.addEventListener("click", () => {
     let name = nameInput.value.trim();
     if (name !== "" && selectedImage !== "") {
         let newCoderValue = { "image": selectedImage, "name": name };
         coders.push(newCoderValue);
-        console.log(coders); 
+        console.log(coders);
         closeModal();
         
+        // Crear elementos para mostrar el nuevo coder agregado
         let newCoderDiv = document.createElement("div");
         newCoderDiv.classList.add("coders__person");
 
@@ -211,5 +197,39 @@ enter.addEventListener("click", () => {
 
         let codersContainer = document.querySelector(".coders");
         codersContainer.appendChild(newCoderDiv);
+
+        // Eliminar la imagen seleccionada de newCoders
+        newCoders = newCoders.filter(coder => coder.image !== selectedImage);
+
+        // Actualizar las imágenes disponibles en el modal
+        availableImagesContainer.innerHTML = ""; // Limpiar las imágenes disponibles existentes
+
+        newCoders.forEach(coder => {
+            // Crear un contenedor div para cada imagen para darle un tamaño más pequeño
+            let imageContainer = document.createElement("div");
+            imageContainer.classList.add("available__image--container");
+
+            // Crear el elemento de imagen con dimensiones más pequeñas
+            let smallImage = document.createElement("img");
+            smallImage.classList.add("available__images");
+            smallImage.src = coder.image;
+            smallImage.style.maxWidth = "90%";
+
+            // Oyente de eventos para seleccionar una imagen
+            smallImage.addEventListener("click", () => {
+                selectedImage = coder.image;
+                let allImages = document.querySelectorAll(".available__images");
+                allImages.forEach(image => {
+                    image.style.border = "none"; // Remove border from all images
+                });
+                smallImage.style.border = "2px solid green"; // Add border to the selected image
+            });
+
+            // Append the smaller image to the container and add it to the modal
+            imageContainer.appendChild(smallImage);
+            availableImagesContainer.appendChild(imageContainer);
+        });
+    } else {
+        alert("Please enter a name and select an image before adding.");
     }
 });
