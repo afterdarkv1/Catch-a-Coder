@@ -87,8 +87,8 @@ buttonCatch.addEventListener("click", () => {
 
         // Show the selected coder in a modal windows
 
-        const modal = document.getElementById("modal");
-        const modalContent = document.getElementById("modal-content");
+        const modal = document.getElementById("modal-id");
+        const modalContent = document.getElementById("modal-content-id");
 
         // Create and add the image element
 
@@ -148,6 +148,7 @@ let closeAddModal = document.getElementById("add__modal--close");
 closeAddModal.addEventListener("click", closeModal);
 
 // Oyente de eventos para imágenes disponibles para seleccionar
+
 newCoders.forEach((coder) => {
     let imageContainer = document.createElement("div");
     imageContainer.classList.add("available__image--container");
