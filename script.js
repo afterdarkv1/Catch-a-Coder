@@ -237,3 +237,35 @@ enter.addEventListener("click", () => {
         alert("Please enter a name and select an image before adding.");
     }
 });
+
+const removeModal = document.getElementById('remove-modal-id');
+const modalClose = document.getElementById('remove-modal-close-id');
+const removeButton = document.getElementById('remove');
+const modalButton = document.getElementById('remove-button');
+const modalInput = document.getElementById('remove-name').value;
+
+
+removeButton.addEventListener('click', () => removeModal.style.display = "block");
+modalClose.addEventListener('click', () => {
+removeModal.style.display = "none";
+modalInput.value = "";
+});
+
+function removeCoder() {
+    const modalInputValue = document.getElementById('remove-name').value;
+    console.log(modalInput);
+    // Remove from coders array
+    let removedCoders = coders.filter(coder => coder.name.toLowerCase() !== modalInputValue.toLowerCase());
+    if (removedCoders.length < coders.length) {
+      coders = removedCoders;
+      console.log('Coders:', coders);
+    }
+    // Remove from newCoders array
+    let removedNewCoders = newCoders.filter(coder => coder.name.toLowerCase() !== modalInputValue.toLowerCase());
+    if (removedNewCoders.length < newCoders.length) {
+      newCoders = removedNewCoders;
+      console.log('Coders:', newCoders);
+    }
+  }
+  //let buttonRemove = document.getElementById('remove-button');
+  modalButton.addEventListener('click', removeCoder);
