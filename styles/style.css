@@ -364,9 +364,11 @@ button:hover .go {
     margin: 16% auto;
   }
   .coders {
+    min-height: 80vh;
+    max-height: 150vh;
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     place-items: center;
     text-align: center;
     gap: 0;
@@ -446,5 +448,59 @@ button:hover .go {
   }
   .buttons__bottom-second-modifier {
     background-color: rgb(132, 147, 208);
+  }
+  .add__modal {
+    display: none;
+    position: fixed;
+    z-index: 30;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+  }
+  .add__modal--content {
+    background-color: #fff;
+    margin: 20% auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 300px;
+    text-align: center;
+  }
+  .add__modal--close {
+    position: relative;
+    top: 0%;
+    left: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  .add__modal--close:hover {
+    color: red;
+  }
+  .add__modal--content input {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 5px;
+  }
+  .add__modal--content button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  .add__modal--content button:hover {
+    background-color: #45a049;
+  }
+  .available__images--container {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+  }
+  .add__coder {
+    position: relative;
+    top: 0%;
+    bottom: 50%;
   }
 }/*# sourceMappingURL=style.css.map */
