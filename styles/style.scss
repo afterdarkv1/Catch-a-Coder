@@ -440,7 +440,11 @@ remove-modal-close:hover {
 .remove-modal button:hover {
     background-color: #0056b3;
 }
-
+.remove-modal-content {
+background-image: url(/assets/backgroundremove.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+}
 // Media query for desktop
 
 @media screen and (min-width: 720px) {
