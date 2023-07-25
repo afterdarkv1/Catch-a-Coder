@@ -1,10 +1,25 @@
-# catch a coder
+# Catch a Coder
 
 ![Catch a coder's logo](assets/logo.png)
 
-## Description
-
 The app is an interactive tool that allows trainers to randomly select different species of Pokémon to add excitement and diversity to their teams. Users can customize the draw rules, such as the number of Pokémon to select to participate in the draw.
+
+## Authors
+
+- [@cyn29](https://github.com/Cyn29)
+- [@Wannda-Abreu](https://github.com/Wannda-Abreu)
+- [@DigitalChampeta](https://github.com/DigitalChampeta)
+- [@afterdarkv1](https://github.com/afterdarkv1)
+- [@BRYAN-MARIANO](https://github.com/BRYAN-MARIANO)
+
+## Color Reference
+
+| Color             | Hex                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Orange | ![](https://via.placeholder.com/10/0a192f?text=+) #0a192f |
+| Example Color | ![#f8f8f8](https://via.placeholder.com/10/f8f8f8?text=+) #f8f8f8 |
+| Example Color | ![#00b48a](https://via.placeholder.com/10/00b48a?text=+) #00b48a |
+| Example Color | ![#00d1a0](https://via.placeholder.com/10/00b48a?text=+) #00d1a0
 
 ## Setting
 
@@ -24,6 +39,7 @@ You can view the website design on Figma by clicking the following link: [Catch 
 - `style.css`: This file contains custom CSS styles for the application.
 - `style.scss`: This file is a style sheet written in Sass that is compiled into style.css.
 - `script.js`: This file contains the JavaScript code for the functionality of the application.
+
 ## External dependencies
 
 The project uses the following external dependencies:
@@ -31,18 +47,6 @@ The project uses the following external dependencies:
 - **Roboto**: Font used on the page. It is loaded from Google Fonts.
 
 Make sure you have an active internet connection to successfully load these dependencies.
-
-## Contribution
-
-If you want to contribute to this project, you can follow the steps below:
-
-1. Fork the repository.
-2. Make your modifications to your own fork.
-3. Submit a pull request to have your changes reviewed.
-
-## Contact
-
-If you have any questions or suggestions about this project, you can contact Catch a Coder through the following email: contacto@Catchacoder.com
 
 ## Project status
 
