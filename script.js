@@ -25,6 +25,7 @@ let coders = [
     { image: "assets/venonat.png", name: "Jorge" },
     { image: "assets/snorlax.png", name: "Jes" },
 ];
+
 console.log(coders);
 
 let callToAction = document.getElementById('home__div-button');
