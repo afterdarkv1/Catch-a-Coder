@@ -297,16 +297,16 @@ function removeCoder() {
         );
     }
 
-  // Remove from newCoders array
-  let removedNewCoders = removeCoderByName(newCoders, modalInputValue);
-  if (removedNewCoders.length < newCoders.length) {
-    newCoders = removedNewCoders;
-    console.log('NewCoders:', newCoders);
-    // Update the UI to reflect the changes
-    updateNewCodersUI();
-  } else {
-    console.log('The name entered does not match any coder in the newCoders list.');
-  }
+    // Remove from newCoders array
+    let removedNewCoders = removeCoderByName(newCoders, modalInputValue);
+    if (removedNewCoders.length < newCoders.length) {
+        newCoders = removedNewCoders;
+        console.log('NewCoders:', newCoders);
+        // Update the UI to reflect the changes
+        updateNewCodersUI();
+    } else {
+        console.log('The name entered does not match any coder in the newCoders list.');
+    }
 
     // Hide the modal after removing the coder
     removeModal.style.display = "none";
@@ -372,21 +372,57 @@ resetButton.addEventListener("click", () => {
 });
 
 window.sr = ScrollReveal();
-    
-    sr.reveal('.nav',{
-        duration: 3000,
-        origin: 'bottom',
-        distance: '-100px'
-    });
 
-    sr.reveal('.coders',{
-        duration: 3000,
-        origin: 'bottom',
-        distance: '-100px'
-    });
+sr.reveal('.nav', {
+    duration: 3000,
+    origin: 'bottom',
+    distance: '-100px'
+});
 
-    sr.reveal('.buttons',{
-        duration: 3000,
-        origin: 'bottom',
-        distance: '-100px'
+sr.reveal('.coders', {
+    duration: 3000,
+    origin: 'bottom',
+    distance: '-100px'
+});
+
+sr.reveal('.buttons', {
+    duration: 3000,
+    origin: 'bottom',
+    distance: '-100px'
+});
+
+sr.reveal('.home__div-text', {
+    duration: 3000,
+    origin: 'bottom',
+    distance: '-100px'
+});
+
+sr.reveal('.pockebola', {
+      distance: '100px',
+      duration: 4000,
+      rotate: {
+        x: 0,
+        y: 180,
+        z: 0
+      },
+      opacity: 0, 
+      scale: 0.8,
+      easing: 'ease-in-out',
+      beforeReveal: (el) => {
+        // Antes de revelar el elemento, aumentamos su opacidad y escala para dar el efecto de rebote inicial
+        el.style.opacity = 1;
+        el.style.transform = 'scale(1)';
+      },
+      afterReveal: (el) => {
+        // Después de revelar el elemento, aplicamos la animación de rebote
+        el.style.transform = 'scale(1.1)';
+        el.style.transition = 'transform 10s';
+        setTimeout(() => {
+          el.style.transform = 'scale(1)';
+        }, 5000);
+      },
+      reset: true
     });
+  
+
+

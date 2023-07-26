@@ -110,10 +110,6 @@ header {
     text-align: center;
     width: 100%;
     height: 100%;
-<<<<<<< HEAD
-    background-repeat: no-repeat;
-=======
->>>>>>> 9bca43b2ba991dcb2f4a66fd9724c308eb4c4a1e
     grid-template-columns: 100%;
     grid-template-rows: 30vh 21vh 15vh 25vh;
 
@@ -123,8 +119,6 @@ header {
         margin-top: 60%;
     }
 
-<<<<<<< HEAD
-=======
     &__div-modifier2 {
         margin-top: 20%;
         display: grid;
@@ -132,7 +126,6 @@ header {
         border-radius: 50%;
     }
    
->>>>>>> 9bca43b2ba991dcb2f4a66fd9724c308eb4c4a1e
     &__div-button {
         cursor: pointer;
         background-color: map-get($colors, "yellow");
