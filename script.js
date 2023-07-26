@@ -84,7 +84,6 @@ buttonCatch.addEventListener("click", () => {
         coders.splice(randomIndex, 1);
         console.log(coders);
 
-
         // Show the selected coder in a modal windows
 
         const modal = document.getElementById("modal-id");
@@ -92,22 +91,22 @@ buttonCatch.addEventListener("click", () => {
 
         // Create and add the image element
 
-        const winnerImage = document.createElement("img");
-        winnerImage.src = random.image;
-        modalContent.appendChild(winnerImage);
+        const randomCoderImage = document.createElement("img");
+        randomCoderImage.src = random.image;
+        modalContent.appendChild(randomCoderImage);
 
         // Create and add the name element
 
-        const winnerName = document.createElement("h2");
-        winnerName.textContent = random.name;
-        modalContent.appendChild(winnerName);
+        const randomCoderName = document.createElement("h2");
+        randomCoderName.textContent = random.name;
+        modalContent.appendChild(randomCoderName);
 
         modal.style.display = "block";
 
         setTimeout(() => {
             modal.style.display = "none";
-            modalContent.removeChild(winnerImage);
-            modalContent.removeChild(winnerName);
+            modalContent.removeChild(randomCoderImage);
+            modalContent.removeChild(randomCoderName);
         }, 5000);
     } else {
         alert("Todos los coders han sido seleccionados");
@@ -133,7 +132,9 @@ let addModalContent = document.getElementById("add__modal--content--id");
 let nameInput = document.getElementById("add__name");
 let enter = document.getElementById("add__button");
 let selectedImage = "";
-let availableImagesContainer = document.getElementById("available__images--container");
+let availableImagesContainer = document.getElementById(
+    "available__images--container"
+);
 
 addButton.addEventListener("click", () => {
     addModal.style.display = "block";
@@ -176,11 +177,11 @@ newCoders.forEach((coder) => {
 enter.addEventListener("click", () => {
     let name = nameInput.value.trim();
     if (name !== "" && selectedImage !== "") {
-        let newCoderValue = { "image": selectedImage, "name": name };
+        let newCoderValue = { image: selectedImage, name: name };
         coders.push(newCoderValue);
         console.log(coders);
         closeModal();
-        
+
         // Crear elementos para mostrar el nuevo coder agregado
 
         let newCoderDiv = document.createElement("div");
@@ -202,35 +203,35 @@ enter.addEventListener("click", () => {
 
         // Eliminar la imagen seleccionada de newCoders
 
-        newCoders = newCoders.filter(coder => coder.image !== selectedImage);
+        newCoders = newCoders.filter((coder) => coder.image !== selectedImage);
 
         // Actualizar las imágenes disponibles en el modal
 
         availableImagesContainer.innerHTML = ""; // Limpiar las imágenes disponibles existentes
 
-        newCoders.forEach(coder => {
+        newCoders.forEach((coder) => {
             // Crear un contenedor div para cada imagen para darle un tamaño más pequeño
             let imageContainer = document.createElement("div");
             imageContainer.classList.add("available__image--container");
 
             // Crear el elemento de imagen con dimensiones más pequeñas
-            let smallImage = document.createElement("img");
-            smallImage.classList.add("available__images");
-            smallImage.src = coder.image;
-            smallImage.style.maxWidth = "90%";
+            let imageNewCoder = document.createElement("img");
+            imageNewCoder.classList.add("available__images");
+            imageNewCoder.src = coder.image;
+            imageNewCoder.style.maxWidth = "90%";
 
             // Oyente de eventos para seleccionar una imagen
-            smallImage.addEventListener("click", () => {
+            imageNewCoder.addEventListener("click", () => {
                 selectedImage = coder.image;
                 let allImages = document.querySelectorAll(".available__images");
-                allImages.forEach(image => {
+                allImages.forEach((image) => {
                     image.style.border = "none"; // Remove border from all images
                 });
-                smallImage.style.border = "2px solid green"; // Add border to the selected image
+                imageNewCoder.style.border = "2px solid green"; // Add border to the selected image
             });
 
             // Append the smaller image to the container and add it to the modal
-            imageContainer.appendChild(smallImage);
+            imageContainer.appendChild(imageNewCoder);
             availableImagesContainer.appendChild(imageContainer);
         });
     } else {
@@ -238,34 +239,118 @@ enter.addEventListener("click", () => {
     }
 });
 
-const removeModal = document.getElementById('remove-modal-id');
-const modalClose = document.getElementById('remove-modal-close-id');
-const removeButton = document.getElementById('remove');
-const modalButton = document.getElementById('remove-button');
-const modalInput = document.getElementById('remove-name').value;
 
+const removeModal = document.getElementById("remove-modal-id");
+const modalClose = document.getElementById("remove-modal-close-id");
+const removeButton = document.getElementById("remove");
+const modalButton = document.getElementById("remove-button");
 
-removeButton.addEventListener('click', () => removeModal.style.display = "block");
-modalClose.addEventListener('click', () => {
-removeModal.style.display = "none";
-modalInput.value = "";
+removeButton.addEventListener(
+    "click",
+    () => (removeModal.style.display = "block")
+);
+modalClose.addEventListener("click", () => {
+    removeModal.style.display = "none";
+    document.getElementById("remove-name").value = ""; // Clear the input field when the modal is closed
 });
 
 function removeCoder() {
-    const modalInputValue = document.getElementById('remove-name').value;
-    console.log(modalInput);
+    const modalInputValue = document.getElementById("remove-name").value.trim();
+
     // Remove from coders array
-    let removedCoders = coders.filter(coder => coder.name.toLowerCase() !== modalInputValue.toLowerCase());
+    let removedCoders = coders.filter(
+        (coder) => coder.name.toLowerCase() !== modalInputValue.toLowerCase()
+    );
     if (removedCoders.length < coders.length) {
-      coders = removedCoders;
-      console.log('Coders:', coders);
+        coders = removedCoders;
+        console.log("Coders:", coders);
+        // Update the UI to reflect the changes
+        updateCodersUI();
+    } else {
+        console.log(
+            "The name entered does not match any coder in the coders list."
+        );
     }
+
     // Remove from newCoders array
-    let removedNewCoders = newCoders.filter(coder => coder.name.toLowerCase() !== modalInputValue.toLowerCase());
+    let removedNewCoders = newCoders.filter(
+        (coder) => coder.name.toLowerCase() !== modalInputValue.toLowerCase()
+    );
     if (removedNewCoders.length < newCoders.length) {
-      newCoders = removedNewCoders;
-      console.log('Coders:', newCoders);
+        newCoders = removedNewCoders;
+        console.log("NewCoders:", newCoders);
+        // Update the UI to reflect the changes
+        updateNewCodersUI();
+    } else {
+        console.log(
+            "The name entered does not match any coder in the newCoders list."
+        );
     }
-  }
-  //let buttonRemove = document.getElementById('remove-button');
-  modalButton.addEventListener('click', removeCoder);
+
+    // Hide the modal after removing the coder
+    removeModal.style.display = "none";
+    document.getElementById("remove-name").value = ""; // Clear the input field after removing the coder
+}
+
+// Add event listener to the remove button
+modalButton.addEventListener("click", removeCoder);
+
+// Function to update the UI with the updated coders data
+function updateCodersUI() {
+    // Get the coders container
+    const codersContainer = document.querySelector(".coders");
+    // Clear the current UI content
+    codersContainer.innerHTML = "";
+
+    // Re-render the coders with the updated data
+    coders.forEach((coder) => {
+        let newCoderDiv = document.createElement("div");
+        newCoderDiv.classList.add("coders__person");
+
+        let newCoderImage = document.createElement("img");
+        newCoderImage.classList.add("coders__img");
+        newCoderImage.src = coder.image;
+
+        let newCoderName = document.createElement("p");
+        newCoderName.classList.add("coders__name");
+        newCoderName.textContent = coder.name;
+
+        newCoderDiv.appendChild(newCoderImage);
+        newCoderDiv.appendChild(newCoderName);
+
+        codersContainer.appendChild(newCoderDiv);
+    });
+}
+
+// Function to update the UI with the updated newCoders data
+function updateNewCodersUI() {
+    // Get the newCoders container
+    const newCodersContainer = document.querySelector(".new-coders");
+    // Clear the current UI content
+    newCodersContainer.innerHTML = "";
+
+    // Re-render the newCoders with the updated data
+    newCoders.forEach((coder) => {
+        let newCoderDiv = document.createElement("div");
+        newCoderDiv.classList.add("coders__person");
+
+        let newCoderImage = document.createElement("img");
+        newCoderImage.classList.add("coders__img");
+        newCoderImage.src = coder.image;
+
+        let newCoderName = document.createElement("p");
+        newCoderName.classList.add("coders__name");
+        newCoderName.textContent = coder.name;
+
+        newCoderDiv.appendChild(newCoderImage);
+        newCoderDiv.appendChild(newCoderName);
+
+        newCodersContainer.appendChild(newCoderDiv);
+    });
+}
+
+const resetButton = document.getElementById("reset-button");
+
+resetButton.addEventListener("click", () => {
+    location.reload();
+});
