@@ -89,14 +89,33 @@ header {
   text-align: center;
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
   background-repeat: no-repeat;
+=======
+>>>>>>> 9bca43b2ba991dcb2f4a66fd9724c308eb4c4a1e
   grid-template-columns: 100%;
   grid-template-rows: 30vh 21vh 15vh 25vh;
 }
 .home__div-modifier {
+<<<<<<< HEAD
   color: #fff;
   font-size: 3rem;
   margin-top: 60%;
+=======
+  color: rgb(147, 195, 217);
+  font-size: 2rem;
+}
+.home__div-coach {
+  width: 40vw;
+  height: 18vh;
+  border-radius: 50%;
+}
+.home__div-modifier2 {
+  margin-top: 20%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-radius: 50%;
+>>>>>>> 9bca43b2ba991dcb2f4a66fd9724c308eb4c4a1e
 }
 .home__div-button {
   cursor: pointer;
@@ -119,6 +138,10 @@ header {
 .home__div-modifier3 {
   display: grid;
   justify-content: center;
+}
+
+.pockebola {
+  width: 15vh;
 }
 
 .buttons__bottom--first,
