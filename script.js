@@ -370,3 +370,23 @@ const resetButton = document.getElementById("reset-button");
 resetButton.addEventListener("click", () => {
     location.reload();
 });
+
+window.sr = ScrollReveal();
+    
+    sr.reveal('.nav',{
+        duration: 3000,
+        origin: 'bottom',
+        distance: '-100px'
+    });
+
+    sr.reveal('.coders',{
+        duration: 3000,
+        origin: 'bottom',
+        distance: '-100px'
+    });
+
+    sr.reveal('.buttons',{
+        duration: 3000,
+        origin: 'bottom',
+        distance: '-100px'
+    });
