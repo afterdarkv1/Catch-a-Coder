@@ -266,8 +266,7 @@ function removeCoder() {
     console.log('Coders:', coders);
     // Update the UI to reflect the changes
     updateCodersUI();
-  } else {
-    console.log('The name entered does not match any coder in the coders list.');
+ 
   }
 
   // Remove from newCoders array
@@ -277,9 +276,7 @@ function removeCoder() {
     console.log('NewCoders:', newCoders);
     // Update the UI to reflect the changes
     updateNewCodersUI();
-  } else {
-    console.log('The name entered does not match any coder in the newCoders list.');
-  }
+  } 
 
   // Hide the modal after removing the coder
   removeModal.style.display = "none";
