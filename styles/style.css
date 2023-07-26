@@ -403,6 +403,12 @@ remove-modal-close:hover {
   background-color: #0056b3;
 }
 
+.remove-modal-content {
+  background-image: url(/assets/backgroundremove.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 @media screen and (min-width: 720px) {
   header {
     display: flex;
