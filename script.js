@@ -109,7 +109,29 @@ buttonCatch.addEventListener("click", () => {
             modalContent.removeChild(randomCoderName);
         }, 5000);
     } else {
-        alert("Todos los coders han sido seleccionados");
+
+        const modal = document.getElementById("modal-id");
+        const modalContent = document.getElementById("modal-content-id");
+
+        const allCodersSelected = document.createElement("img");
+        allCodersSelected.src = 'assets/pikachu-pokemon.jpg';
+        modalContent.appendChild(allCodersSelected);
+
+        // Create and add the name element
+
+        const allCodersSelectedText = document.createElement("h2");
+        allCodersSelectedText.textContent = 'Todos los coders fueron seleccionados';
+        modalContent.appendChild(allCodersSelectedText);
+
+        modal.style.display = "block";
+
+        setTimeout(() => {
+            modal.style.display = "none";
+            modalContent.removeChild(allCodersSelected);
+            modalContent.removeChild(allCodersSelectedText);
+        }, 8000);
+
+        window.history.back();
 
         // Navigate to the section with id "home" RESTATING THE HEADER
 
