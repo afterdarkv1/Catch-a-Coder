@@ -238,6 +238,9 @@ enter.addEventListener("click", () => {
     }
 });
 
+
+
+// Function remove coders
 const removeModal = document.getElementById('remove-modal-id');
 const modalClose = document.getElementById('remove-modal-close-id');
 const removeButton = document.getElementById('remove');
@@ -259,9 +262,7 @@ function removeCoder() {
     console.log('Coders:', coders);
     // Update the UI to reflect the changes
     updateCodersUI();
-  } else {
-    console.log('The name entered does not match any coder in the coders list.');
-  }
+  } 
 
   // Remove from newCoders array
   let removedNewCoders = newCoders.filter(coder => coder.name.toLowerCase() !== modalInputValue.toLowerCase());
@@ -270,10 +271,7 @@ function removeCoder() {
     console.log('NewCoders:', newCoders);
     // Update the UI to reflect the changes
     updateNewCodersUI();
-  } else {
-    console.log('The name entered does not match any coder in the newCoders list.');
-  }
-
+  } 
   // Hide the modal after removing the coder
   removeModal.style.display = "none";
   document.getElementById('remove-name').value = ""; // Clear the input field after removing the coder
