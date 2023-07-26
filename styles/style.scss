@@ -109,8 +109,6 @@ header {
     text-align: center;
     width: 100%;
     height: 100%;
-    background-image: url(/assets/catch-background.jpg);
-    background-repeat: no-repeat;
     grid-template-columns: 100%;
     grid-template-rows: 30vh 21vh 15vh 25vh;
 
@@ -120,12 +118,13 @@ header {
         margin-top: 60%;
     }
 
-    /*&__div-coach {
-        width: 40vw;
-        height: 18vh;
+    &__div-modifier2 {
+        margin-top: 20%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         border-radius: 50%;
-    }*/
-
+    }
+   
     &__div-button {
         cursor: pointer;
         background-color: map-get($colors, "orange");
@@ -151,8 +150,11 @@ header {
         justify-content: center;
     }
     
+   
 }
-
+.pockebola{
+    width: 15vh;
+}
 //PiKACHU ANIMATIONS
 
 .buttons__bottom--first,
