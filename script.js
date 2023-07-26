@@ -238,6 +238,8 @@ enter.addEventListener("click", () => {
         alert("Please enter a name and select an image before adding.");
     }
 });
+
+///function remove
 // Get references to elements with specific IDs in the HTML
 const removeModal = document.getElementById('remove-modal-id');
 const modalClose = document.getElementById('remove-modal-close-id');
