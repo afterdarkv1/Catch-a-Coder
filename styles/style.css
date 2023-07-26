@@ -378,6 +378,7 @@ remove-modal-close:hover {
 
 .remove-modal h2 {
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .remove-modal input {
