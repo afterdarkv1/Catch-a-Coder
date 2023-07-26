@@ -88,17 +88,20 @@ header {
   text-align: center;
   width: 100%;
   height: 100%;
+  background-image: url(/assets/catch-background.jpg);
+  background-repeat: no-repeat;
   grid-template-columns: 100%;
   grid-template-rows: 30vh 21vh 15vh 25vh;
+  /*&__div-coach {
+      width: 40vw;
+      height: 18vh;
+      border-radius: 50%;
+  }*/
 }
 .home__div-modifier {
-  color: rgb(132, 147, 208);
-  font-size: 2rem;
-}
-.home__div-coach {
-  width: 40vw;
-  height: 18vh;
-  border-radius: 50%;
+  color: #fff;
+  font-size: 3rem;
+  margin-top: 60%;
 }
 .home__div-button {
   cursor: pointer;
@@ -107,6 +110,7 @@ header {
   height: 3rem;
   width: 8rem;
   margin: 1rem;
+  margin-top: 17rem;
   font-weight: bold;
   color: white;
   box-shadow: 1px 1px 5px 1px;

@@ -109,19 +109,22 @@ header {
     text-align: center;
     width: 100%;
     height: 100%;
+    background-image: url(/assets/catch-background.jpg);
+    background-repeat: no-repeat;
     grid-template-columns: 100%;
     grid-template-rows: 30vh 21vh 15vh 25vh;
 
     &__div-modifier {
-        color: map-get($colors, "blue");
-        font-size: 2rem;
+        color: map-get($colors, "white");
+        font-size: 3rem;
+        margin-top: 60%;
     }
 
-    &__div-coach {
+    /*&__div-coach {
         width: 40vw;
         height: 18vh;
         border-radius: 50%;
-    }
+    }*/
 
     &__div-button {
         cursor: pointer;
@@ -130,6 +133,7 @@ header {
         height: 3rem;
         width: 8rem;
         margin: 1rem;
+        margin-top: 17rem;
         font-weight: bold;
         color: white;
         box-shadow: 1px 1px 5px 1px;
@@ -146,6 +150,7 @@ header {
         display: grid;
         justify-content: center;
     }
+    
 }
 
 //PiKACHU ANIMATIONS
