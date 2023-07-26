@@ -118,7 +118,12 @@ header {
         font-size: 3rem;
         margin-top: 60%;
     }
-
+    &__div-text {
+        font-size: 1.5rem;
+        margin-top: 5%;
+        text-align: center;
+        color: map-get($colors, "blue");
+    }
     &__div-modifier2 {
         margin-top: 20%;
         display: grid;
@@ -131,11 +136,12 @@ header {
         background-color: map-get($colors, "yellow");
         border-radius: 5rem;
         height: 3rem;
-        width: 8rem;
+        width: 9rem;
         margin: 1rem;
-        margin-top: 17rem;
+        margin-top:20rem;
         font-weight: bold;
         color: white;
+        background: linear-gradient(110deg, map-get($colors, "yellow") 10%,  #FF9442 50%,  map-get($colors, "blue") 50%);
         box-shadow: 1px 1px 5px 1px;
     }
 
@@ -165,8 +171,8 @@ header {
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 150px;
-    height: 60px;
+    width: 12rem;
+    height: 3.7rem;
     overflow: hidden;
     border: 1px solid map-get($colors, "white");
     border-radius: 50px;
@@ -479,33 +485,20 @@ header {
         justify-content: center;
     }
 
-    &__div-img {
-        width: 60%;
-        height: 60%;
-        margin-top: 5%;
-        align-content: center;
-    }
-
     &__div-text {
-        font-size: 1.5rem;
+        font-size: 2.2rem;
         margin-top: 5%;
         text-align: center;
         color: map-get($colors, "blue");
     }
 
-    &__div-coach {
-        display: flex;
-        width: 10vh;
-        height: 10vh;
-        align-content: center;
-        justify-content: center;
-        margin-top: 3%;
-        border-radius: 7.5vh;
+    &__div-modifier2{
+        margin-top: 5%;
     }
 
     &__div-button {
         display: flex;
-        margin-top: 2%;
+        margin-top: 60%;
         width: 18rem;
         height: 3.5rem;
         border-radius: 1.7rem;
@@ -516,6 +509,7 @@ header {
         font-weight: 900;
         color: map-get($colors, "white");
         border-color: map-get($colors, "white");
+        background: linear-gradient(110deg, map-get($colors, "yellow") 10%,  #FF9442 50%,  map-get($colors, "blue") 50%);
 
     }
 
