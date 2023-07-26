@@ -319,7 +319,7 @@ modalButton.addEventListener("click", removeCoder);
 // Function to update the UI with the updated coders data
 function updateCodersUI() {
     // Get the coders container
-    const codersContainer = document.querySelector(".coders");
+    const codersContainer = document.getElementById(".coders");
     // Clear the current UI content
     codersContainer.innerHTML = "";
 
