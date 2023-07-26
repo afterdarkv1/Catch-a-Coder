@@ -365,7 +365,7 @@ sr.reveal('.nav', {
 
 sr.reveal('.home__div-modifier', {
     duration: 4000,
-    origin: 'left',
+    origin: 'right',
     distance: '-100px'
 });
 sr.reveal('.coders', {
