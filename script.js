@@ -237,3 +237,25 @@ enter.addEventListener("click", () => {
         alert("Please enter a name and select an image before adding.");
     }
 });
+
+function removeCoder() {
+    const nameToRemove = prompt('Ingresa el nombre del coder que quieres borrar:');
+    // Remove from coders array
+    let removedCoders = coders.filter(coder => coder.name.toLowerCase() !== nameToRemove.toLowerCase());
+    if (removedCoders.length < coders.length) {
+      coders = removedCoders;
+      console.log('Coders:', coders);
+    } else {
+      console.log('El nombre ingresado no coincide con ningún coder en la lista de coders.');
+    }
+    // Remove from newCoders array
+    let removedNewCoders = newCoders.filter(coder => coder.name.toLowerCase() !== nameToRemove.toLowerCase());
+    if (removedNewCoders.length < newCoders.length) {
+      newCoders = removedNewCoders;
+      console.log('NewCoders:', newCoders);
+    } else {
+      console.log('El nombre ingresado no coincide con ningún coder en la lista de newCoders.');
+    }
+  }
+  let buttonRemove = document.getElementById('remove');
+  buttonRemove.addEventListener('click', removeCoder);
