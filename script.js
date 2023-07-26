@@ -353,3 +353,32 @@ const resetButton = document.getElementById("reset-button");
 resetButton.addEventListener("click", () => {
     location.reload();
 });
+
+//create transitions page
+window.sr = ScrollReveal();
+
+sr.reveal('.nav', {
+    duration: 3000,
+    origin: 'bottom',
+    distance: '-100px'
+});
+
+sr.reveal('.home__div-modifier', {
+    duration: 4000,
+    origin: 'left',
+    distance: '-100px'
+});
+sr.reveal('.coders', {
+    duration: 3000,
+    origin: 'bottom',
+    distance: '-100px'
+});
+
+sr.reveal('.buttons', {
+    duration: 3000,
+    origin: 'bottom',
+    distance: '-100px'
+});
+
+
+
