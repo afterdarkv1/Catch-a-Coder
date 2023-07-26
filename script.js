@@ -242,30 +242,96 @@ const removeModal = document.getElementById('remove-modal-id');
 const modalClose = document.getElementById('remove-modal-close-id');
 const removeButton = document.getElementById('remove');
 const modalButton = document.getElementById('remove-button');
-const modalInput = document.getElementById('remove-name').value;
-
 
 removeButton.addEventListener('click', () => removeModal.style.display = "block");
 modalClose.addEventListener('click', () => {
-removeModal.style.display = "none";
-modalInput.value = "";
+  removeModal.style.display = "none";
+  document.getElementById('remove-name').value = ""; // Clear the input field when the modal is closed
 });
 
 function removeCoder() {
-    const modalInputValue = document.getElementById('remove-name').value;
-    console.log(modalInput);
-    // Remove from coders array
-    let removedCoders = coders.filter(coder => coder.name.toLowerCase() !== modalInputValue.toLowerCase());
-    if (removedCoders.length < coders.length) {
-      coders = removedCoders;
-      console.log('Coders:', coders);
-    }
-    // Remove from newCoders array
-    let removedNewCoders = newCoders.filter(coder => coder.name.toLowerCase() !== modalInputValue.toLowerCase());
-    if (removedNewCoders.length < newCoders.length) {
-      newCoders = removedNewCoders;
-      console.log('Coders:', newCoders);
-    }
+  const modalInputValue = document.getElementById('remove-name').value.trim();
+  
+  // Remove from coders array
+  let removedCoders = coders.filter(coder => coder.name.toLowerCase() !== modalInputValue.toLowerCase());
+  if (removedCoders.length < coders.length) {
+    coders = removedCoders;
+    console.log('Coders:', coders);
+    // Update the UI to reflect the changes
+    updateCodersUI();
+  } else {
+    console.log('The name entered does not match any coder in the coders list.');
   }
-  //let buttonRemove = document.getElementById('remove-button');
-  modalButton.addEventListener('click', removeCoder);
+
+  // Remove from newCoders array
+  let removedNewCoders = newCoders.filter(coder => coder.name.toLowerCase() !== modalInputValue.toLowerCase());
+  if (removedNewCoders.length < newCoders.length) {
+    newCoders = removedNewCoders;
+    console.log('NewCoders:', newCoders);
+    // Update the UI to reflect the changes
+    updateNewCodersUI();
+  } else {
+    console.log('The name entered does not match any coder in the newCoders list.');
+  }
+
+  // Hide the modal after removing the coder
+  removeModal.style.display = "none";
+  document.getElementById('remove-name').value = ""; // Clear the input field after removing the coder
+}
+
+// Add event listener to the remove button
+modalButton.addEventListener('click', removeCoder);
+
+// Function to update the UI with the updated coders data
+function updateCodersUI() {
+  // Get the coders container
+  const codersContainer = document.querySelector(".coders");
+  // Clear the current UI content
+  codersContainer.innerHTML = "";
+  
+  // Re-render the coders with the updated data
+  coders.forEach(coder => {
+    let newCoderDiv = document.createElement("div");
+    newCoderDiv.classList.add("coders__person");
+
+    let newCoderImage = document.createElement("img");
+    newCoderImage.classList.add("coders__img");
+    newCoderImage.src = coder.image;
+
+    let newCoderName = document.createElement("p");
+    newCoderName.classList.add("coders__name");
+    newCoderName.textContent = coder.name;
+
+    newCoderDiv.appendChild(newCoderImage);
+    newCoderDiv.appendChild(newCoderName);
+
+    codersContainer.appendChild(newCoderDiv);
+  });
+}
+
+// Function to update the UI with the updated newCoders data
+function updateNewCodersUI() {
+  // Get the newCoders container
+  const newCodersContainer = document.querySelector(".new-coders");
+  // Clear the current UI content
+  newCodersContainer.innerHTML = "";
+
+  // Re-render the newCoders with the updated data
+  newCoders.forEach(coder => {
+    let newCoderDiv = document.createElement("div");
+    newCoderDiv.classList.add("coders__person");
+
+    let newCoderImage = document.createElement("img");
+    newCoderImage.classList.add("coders__img");
+    newCoderImage.src = coder.image;
+
+    let newCoderName = document.createElement("p");
+    newCoderName.classList.add("coders__name");
+    newCoderName.textContent = coder.name;
+
+    newCoderDiv.appendChild(newCoderImage);
+    newCoderDiv.appendChild(newCoderName);
+
+    newCodersContainer.appendChild(newCoderDiv);
+  });
+}
