@@ -91,22 +91,22 @@ buttonCatch.addEventListener("click", () => {
 
         // Create and add the image element
 
-        const winnerImage = document.createElement("img");
-        winnerImage.src = random.image;
-        modalContent.appendChild(winnerImage);
+        const randomCoderImage = document.createElement("img");
+        randomCoderImage.src = random.image;
+        modalContent.appendChild(randomCoderImage);
 
         // Create and add the name element
 
-        const winnerName = document.createElement("h2");
-        winnerName.textContent = random.name;
-        modalContent.appendChild(winnerName);
+        const randomCoderName = document.createElement("h2");
+        randomCoderName.textContent = random.name;
+        modalContent.appendChild(randomCoderName);
 
         modal.style.display = "block";
 
         setTimeout(() => {
             modal.style.display = "none";
-            modalContent.removeChild(winnerImage);
-            modalContent.removeChild(winnerName);
+            modalContent.removeChild(randomCoderImage);
+            modalContent.removeChild(randomCoderName);
         }, 5000);
     } else {
         alert("Todos los coders han sido seleccionados");
