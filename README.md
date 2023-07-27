@@ -16,10 +16,11 @@ The app is an interactive tool that allows trainers to randomly select different
 
 | Color             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
-| Example Color | ![#F9E520](/assets/circulo.png)
-| Example Color | ![#FF9442](/assets/circulo%20(1).png) 
-| Example Color | ![#9DC2D7](/assets/circulo%20(2).png) 
-| Example Color | ![#8493D0](/assets/circulo%20(3).png) 
+| Yellow | ![#F9E520](/assets/circulo.png) |#F9E520
+| Orange | ![#FF9442](/assets/circulo%20(1).png) |#FF9442
+| Blue   | ![#8493D0](/assets/circulo%20(3).png) |#8493D0
+| Soft blue | ![#9DC2D7](/assets/circulo%20(2).png) |#9DC2D7
+ 
 
 
 ## Setting
