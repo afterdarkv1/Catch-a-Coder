@@ -1,6 +1,6 @@
 # Catch a Coder
 
-![Catch a coder's logo](assets/others/)
+![Catch a coder's logo](assets/others/logo.png)
 
 The app is an interactive tool that allows trainers to randomly select different species of Pokémon to add excitement and diversity to their teams. Users can customize the draw rules, such as the number of Pokémon to select to participate in the draw.
 
