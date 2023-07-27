@@ -110,7 +110,29 @@ buttonCatch.addEventListener("click", () => {
             modalContent.removeChild(winnerName);
         }, 5000);
     } else {
-        alert("Todos los coders han sido seleccionados");
+
+        const modal = document.getElementById("modal-id");
+        const modalContent = document.getElementById("modal-content-id");
+
+        const allCodersSelected = document.createElement("img");
+        allCodersSelected.src = 'assets/pikachu-pokemon.jpg';
+        modalContent.appendChild(allCodersSelected);
+
+        // Create and add the name element
+
+        const allCodersSelectedText = document.createElement("h2");
+        allCodersSelectedText.textContent = 'Todos los coders fueron seleccionados';
+        modalContent.appendChild(allCodersSelectedText);
+
+        modal.style.display = "block";
+
+        setTimeout(() => {
+            modal.style.display = "none";
+            modalContent.removeChild(allCodersSelected);
+            modalContent.removeChild(allCodersSelectedText);
+        }, 8000);
+
+        window.history.back();
 
         // Navigate to the section with id "home" RESTATING THE HEADER
 
@@ -238,41 +260,53 @@ enter.addEventListener("click", () => {
     }
 });
 
-const removeModal = document.getElementById('remove-modal-id');
-const modalClose = document.getElementById('remove-modal-close-id');
-const removeButton = document.getElementById('remove');
-const modalButton = document.getElementById('remove-button');
+const removeModal = document.getElementById("remove-modal-id");
+const modalClose = document.getElementById("remove-modal-close-id");
+const removeButton = document.getElementById("remove");
+const modalButton = document.getElementById("remove-button");
 
-removeButton.addEventListener('click', () => removeModal.style.display = "block");
-modalClose.addEventListener('click', () => {
-  removeModal.style.display = "none";
-  document.getElementById('remove-name').value = ""; // Clear the input field when the modal is closed
+removeButton.addEventListener(
+    "click",
+    () => (removeModal.style.display = "block")
+);
+modalClose.addEventListener("click", () => {
+    removeModal.style.display = "none";
+    document.getElementById("remove-name").value = ""; // Clear the input field when the modal is closed
 });
 
+// Function to remove a coder based on the input value
 function removeCoder() {
-  const modalInputValue = document.getElementById('remove-name').value.trim();
-  
-  // Remove from coders array
-  let removedCoders = coders.filter(coder => coder.name.toLowerCase() !== modalInputValue.toLowerCase());
-  if (removedCoders.length < coders.length) {
-    coders = removedCoders;
-    console.log('Coders:', coders);
-    // Update the UI to reflect the changes
-    updateCodersUI();
-  } else {
-    console.log('The name entered does not match any coder in the coders list.');
-  }
+    const modalInputValue = document.getElementById("remove-name").value.trim();
 
-  // Remove from newCoders array
-  let removedNewCoders = newCoders.filter(coder => coder.name.toLowerCase() !== modalInputValue.toLowerCase());
-  if (removedNewCoders.length < newCoders.length) {
-    newCoders = removedNewCoders;
-    console.log('NewCoders:', newCoders);
-    // Update the UI to reflect the changes
-    updateNewCodersUI();
-  } else {
-    console.log('The name entered does not match any coder in the newCoders list.');
-  }
+    // Remove from coders array
+    let removedCoders = coders.filter(
+        (coder) => coder.name.toLowerCase() !== modalInputValue.toLowerCase()
+    );
+    if (removedCoders.length < coders.length) {
+        coders = removedCoders;
+        console.log("Coders:", coders);
+        // Update the UI to reflect the changes
+        updateCodersUI();
+    } else {
+        console.log(
+            "The name entered does not match any coder in the coders list."
+        );
+    }
+
+    // Remove from newCoders array
+    let removedNewCoders = newCoders.filter(
+        (coder) => coder.name.toLowerCase() !== modalInputValue.toLowerCase()
+    );
+    if (removedNewCoders.length < newCoders.length) {
+        newCoders = removedNewCoders;
+        console.log("NewCoders:", newCoders);
+        // Update the UI to reflect the changes
+        updateNewCodersUI();
+    } else {
+        console.log(
+            "The name entered does not match any coder in the newCoders list."
+        );
+    }
 
   // Hide the modal after removing the coder
   removeModal.style.display = "none";
@@ -280,46 +314,46 @@ function removeCoder() {
 }
 
 // Add event listener to the remove button
-modalButton.addEventListener('click', removeCoder);
+modalButton.addEventListener("click", removeCoder);
 
 // Function to update the UI with the updated coders data
 function updateCodersUI() {
-  // Get the coders container
-  const codersContainer = document.querySelector(".coders");
-  // Clear the current UI content
-  codersContainer.innerHTML = "";
-  
-  // Re-render the coders with the updated data
-  coders.forEach(coder => {
-    let newCoderDiv = document.createElement("div");
-    newCoderDiv.classList.add("coders__person");
+    // Get the coders container
+    const codersContainer = document.querySelector(".coders");
+    // Clear the current UI content
+    codersContainer.innerHTML = "";
 
-    let newCoderImage = document.createElement("img");
-    newCoderImage.classList.add("coders__img");
-    newCoderImage.src = coder.image;
+    // Re-render the coders with the updated data
+    coders.forEach((coder) => {
+        let newCoderDiv = document.createElement("div");
+        newCoderDiv.classList.add("coders__person");
 
-    let newCoderName = document.createElement("p");
-    newCoderName.classList.add("coders__name");
-    newCoderName.textContent = coder.name;
+        let newCoderImage = document.createElement("img");
+        newCoderImage.classList.add("coders__img");
+        newCoderImage.src = coder.image;
 
-    newCoderDiv.appendChild(newCoderImage);
-    newCoderDiv.appendChild(newCoderName);
+        let newCoderName = document.createElement("p");
+        newCoderName.classList.add("coders__name");
+        newCoderName.textContent = coder.name;
 
-    codersContainer.appendChild(newCoderDiv);
-  });
+        newCoderDiv.appendChild(newCoderImage);
+        newCoderDiv.appendChild(newCoderName);
+
+        codersContainer.appendChild(newCoderDiv);
+    });
 }
 
 // Function to update the UI with the updated newCoders data
 function updateNewCodersUI() {
-  // Get the newCoders container
-  const newCodersContainer = document.querySelector(".new-coders");
-  // Clear the current UI content
-  newCodersContainer.innerHTML = "";
+    // Get the newCoders container
+    const newCodersContainer = document.querySelector(".new-coders");
+    // Clear the current UI content
+    newCodersContainer.innerHTML = "";
 
-  // Re-render the newCoders with the updated data
-  newCoders.forEach(coder => {
-    let newCoderDiv = document.createElement("div");
-    newCoderDiv.classList.add("coders__person");
+    // Re-render the newCoders with the updated data
+    newCoders.forEach((coder) => {
+        let newCoderDiv = document.createElement("div");
+        newCoderDiv.classList.add("coders__person");
 
     let newCoderImage = document.createElement("img");
     newCoderImage.classList.add("coders__img");
@@ -332,6 +366,12 @@ function updateNewCodersUI() {
     newCoderDiv.appendChild(newCoderImage);
     newCoderDiv.appendChild(newCoderName);
 
-    newCodersContainer.appendChild(newCoderDiv);
-  });
+        newCodersContainer.appendChild(newCoderDiv);
+    });
 }
+
+const resetButton = document.getElementById("reset-button");
+
+resetButton.addEventListener("click", () => {
+    location.reload();
+});
