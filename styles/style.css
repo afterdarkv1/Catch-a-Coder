@@ -227,12 +227,20 @@ header {
   grid-template-rows: 30vh 21vh 15vh 25vh;
 }
 .home__div-modifier {
-  color: rgb(147, 195, 217);
-  font-size: 2rem;
+  color: #fff;
+  font-size: 3rem;
+  margin-top: 60%;
 }
-.home__div-coach {
-  width: 40vw;
-  height: 18vh;
+.home__div-text {
+  font-size: 1.5rem;
+  margin-top: 5%;
+  text-align: center;
+  color: rgb(147, 195, 217);
+}
+.home__div-modifier2 {
+  margin-top: 20%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   border-radius: 50%;
 }
 .home__div-button {
@@ -240,10 +248,12 @@ header {
   background-color: rgb(249, 229, 32);
   border-radius: 5rem;
   height: 3rem;
-  width: 8rem;
+  width: 9rem;
   margin: 1rem;
+  margin-top: 20rem;
   font-weight: bold;
   color: white;
+  background: linear-gradient(110deg, rgb(249, 229, 32) 10%, #FF9442 50%, rgb(147, 195, 217) 50%);
   box-shadow: 1px 1px 5px 1px;
 }
 .home__div {
@@ -257,6 +267,10 @@ header {
   justify-content: center;
 }
 
+.pockebola {
+  width: 15vh;
+}
+
 .buttons__bottom--first,
 .home__div-button {
   cursor: pointer;
@@ -264,8 +278,8 @@ header {
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 150px;
-  height: 60px;
+  width: 12rem;
+  height: 3.7rem;
   overflow: hidden;
   border: 1px solid #fff;
   border-radius: 50px;
@@ -546,6 +560,7 @@ remove-modal-close:hover {
 
 .remove-modal h2 {
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .remove-modal input {
@@ -592,30 +607,18 @@ remove-modal-close:hover {
     align-content: center;
     justify-content: center;
   }
-  .home__div-img {
-    width: 60%;
-    height: 60%;
-    margin-top: 5%;
-    align-content: center;
-  }
   .home__div-text {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
     margin-top: 5%;
     text-align: center;
     color: rgb(147, 195, 217);
   }
-  .home__div-coach {
-    display: flex;
-    width: 10vh;
-    height: 10vh;
-    align-content: center;
-    justify-content: center;
-    margin-top: 3%;
-    border-radius: 7.5vh;
+  .home__div-modifier2 {
+    margin-top: 5%;
   }
   .home__div-button {
     display: flex;
-    margin-top: 2%;
+    margin-top: 60%;
     width: 18rem;
     height: 3.5rem;
     border-radius: 1.7rem;
@@ -626,6 +629,7 @@ remove-modal-close:hover {
     font-weight: 900;
     color: #fff;
     border-color: #fff;
+    background: linear-gradient(110deg, rgb(249, 229, 32) 10%, #FF9442 50%, rgb(147, 195, 217) 50%);
   }
   .home__game-link {
     text-decoration: none;
