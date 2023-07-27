@@ -101,18 +101,18 @@ buttonCatch.addEventListener("click", () => {
             modal.style.display = "none";
             modalContent.removeChild(randomCoderImage);
             modalContent.removeChild(randomCoderName);
-        }, 1000);
+        }, 5000);
     } else {
         const modal = document.getElementById("modal-id");
         const modalContent = document.getElementById("modal-content-id");
 
         const allCodersSelected = document.createElement("img");
-        allCodersSelected.src = "assets/pikachu-pokemon.jpg";
+        allCodersSelected.src = '/assets/pikachu-catch-button.jpg';
         modalContent.appendChild(allCodersSelected);
 
         const allCodersSelectedText = document.createElement("h2");
         allCodersSelectedText.textContent =
-            "Todos los coders fueron seleccionados";
+            "All coders have been selected.";
         modalContent.appendChild(allCodersSelectedText);
 
         modal.style.display = "block";
@@ -251,20 +251,12 @@ function removeCoder() {
         coders = removedCoders;
         console.log("Coders:", coders);
         updateCodersUI();
-    } else {
-        console.log(
-            "The name entered does not match any coder in the coders list."
-        );
     }
     let removedNewCoders = removeCoderByName(newCoders, modalInputValue);
     if (removedNewCoders.length < newCoders.length) {
         newCoders = removedNewCoders;
         console.log("NewCoders:", newCoders);
         updateNewCodersUI();
-    } else {
-        console.log(
-            "The name entered does not match any coder in the newCoders list."
-        );
     }
     removeModal.style.display = "none";
     document.getElementById("remove-name").value = "";
@@ -315,6 +307,27 @@ function createCoderElement(coder) {
 function clearUIContainer(container) {
     container.innerHTML = "";
 }
+
+modalButton.addEventListener('click', () => {
+    const modal = document.getElementById("modal-id");
+    const modalContent = document.getElementById("modal-content-id");
+
+    const removedCoderAlertImage = document.createElement("img");
+    removedCoderAlertImage.src = '/assets/pikachu-remove-button.jpg';
+    modalContent.appendChild(removedCoderAlertImage);
+
+    const removedCoderAlertText = document.createElement("h2");
+    removedCoderAlertText.textContent = 'The coder has been removed...';
+    modalContent.appendChild(removedCoderAlertText);
+
+    modal.style.display = "block";
+
+    setTimeout(() => {
+        modal.style.display = "none";
+        modalContent.removeChild(removedCoderAlertImage);
+        modalContent.removeChild(removedCoderAlertText);
+    }, 5000);
+});
 
 //RESET BUTTON
 
