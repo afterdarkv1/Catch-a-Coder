@@ -395,11 +395,11 @@ sr.reveal('.coders', {
 
 
 //BOTOM PARA CAMBIAR COLORES
-let modoBlanco = document.querySelector('.modo_blanco');
-let modoVerde = document.querySelector('.modo_verde');
-let modoAzul = document.querySelector('.modo_azul');
-let modoGris = document.querySelector('.modo_gris');
-let modoAmarillo = document.querySelector('.modo_amarillo');
+let modoBlanco = document.querySelector('.white_color');
+let modoVerde = document.querySelector('.green_color');
+let modoAzul = document.querySelector('.blue_color');
+let modoGris = document.querySelector('.gray_color');
+let modoAmarillo = document.querySelector('.yellow_color');
 let letras = document.querySelector('.home__div-text')
 
 
