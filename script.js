@@ -255,7 +255,8 @@ function removeCoder() {
     let removedNewCoders = removeCoderByName(newCoders, modalInputValue);
     if (removedNewCoders.length < newCoders.length) {
         newCoders = removedNewCoders;
-        console.log("NewCoders:", newCoders);
+        console.log('NewCoders:', newCoders);
+        // Update the UI to reflect the changes
         updateNewCodersUI();
     }
     removeModal.style.display = "none";
@@ -336,3 +337,137 @@ const resetButton = document.getElementById("reset-button");
 resetButton.addEventListener("click", () => {
     location.reload();
 });
+
+window.sr = ScrollReveal();
+
+sr.reveal('.home__div-text', {
+    duration: 3000,
+    origin: 'bottom',
+    distance: '-100px'
+});
+
+sr.reveal('.pockebola', {
+    duration: 3000,
+    origin: 'bottom',
+    distance: '-100px'
+});
+
+sr.reveal('.home__div-button', {
+    duration: 3000,
+    origin: 'bottom',
+    distance: '-100px'
+});
+
+sr.reveal('.coders', {
+    duration: 3000,
+    origin: 'bottom',
+    distance: '-100px'
+});
+
+    sr.reveal('.pockebola', {
+      distance: '50px',
+      duration: 1000,
+      rotate: {
+        x: 0,
+        y: 180,
+        z: 0
+      },
+      opacity: 0,
+      scale: 0.8,
+      easing: 'ease-in-out',
+      beforeReveal: (el) => {
+        el.style.opacity = 1;
+        el.style.transform = 'scale(1)';
+      },
+      afterReveal: (el) => {
+        el.style.transform = 'scale(1.1)';
+        el.style.transition = 'transform 0.3s';
+        setTimeout(() => {
+          el.style.transform = 'scale(1)';
+        }, 300);      
+    },
+      reset: true
+    });
+  
+
+    
+  
+
+
+//BOTOM PARA CAMBIAR COLORES
+let modoBlanco = document.querySelector('.modo_blanco');
+let modoVerde = document.querySelector('.modo_verde');
+let modoAzul = document.querySelector('.modo_azul');
+let modoGris = document.querySelector('.modo_gris');
+let modoAmarillo = document.querySelector('.modo_amarillo');
+let letras = document.querySelector('.home__div-text')
+
+
+let body = document.querySelector('body');
+
+
+//BLANCO
+function blanco (){
+  modoBlanco.style.cssText= 'display: none';
+  modoVerde.style.cssText= 'display: inline';
+  modoGris.style.cssText= 'display: none';
+  modoAmarillo.style.cssText= 'display: none';
+  modoAzul.style.cssText ='display: none';
+  body.style.cssText= 'background-color: white';
+  letras.style.cssText = 'color: #93C3D9'
+};
+
+modoBlanco.addEventListener('click', blanco);
+
+//VERDE
+function verde (){
+  modoVerde.style.cssText ='display:none';
+  modoBlanco.style.cssText = 'display: none';
+  modoGris.style.cssText= 'display: none';
+  modoAmarillo.style.cssText= 'display: none';
+  modoAzul.style.cssText ='display: inline';
+  body.style.cssText = 'background-color: #8ECEAC';
+  letras.style.cssText = 'color: white'
+};
+
+modoVerde.addEventListener('click', verde)
+
+//AZUL
+function azul (){
+  modoVerde.style.cssText= 'display: none';
+  modoAzul.style.cssText ='display: none';
+  modoBlanco.style.cssText= 'display: none';
+  modoAmarillo.style.cssText= 'display: none';
+  modoGris.style.cssText= 'display: inline';
+  body.style.cssText= 'background-color: #93C3D9';
+  letras.style.cssText = 'color: white'
+};
+
+modoAzul.addEventListener('click', azul);
+
+//GRIS
+function gris (){
+  modoVerde.style.cssText= 'display: none';
+  modoAzul.style.cssText ='display: none';
+  modoBlanco.style.cssText= 'display: none';
+  modoGris.style.cssText= 'display: none';
+  modoAmarillo.style.cssText= 'display: inline';
+  body.style.cssText= 'background-color: rgb(235, 235, 235)';
+  letras.style.cssText = 'color: #93C3D9'
+};
+
+modoGris.addEventListener('click', gris);
+
+//AMARILLO
+function amarillo (){
+  modoAzul.style.cssText ='display: none';
+  modoBlanco.style.cssText= 'display: inline';
+  modoGris.style.cssText= 'display: none';
+  modoVerde.style.cssText= 'display: none';
+  modoAmarillo.style.cssText= 'display: none';
+  body.style.cssText= 'background-color: #F9EE8B';
+  letras.style.cssText = 'color: #93C3D9'
+};
+
+modoAmarillo.addEventListener('click', amarillo);
+
