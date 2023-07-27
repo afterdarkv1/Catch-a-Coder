@@ -44,14 +44,11 @@ header {
   z-index: 7;
 }
 
-.cambio_color {
-  position: absolute;
+.change_color {
   display: flex;
-  right: 10.2rem;
-  top: 1.2rem;
 }
 
-.modo_verde {
+.green_color {
   background-color: rgb(249, 229, 32);
   padding: 0.5em;
   border-radius: 10px;
@@ -59,8 +56,7 @@ header {
   box-shadow: 0px 0px 2px 1px white;
   color: black;
   font-weight: 900;
-  z-index: 5;
-  position: absolute;
+  z-index: 7;
   display: inline;
   height: 2rem;
   width: 4.5rem;
@@ -69,14 +65,14 @@ header {
           animation: pulse-animation_0011 1.1s infinite ease-in-out;
 }
 
-.modo_verde img {
+.green_color img {
   height: 2rem;
   width: 2rem;
   position: relative;
   bottom: 0.5rem;
 }
 
-.modo_blanco {
+.white_color {
   background-color: rgb(249, 229, 32);
   padding: 0.5em;
   border-radius: 10px;
@@ -85,7 +81,6 @@ header {
   color: black;
   font-weight: 900;
   z-index: 4;
-  position: absolute;
   display: none;
   height: 2rem;
   width: 4.5rem;
@@ -94,14 +89,14 @@ header {
           animation: pulse-animation_0011 1.1s infinite ease-in-out;
 }
 
-.modo_blanco img {
+.white_color img {
   height: 2rem;
   width: 2rem;
   position: relative;
   bottom: 0.5rem;
 }
 
-.modo_azul {
+.blue_color {
   background-color: rgb(249, 229, 32);
   padding: 0.5em;
   border-radius: 10px;
@@ -110,7 +105,6 @@ header {
   color: black;
   font-weight: 900;
   z-index: 3;
-  position: absolute;
   display: none;
   height: 2rem;
   width: 4.5rem;
@@ -119,14 +113,14 @@ header {
           animation: pulse-animation_0011 1.1s infinite ease-in-out;
 }
 
-.modo_azul img {
+.blue_color img {
   height: 2rem;
   width: 2rem;
   position: relative;
   bottom: 0.5rem;
 }
 
-.modo_gris {
+.gray_color {
   background-color: rgb(249, 229, 32);
   padding: 0.5em;
   border-radius: 10px;
@@ -135,7 +129,6 @@ header {
   color: black;
   font-weight: 900;
   z-index: 2;
-  position: absolute;
   display: none;
   height: 2rem;
   width: 4.5rem;
@@ -144,14 +137,14 @@ header {
           animation: pulse-animation_0011 1.1s infinite ease-in-out;
 }
 
-.modo_gris img {
+.gray_color img {
   height: 2rem;
   width: 2rem;
   position: relative;
   bottom: 0.5rem;
 }
 
-.modo_amarillo {
+.yellow_color {
   background-color: rgb(249, 229, 32);
   padding: 0.5em;
   border-radius: 10px;
@@ -160,7 +153,6 @@ header {
   color: black;
   font-weight: 900;
   z-index: 1;
-  position: absolute;
   display: none;
   height: 2rem;
   width: 4.5rem;
@@ -169,7 +161,7 @@ header {
           animation: pulse-animation_0011 1.1s infinite ease-in-out;
 }
 
-.modo_amarillo img {
+.yellow_color img {
   height: 2rem;
   width: 2rem;
   position: relative;
@@ -206,13 +198,13 @@ header {
 .nav {
   align-items: center;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  align-items: center;
   width: 100%;
 }
 .nav__img {
   width: 50vw;
   height: 6vh;
-  margin-right: 5rem;
 }
 
 .home {
@@ -583,12 +575,6 @@ remove-modal-close:hover {
 }
 
 @media screen and (min-width: 720px) {
-  .cambio_color {
-    position: absolute;
-    display: flex;
-    right: 10.2rem;
-    top: 2.2rem;
-  }
   header {
     display: flex;
     padding: 0%;
@@ -598,9 +584,19 @@ remove-modal-close:hover {
     align-items: center;
     z-index: 7;
   }
+  .change_color {
+    display: flex;
+  }
+  .nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
   .nav__logo1 {
     height: 100%;
-    width: 90%;
+    width: 85%;
     margin-right: 0.3%;
   }
   .nav__img {
@@ -695,8 +691,5 @@ remove-modal-close:hover {
   }
   .buttons__bottom-second-modifier {
     background-color: rgb(147, 195, 217);
-  }
-  .cambio_color {
-    right: 12rem;
   }
 }/*# sourceMappingURL=style.css.map */
