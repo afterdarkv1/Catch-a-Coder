@@ -1,6 +1,6 @@
 # Catch a Coder
 
-![Catch a coder's logo](assets/others/logo.png)
+![Catch a coder's logo](assets/others/)
 
 The app is an interactive tool that allows trainers to randomly select different species of Pokémon to add excitement and diversity to their teams. Users can customize the draw rules, such as the number of Pokémon to select to participate in the draw.
 
@@ -34,11 +34,10 @@ You can view the website design on Figma by clicking the following link: [Catch 
 
 ## File structure
 
-- `index.html`: This is the main file that contains the HTML code of the page.
-- `reset.css`: This file contains CSS styles to restore the default styles of the browser.
-- `style.css`: This file contains custom CSS styles for the application.
-- `style.scss`: This file is a style sheet written in Sass that is compiled into style.css.
-- `script.js`: This file contains the JavaScript code for the functionality of the application.
+<div> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> 
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="css3" width="40" height="40"/></div>
 
 ## External dependencies
 
