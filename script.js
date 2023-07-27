@@ -107,12 +107,12 @@ buttonCatch.addEventListener("click", () => {
         const modalContent = document.getElementById("modal-content-id");
 
         const allCodersSelected = document.createElement("img");
-        allCodersSelected.src = "assets/pikachu-pokemon.jpg";
+        allCodersSelected.src = '/assets/others/pikachu-catch-button.jpg';
         modalContent.appendChild(allCodersSelected);
 
         const allCodersSelectedText = document.createElement("h2");
         allCodersSelectedText.textContent =
-            "Todos los coders fueron seleccionados";
+            "All coders have been selected...";
         modalContent.appendChild(allCodersSelectedText);
 
         modal.style.display = "block";
@@ -251,10 +251,6 @@ function removeCoder() {
         coders = removedCoders;
         console.log("Coders:", coders);
         updateCodersUI();
-    } else {
-        console.log(
-            "The name entered does not match any coder in the coders list."
-        );
     }
     let removedNewCoders = removeCoderByName(newCoders, modalInputValue);
     if (removedNewCoders.length < newCoders.length) {
@@ -262,8 +258,6 @@ function removeCoder() {
         console.log('NewCoders:', newCoders);
         // Update the UI to reflect the changes
         updateNewCodersUI();
-    } else {
-        console.log('The name entered does not match any coder in the newCoders list.');
     }
     removeModal.style.display = "none";
     document.getElementById("remove-name").value = "";
@@ -315,6 +309,27 @@ function clearUIContainer(container) {
     container.innerHTML = "";
 }
 
+modalButton.addEventListener('click', () => {
+    const modal = document.getElementById("modal-id");
+    const modalContent = document.getElementById("modal-content-id");
+
+    const removedCoderAlertImage = document.createElement("img");
+    removedCoderAlertImage.src = '/assets/others/pikachu-remove-button.jpg';
+    modalContent.appendChild(removedCoderAlertImage);
+
+    const removedCoderAlertText = document.createElement("h2");
+    removedCoderAlertText.textContent = 'The coder has been removed...';
+    modalContent.appendChild(removedCoderAlertText);
+
+    modal.style.display = "block";
+
+    setTimeout(() => {
+        modal.style.display = "none";
+        modalContent.removeChild(removedCoderAlertImage);
+        modalContent.removeChild(removedCoderAlertText);
+    }, 5000);
+});
+
 //RESET BUTTON
 
 const resetButton = document.getElementById("reset-button");
@@ -331,7 +346,7 @@ sr.reveal('.home__div-text', {
     distance: '-100px'
 });
 
-sr.reveal('.pockebola', {
+sr.reveal('.pokeball', {
     duration: 3000,
     origin: 'bottom',
     distance: '-100px'
@@ -349,7 +364,7 @@ sr.reveal('.coders', {
     distance: '-100px'
 });
 
-    sr.reveal('.pockebola', {
+    sr.reveal('.pokeball', {
       distance: '50px',
       duration: 1000,
       rotate: {
@@ -380,11 +395,12 @@ sr.reveal('.coders', {
 
 
 //BOTOM PARA CAMBIAR COLORES
-let modoBlanco = document.querySelector('.modo_blanco');
-let modoVerde = document.querySelector('.modo_verde');
-let modoAzul = document.querySelector('.modo_azul');
-let modoGris = document.querySelector('.modo_gris');
-let modoAmarillo = document.querySelector('.modo_amarillo');
+let modoBlanco = document.querySelector('.white_color');
+let modoVerde = document.querySelector('.green_color');
+let modoAzul = document.querySelector('.blue_color');
+let modoGris = document.querySelector('.gray_color');
+let modoAmarillo = document.querySelector('.yellow_color');
+let letras = document.querySelector('.home__div-text')
 
 
 let body = document.querySelector('body');
@@ -398,6 +414,7 @@ function blanco (){
   modoAmarillo.style.cssText= 'display: none';
   modoAzul.style.cssText ='display: none';
   body.style.cssText= 'background-color: white';
+  letras.style.cssText = 'color: #93C3D9'
 };
 
 modoBlanco.addEventListener('click', blanco);
@@ -410,6 +427,7 @@ function verde (){
   modoAmarillo.style.cssText= 'display: none';
   modoAzul.style.cssText ='display: inline';
   body.style.cssText = 'background-color: #8ECEAC';
+  letras.style.cssText = 'color: white'
 };
 
 modoVerde.addEventListener('click', verde)
@@ -422,6 +440,7 @@ function azul (){
   modoAmarillo.style.cssText= 'display: none';
   modoGris.style.cssText= 'display: inline';
   body.style.cssText= 'background-color: #93C3D9';
+  letras.style.cssText = 'color: white'
 };
 
 modoAzul.addEventListener('click', azul);
@@ -434,6 +453,7 @@ function gris (){
   modoGris.style.cssText= 'display: none';
   modoAmarillo.style.cssText= 'display: inline';
   body.style.cssText= 'background-color: rgb(235, 235, 235)';
+  letras.style.cssText = 'color: #93C3D9'
 };
 
 modoGris.addEventListener('click', gris);
@@ -446,6 +466,7 @@ function amarillo (){
   modoVerde.style.cssText= 'display: none';
   modoAmarillo.style.cssText= 'display: none';
   body.style.cssText= 'background-color: #F9EE8B';
+  letras.style.cssText = 'color: #93C3D9'
 };
 
 modoAmarillo.addEventListener('click', amarillo);
