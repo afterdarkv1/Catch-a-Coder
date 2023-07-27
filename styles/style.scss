@@ -29,6 +29,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: map-get($colors, "white");
+    transition: 0.7s;
 }
 
 ::-webkit-scrollbar {
@@ -67,6 +68,7 @@ header {
 
 .change_color {
     display: flex;
+   
 }
 .green_color {
     background-color: map-get($colors, "yellow");
@@ -401,6 +403,7 @@ button:hover .go {
 .buttons__bottom-second-modifier {
     padding-left: 0;
 }
+
 
 //CODERS-PHONE
 
