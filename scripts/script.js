@@ -47,7 +47,7 @@ let newCoders = [
 //SOUND ANIMATIONS
 
 const button = document.getElementById("music");
-const cancion = document.getElementById("cancion");
+const cancion = document.getElementById("song");
 let isPlaying = false;
 
 const toggleMusic = () => {
@@ -61,13 +61,13 @@ const toggleMusic = () => {
 
 button.addEventListener("click", toggleMusic);
 
-let callToAction = document.getElementById("home__div-button");
+let callToAction = document.getElementById("home-div-button");
 let soundHome = new Audio("audios/caught-a-pokemon.mp3");
 callToAction.addEventListener("click", () => {
     soundHome.play();
 });
 
-let catchButton = document.getElementById("buttons__bottom--first");
+let catchButton = document.getElementById("buttons-bottom-first-id");
 let sound = new Audio("audios/pokemon-3.mp3");
 catchButton.addEventListener("click", () => {
     sound.play();
@@ -75,7 +75,7 @@ catchButton.addEventListener("click", () => {
 
 //CATCH BUTTON
 
-let buttonCatch = document.getElementById("buttons__bottom--first");
+let buttonCatch = document.getElementById("buttons-bottom-first-id");
 buttonCatch.addEventListener("click", () => {
     if (coders.length > 0) {
         let randomIndex = Math.floor(Math.random() * coders.length);
@@ -129,14 +129,14 @@ buttonCatch.addEventListener("click", () => {
 
 //ADD BUTTON
 
-let addButton = document.getElementById("buttons__top--add");
-let addModal = document.getElementById("add__modal--id");
-let addModalContent = document.getElementById("add__modal--content--id");
-let nameInput = document.getElementById("add__name");
-let enter = document.getElementById("add__button");
+let addButton = document.getElementById("buttons-top-add");
+let addModal = document.getElementById("add-modal-id");
+let addModalContent = document.getElementById("add-modal-content-id");
+let nameInput = document.getElementById("add-name");
+let enter = document.getElementById("add-button");
 let selectedImage = "";
 let availableImagesContainer = document.getElementById(
-    "available__images--container"
+    "available-images-container-id"
 );
 
 addButton.addEventListener("click", () => {
@@ -148,7 +148,7 @@ let closeModal = () => {
     nameInput.value = "";
 };
 
-let closeAddModal = document.getElementById("add__modal--close");
+let closeAddModal = document.getElementById("add-modal-close-id");
 closeAddModal.addEventListener("click", closeModal);
 
 newCoders.forEach((coder) => {
@@ -195,7 +195,7 @@ enter.addEventListener("click", () => {
         newCoderDiv.appendChild(newCoderImage);
         newCoderDiv.appendChild(newCoderName);
 
-        let codersContainer = document.getElementById("coders__id");
+        let codersContainer = document.getElementById("coders-id");
         codersContainer.appendChild(newCoderDiv);
 
         newCoders = newCoders.filter((coder) => coder.image !== selectedImage);
@@ -352,7 +352,7 @@ sr.reveal('.pokeball', {
     distance: '-100px'
 });
 
-sr.reveal('.home__div-button', {
+sr.reveal('.home-div-button', {
     duration: 3000,
     origin: 'bottom',
     distance: '-100px'
@@ -395,79 +395,73 @@ sr.reveal('.coders', {
 
 
 //BOTOM PARA CAMBIAR COLORES
-let modoBlanco = document.querySelector('.white_color');
-let modoVerde = document.querySelector('.green_color');
-let modoAzul = document.querySelector('.blue_color');
-let modoGris = document.querySelector('.gray_color');
-let modoAmarillo = document.querySelector('.yellow_color');
-let letras = document.querySelector('.home__div-text')
+let whiteMode = document.getElementById('white');
+let greenMode = document.getElementById('green');
+let blueMode = document.getElementById('blue');
+let greyMode = document.getElementById('grey');
+let yellowMode = document.getElementById('yellow');
+let words = document.getElementById('home-text')
 
 
 let body = document.querySelector('body');
 
-
-//BLANCO
-function blanco (){
-  modoBlanco.style.cssText= 'display: none';
-  modoVerde.style.cssText= 'display: inline';
-  modoGris.style.cssText= 'display: none';
-  modoAmarillo.style.cssText= 'display: none';
-  modoAzul.style.cssText ='display: none';
+function changeWhiteColor () {
+  whiteMode.style.cssText= 'display: none';
+  greenMode.style.cssText= 'display: inline';
+  greyMode.style.cssText= 'display: none';
+  yellowMode.style.cssText= 'display: none';
+  blueMode.style.cssText ='display: none';
   body.style.cssText= 'background-color: white';
-  letras.style.cssText = 'color: #93C3D9'
+  words.style.cssText = 'color: #93C3D9'
 };
 
-modoBlanco.addEventListener('click', blanco);
+whiteMode.addEventListener('click', changeWhiteColor);
 
-//VERDE
-function verde (){
-  modoVerde.style.cssText ='display:none';
-  modoBlanco.style.cssText = 'display: none';
-  modoGris.style.cssText= 'display: none';
-  modoAmarillo.style.cssText= 'display: none';
-  modoAzul.style.cssText ='display: inline';
+function changeGreenColor () {
+  greenMode.style.cssText ='display:none';
+  whiteMode.style.cssText = 'display: none';
+  greyMode.style.cssText= 'display: none';
+  yellowMode.style.cssText= 'display: none';
+  blueMode.style.cssText ='display: inline';
   body.style.cssText = 'background-color: #8ECEAC';
-  letras.style.cssText = 'color: white'
+  words.style.cssText = 'color: white'
 };
 
-modoVerde.addEventListener('click', verde)
+greenMode.addEventListener('click', changeGreenColor);
 
-//AZUL
-function azul (){
-  modoVerde.style.cssText= 'display: none';
-  modoAzul.style.cssText ='display: none';
-  modoBlanco.style.cssText= 'display: none';
-  modoAmarillo.style.cssText= 'display: none';
-  modoGris.style.cssText= 'display: inline';
+function changeBlueColor (){
+  greenMode.style.cssText= 'display: none';
+  blueMode.style.cssText ='display: none';
+  whiteMode.style.cssText= 'display: none';
+  yellowMode.style.cssText= 'display: none';
+  greyMode.style.cssText= 'display: inline';
   body.style.cssText= 'background-color: #93C3D9';
-  letras.style.cssText = 'color: white'
+  words.style.cssText = 'color: white'
 };
 
-modoAzul.addEventListener('click', azul);
+blueMode.addEventListener('click', changeBlueColor);
 
-//GRIS
-function gris (){
-  modoVerde.style.cssText= 'display: none';
-  modoAzul.style.cssText ='display: none';
-  modoBlanco.style.cssText= 'display: none';
-  modoGris.style.cssText= 'display: none';
-  modoAmarillo.style.cssText= 'display: inline';
+function changeGreyColor () {
+  greenMode.style.cssText= 'display: none';
+  blueMode.style.cssText ='display: none';
+  whiteMode.style.cssText= 'display: none';
+  greyMode.style.cssText= 'display: none';
+  yellowMode.style.cssText= 'display: inline';
   body.style.cssText= 'background-color: rgb(235, 235, 235)';
-  letras.style.cssText = 'color: #93C3D9'
+  words.style.cssText = 'color: #93C3D9'
 };
 
-modoGris.addEventListener('click', gris);
+greyMode.addEventListener('click', changeGreyColor);
 
-//AMARILLO
-function amarillo (){
-  modoAzul.style.cssText ='display: none';
-  modoBlanco.style.cssText= 'display: inline';
-  modoGris.style.cssText= 'display: none';
-  modoVerde.style.cssText= 'display: none';
-  modoAmarillo.style.cssText= 'display: none';
+function changeYellowColor () {
+  blueMode.style.cssText ='display: none';
+  whiteMode.style.cssText= 'display: inline';
+  greyMode.style.cssText= 'display: none';
+  greenMode.style.cssText= 'display: none';
+  yellowMode.style.cssText= 'display: none';
   body.style.cssText= 'background-color: #F9EE8B';
-  letras.style.cssText = 'color: #93C3D9'
+  words.style.cssText = 'color: #93C3D9'
 };
 
-modoAmarillo.addEventListener('click', amarillo);
+yellowMode.addEventListener('click', changeYellowColor);
 

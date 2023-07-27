@@ -16,14 +16,12 @@ body {
   width: 10px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background-color: #e2d2bb;
   border-radius: 5px;
-  box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.9); /* Add a subtle box shadow */
+  box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.9);
 }
 
-/* On hover */
 ::-webkit-scrollbar-thumb:hover {
   background-color: #e4c79d;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.9);
@@ -41,14 +39,13 @@ header {
   top: 0;
   display: flex;
   align-items: center;
-  z-index: 7;
+  z-index: 1;
 }
 
-.change_color {
+.change {
   display: flex;
 }
-
-.green_color {
+.change__white {
   background-color: rgb(249, 229, 32);
   padding: 0.5em;
   border-radius: 10px;
@@ -56,21 +53,18 @@ header {
   box-shadow: 0px 0px 2px 1px white;
   color: black;
   font-weight: 900;
-  z-index: 7;
   display: inline;
   height: 2rem;
   width: 4.5rem;
   cursor: pointer;
 }
-
-.green_color img {
+.change__white img {
   height: 2rem;
   width: 2rem;
   position: relative;
   bottom: 0.5rem;
 }
-
-.white_color {
+.change__green {
   background-color: rgb(249, 229, 32);
   padding: 0.5em;
   border-radius: 10px;
@@ -78,21 +72,18 @@ header {
   box-shadow: 0px 0px 2px 1px white;
   color: black;
   font-weight: 900;
-  z-index: 4;
   display: none;
   height: 2rem;
   width: 4.5rem;
   cursor: pointer;
 }
-
-.white_color img {
+.change__green img {
   height: 2rem;
   width: 2rem;
   position: relative;
   bottom: 0.5rem;
 }
-
-.blue_color {
+.change__blue {
   background-color: rgb(249, 229, 32);
   padding: 0.5em;
   border-radius: 10px;
@@ -100,21 +91,18 @@ header {
   box-shadow: 0px 0px 2px 1px white;
   color: black;
   font-weight: 900;
-  z-index: 3;
   display: none;
   height: 2rem;
   width: 4.5rem;
   cursor: pointer;
 }
-
-.blue_color img {
+.change__blue img {
   height: 2rem;
   width: 2rem;
   position: relative;
   bottom: 0.5rem;
 }
-
-.gray_color {
+.change__grey {
   background-color: rgb(249, 229, 32);
   padding: 0.5em;
   border-radius: 10px;
@@ -122,21 +110,18 @@ header {
   box-shadow: 0px 0px 2px 1px white;
   color: black;
   font-weight: 900;
-  z-index: 2;
   display: none;
   height: 2rem;
   width: 4.5rem;
   cursor: pointer;
 }
-
-.gray_color img {
+.change__grey img {
   height: 2rem;
   width: 2rem;
   position: relative;
   bottom: 0.5rem;
 }
-
-.yellow_color {
+.change__yellow {
   background-color: rgb(249, 229, 32);
   padding: 0.5em;
   border-radius: 10px;
@@ -144,14 +129,12 @@ header {
   box-shadow: 0px 0px 2px 1px white;
   color: black;
   font-weight: 900;
-  z-index: 1;
   display: none;
   height: 2rem;
   width: 4.5rem;
   cursor: pointer;
 }
-
-.yellow_color img {
+.change__yellow img {
   height: 2rem;
   width: 2rem;
   position: relative;
@@ -263,7 +246,6 @@ header {
   border: 1px solid #fff;
   border-radius: 50px;
   padding-left: 35px;
-  box-shadow: 2.9px 2.9px 2.2px rgba(0, 0, 0, 0.019), 5.2px 5.2px 5.3px rgba(0, 0, 0, 0.023), 7px 7px 10px rgba(0, 0, 0, 0.025), 8.7px 8.7px 17.9px rgba(0, 0, 0, 0.024), 11.3px 11.3px 33.4px rgba(0, 0, 0, 0.023), 20px 20px 80px rgba(0, 0, 0, 0.02);
 }
 
 .pika {
@@ -282,18 +264,17 @@ button:hover .pika {
 }
 
 .modal {
-  display: none; /* Oculta la ventana modal por defecto */
+  display: none;
   position: fixed;
-  z-index: 9999;
+  z-index: 2;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  background-color: rgba(0, 0, 0, 0.5);
   overflow: auto;
 }
-
-.modal-content {
+.modal__content {
   background-color: #fff;
   margin: 60% auto;
   padding: 20px;
@@ -301,8 +282,7 @@ button:hover .pika {
   width: 300px;
   text-align: center;
 }
-
-.modal-content img {
+.modal__content img {
   max-width: 100%;
   max-height: 150px;
   animation: fade-in 3s ease-in-out;
@@ -337,7 +317,6 @@ button:hover .pika {
   font-weight: 900;
   letter-spacing: 1px;
   line-height: 1;
-  z-index: 2;
 }
 
 button:hover .go {
@@ -398,7 +377,7 @@ button:hover .go {
 .buttons__top .add__modal {
   display: none;
   position: fixed;
-  z-index: 30;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
@@ -469,7 +448,7 @@ button:hover .go {
   background-color: rgb(147, 195, 217);
 }
 
-.remove-modal {
+.remove__modal {
   display: none;
   position: fixed;
   top: 0;
@@ -477,10 +456,9 @@ button:hover .go {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: 9999;
+  z-index: 1;
 }
-
-.remove-modal-content {
+.remove__modal--content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -491,24 +469,20 @@ button:hover .go {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   width: 300px;
 }
-
-.remove-modal-close {
+.remove__modal--close {
   position: absolute;
   top: 10px;
   right: 10px;
   cursor: pointer;
 }
-
-remove-modal-close:hover {
+.remove__modal--close:hover {
   color: #ff0000;
 }
-
-.remove-modal h2 {
+.remove__modal h2 {
   margin-bottom: 10px;
   text-align: center;
 }
-
-.remove-modal input {
+.remove__modal input {
   display: block;
   width: 100%;
   padding: 10px;
@@ -516,8 +490,7 @@ remove-modal-close:hover {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-
-.remove-modal button {
+.remove__modal button {
   display: block;
   width: 100%;
   padding: 10px;
@@ -536,7 +509,7 @@ remove-modal-close:hover {
     height: 12vh;
     background-color: rgb(249, 229, 32);
     align-items: center;
-    z-index: 7;
+    z-index: 1;
   }
   .change_color {
     display: flex;
@@ -589,8 +562,7 @@ remove-modal-close:hover {
   .home__game-link {
     text-decoration: none;
   }
-  /*DESKTOP CODERS*/
-  .modal-content {
+  .modal__content {
     margin: 16% auto;
   }
   .coders {
