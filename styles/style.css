@@ -60,7 +60,6 @@ header {
   height: 2rem;
   width: 4.5rem;
   cursor: pointer;
-  animation: pulse-animation_0011 1.1s infinite ease-in-out;
 }
 
 .green_color img {
@@ -83,7 +82,6 @@ header {
   height: 2rem;
   width: 4.5rem;
   cursor: pointer;
-  animation: pulse-animation_0011 1.1s infinite ease-in-out;
 }
 
 .white_color img {
@@ -106,7 +104,6 @@ header {
   height: 2rem;
   width: 4.5rem;
   cursor: pointer;
-  animation: pulse-animation_0011 1.1s infinite ease-in-out;
 }
 
 .blue_color img {
@@ -129,7 +126,6 @@ header {
   height: 2rem;
   width: 4.5rem;
   cursor: pointer;
-  animation: pulse-animation_0011 1.1s infinite ease-in-out;
 }
 
 .gray_color img {
@@ -152,7 +148,6 @@ header {
   height: 2rem;
   width: 4.5rem;
   cursor: pointer;
-  animation: pulse-animation_0011 1.1s infinite ease-in-out;
 }
 
 .yellow_color img {
@@ -174,7 +169,6 @@ header {
   color: black;
   font-weight: 900;
   cursor: pointer;
-  animation: pulse-animation_0011 1.1s infinite ease-in-out;
 }
 
 #music.paused::after {
