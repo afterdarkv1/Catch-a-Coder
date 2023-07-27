@@ -101,7 +101,7 @@ buttonCatch.addEventListener("click", () => {
             modal.style.display = "none";
             modalContent.removeChild(randomCoderImage);
             modalContent.removeChild(randomCoderName);
-        }, 5000);
+        }, 1000);
     } else {
         const modal = document.getElementById("modal-id");
         const modalContent = document.getElementById("modal-content-id");

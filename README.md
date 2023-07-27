@@ -1,6 +1,6 @@
 # Catch a Coder
 
-![Catch a coder's logo](assets/others/logo.png)
+![Catch a coder's logo](assets/logo-readme.png)
 
 The app is an interactive tool that allows trainers to randomly select different species of Pokémon to add excitement and diversity to their teams. Users can customize the draw rules, such as the number of Pokémon to select to participate in the draw.
 
@@ -16,10 +16,10 @@ The app is an interactive tool that allows trainers to randomly select different
 
 | Color             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
-| Orange | ![](https://via.placeholder.com/10/0a192f?text=+) #0a192f |
-| Example Color | ![#f8f8f8](https://via.placeholder.com/10/f8f8f8?text=+) #f8f8f8 |
-| Example Color | ![#00b48a](https://via.placeholder.com/10/00b48a?text=+) #00b48a |
-| Example Color | ![#00d1a0](https://via.placeholder.com/10/00b48a?text=+) #00d1a0
+| Yellow | ![#F9E520](/assets/colors/circulo.png) #F9E520 |
+| Orange | ![#FF9442](/assets/colors/%20(1).png) #FF9442 |
+| Blue   | ![#8493D0](/assets/colors/circulo%20(3).png) #8493D0 |
+| Soft blue | ![#9DC2D7](/assets/colors/circulo%20(2).png) #9DC2D7 |
 
 ## Setting
 

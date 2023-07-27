@@ -19,10 +19,10 @@ $colors: (
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -48,7 +48,7 @@ body {
   }
   
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -330,9 +330,6 @@ button:hover .pika {
         animation: fade-in 3s ease-in-out;
       }
   }
-
-
-  
  
   @keyframes fade-in {
     from {
@@ -488,8 +485,8 @@ button:hover .go {
 }
 
 .buttons__bottom {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 
     &--first {
         @include stylesButton (map-get($colors, "white"), map-get($colors, "yellow"), map-get($colors, "white"), 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px map-get($colors, "grey-shadow"));
@@ -679,9 +676,9 @@ header {
 
     }
 
-    .buttons__bottom {
-        display: flex;
-        justify-content: center;
+  .buttons__bottom {
+    display: flex;
+    justify-content: center;
 
         &--first {
             @include stylesButton (map-get($colors, "white"), map-get($colors,"yellow"), map-get($colors, "white"), 5rem, 3rem, 8rem, 1rem, bold, 1px 1px 5px 1px map-get($colors, "grey-shadow"));
