@@ -325,13 +325,19 @@ resetButton.addEventListener("click", () => {
 
 window.sr = ScrollReveal();
 
-sr.reveal('.nav', {
+sr.reveal('.home__div-text', {
     duration: 3000,
     origin: 'bottom',
     distance: '-100px'
 });
 
 sr.reveal('.pockebola', {
+    duration: 3000,
+    origin: 'bottom',
+    distance: '-100px'
+});
+
+sr.reveal('.home__div-button', {
     duration: 3000,
     origin: 'bottom',
     distance: '-100px'
