@@ -259,7 +259,8 @@ function removeCoder() {
     let removedNewCoders = removeCoderByName(newCoders, modalInputValue);
     if (removedNewCoders.length < newCoders.length) {
         newCoders = removedNewCoders;
-        console.log("NewCoders:", newCoders);
+        console.log('NewCoders:', newCoders);
+        // Update the UI to reflect the changes
         updateNewCodersUI();
     } else {
         console.log(
