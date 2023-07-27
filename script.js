@@ -107,12 +107,12 @@ buttonCatch.addEventListener("click", () => {
         const modalContent = document.getElementById("modal-content-id");
 
         const allCodersSelected = document.createElement("img");
-        allCodersSelected.src = '/assets/pikachu-catch-button.jpg';
+        allCodersSelected.src = '/assets/others/pikachu-catch-button.jpg';
         modalContent.appendChild(allCodersSelected);
 
         const allCodersSelectedText = document.createElement("h2");
         allCodersSelectedText.textContent =
-            "All coders have been selected.";
+            "All coders have been selected...";
         modalContent.appendChild(allCodersSelectedText);
 
         modal.style.display = "block";
@@ -314,7 +314,7 @@ modalButton.addEventListener('click', () => {
     const modalContent = document.getElementById("modal-content-id");
 
     const removedCoderAlertImage = document.createElement("img");
-    removedCoderAlertImage.src = '/assets/pikachu-remove-button.jpg';
+    removedCoderAlertImage.src = '/assets/others/pikachu-remove-button.jpg';
     modalContent.appendChild(removedCoderAlertImage);
 
     const removedCoderAlertText = document.createElement("h2");
@@ -346,7 +346,7 @@ sr.reveal('.home__div-text', {
     distance: '-100px'
 });
 
-sr.reveal('.pockebola', {
+sr.reveal('.pokeball', {
     duration: 3000,
     origin: 'bottom',
     distance: '-100px'
@@ -364,7 +364,7 @@ sr.reveal('.coders', {
     distance: '-100px'
 });
 
-    sr.reveal('.pockebola', {
+    sr.reveal('.pokeball', {
       distance: '50px',
       duration: 1000,
       rotate: {
