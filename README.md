@@ -36,11 +36,18 @@ You can view the website design on Figma by clicking the following link: [Catch 
 
 ## File structure
 
-- `index.html`: This is the main file that contains the HTML code of the page.
-- `reset.css`: This file contains CSS styles to restore the default styles of the browser.
-- `style.css`: This file contains custom CSS styles for the application.
-- `style.scss`: This file is a style sheet written in Sass that is compiled into style.css.
-- `script.js`: This file contains the JavaScript code for the functionality of the application.
+<div> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> 
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="css3" width="40" height="40"/></div>
+
+## Tolls
+<div>
+<img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/>
+<img src="https://w7.pngwing.com/pngs/512/824/png-transparent-visual-studio-code-hd-logo-thumbnail.png" alt="vscode" width="40" heigth="40"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original-wordmark.svg" alt="Jira" width="40" heigth="40"/>
+<img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/>
+<img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github" width="40" heigth="40"/> </div>
 
 ## External dependencies
 
