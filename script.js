@@ -399,6 +399,7 @@ function blanco (){
   modoAmarillo.style.cssText= 'display: none';
   modoAzul.style.cssText ='display: none';
   body.style.cssText= 'background-color: white';
+  letras.style.cssText = 'color: #93C3D9'
 };
 
 modoBlanco.addEventListener('click', blanco);
@@ -411,6 +412,7 @@ function verde (){
   modoAmarillo.style.cssText= 'display: none';
   modoAzul.style.cssText ='display: inline';
   body.style.cssText = 'background-color: #8ECEAC';
+  letras.style.cssText = 'color: white'
 };
 
 modoVerde.addEventListener('click', verde)
@@ -423,7 +425,7 @@ function azul (){
   modoAmarillo.style.cssText= 'display: none';
   modoGris.style.cssText= 'display: inline';
   body.style.cssText= 'background-color: #93C3D9';
-  letras.style.cssText = 'color: gray'
+  letras.style.cssText = 'color: white'
 };
 
 modoAzul.addEventListener('click', azul);
@@ -436,6 +438,7 @@ function gris (){
   modoGris.style.cssText= 'display: none';
   modoAmarillo.style.cssText= 'display: inline';
   body.style.cssText= 'background-color: rgb(235, 235, 235)';
+  letras.style.cssText = 'color: #93C3D9'
 };
 
 modoGris.addEventListener('click', gris);
@@ -448,6 +451,7 @@ function amarillo (){
   modoVerde.style.cssText= 'display: none';
   modoAmarillo.style.cssText= 'display: none';
   body.style.cssText= 'background-color: #F9EE8B';
+  letras.style.cssText = 'color: #93C3D9'
 };
 
 modoAmarillo.addEventListener('click', amarillo);
