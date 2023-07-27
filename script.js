@@ -379,3 +379,74 @@ sr.reveal('.coders', {
   
 
 
+//BOTOM PARA CAMBIAR COLORES
+let modoBlanco = document.querySelector('.modo_blanco');
+let modoVerde = document.querySelector('.modo_verde');
+let modoAzul = document.querySelector('.modo_azul');
+let modoGris = document.querySelector('.modo_gris');
+let modoAmarillo = document.querySelector('.modo_amarillo');
+
+
+let body = document.querySelector('body');
+
+
+//BLANCO
+function blanco (){
+  modoBlanco.style.cssText= 'display: none';
+  modoVerde.style.cssText= 'display: inline';
+  modoGris.style.cssText= 'display: none';
+  modoAmarillo.style.cssText= 'display: none';
+  modoAzul.style.cssText ='display: none';
+  body.style.cssText= 'background-color: white';
+};
+
+modoBlanco.addEventListener('click', blanco);
+
+//VERDE
+function verde (){
+  modoVerde.style.cssText ='display:none';
+  modoBlanco.style.cssText = 'display: none';
+  modoGris.style.cssText= 'display: none';
+  modoAmarillo.style.cssText= 'display: none';
+  modoAzul.style.cssText ='display: inline';
+  body.style.cssText = 'background-color: #8ECEAC';
+};
+
+modoVerde.addEventListener('click', verde)
+
+//AZUL
+function azul (){
+  modoVerde.style.cssText= 'display: none';
+  modoAzul.style.cssText ='display: none';
+  modoBlanco.style.cssText= 'display: none';
+  modoAmarillo.style.cssText= 'display: none';
+  modoGris.style.cssText= 'display: inline';
+  body.style.cssText= 'background-color: #93C3D9';
+};
+
+modoAzul.addEventListener('click', azul);
+
+//GRIS
+function gris (){
+  modoVerde.style.cssText= 'display: none';
+  modoAzul.style.cssText ='display: none';
+  modoBlanco.style.cssText= 'display: none';
+  modoGris.style.cssText= 'display: none';
+  modoAmarillo.style.cssText= 'display: inline';
+  body.style.cssText= 'background-color: rgb(235, 235, 235)';
+};
+
+modoGris.addEventListener('click', gris);
+
+//AMARILLO
+function amarillo (){
+  modoAzul.style.cssText ='display: none';
+  modoBlanco.style.cssText= 'display: inline';
+  modoGris.style.cssText= 'display: none';
+  modoVerde.style.cssText= 'display: none';
+  modoAmarillo.style.cssText= 'display: none';
+  body.style.cssText= 'background-color: #F9EE8B';
+};
+
+modoAmarillo.addEventListener('click', amarillo);
+
