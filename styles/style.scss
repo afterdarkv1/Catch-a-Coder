@@ -587,6 +587,12 @@ remove-modal-close:hover {
 
 @media screen and (min-width: 720px) {
 
+    .cambio_color{
+        position: absolute;
+        display: flex;
+        right: 10.2rem;
+        top: 2.2rem; 
+    }
 
 header {
     display: flex;

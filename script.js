@@ -385,6 +385,7 @@ let modoVerde = document.querySelector('.modo_verde');
 let modoAzul = document.querySelector('.modo_azul');
 let modoGris = document.querySelector('.modo_gris');
 let modoAmarillo = document.querySelector('.modo_amarillo');
+let letras = document.querySelector('.home__div-text')
 
 
 let body = document.querySelector('body');
@@ -422,6 +423,7 @@ function azul (){
   modoAmarillo.style.cssText= 'display: none';
   modoGris.style.cssText= 'display: inline';
   body.style.cssText= 'background-color: #93C3D9';
+  letras.style.cssText = 'color: gray'
 };
 
 modoAzul.addEventListener('click', azul);
