@@ -107,7 +107,7 @@ buttonCatch.addEventListener("click", () => {
         const modalContent = document.getElementById("modal-content-id");
 
         const allCodersSelected = document.createElement("img");
-        allCodersSelected.src = '/assets/others/pikachu-catch-button.jpg';
+        allCodersSelected.src = 'assets/others/pikachu-catch-button.jpg';
         modalContent.appendChild(allCodersSelected);
 
         const allCodersSelectedText = document.createElement("h2");
@@ -314,7 +314,7 @@ modalButton.addEventListener('click', () => {
     const modalContent = document.getElementById("modal-content-id");
 
     const removedCoderAlertImage = document.createElement("img");
-    removedCoderAlertImage.src = '/assets/others/pikachu-remove-button.jpg';
+    removedCoderAlertImage.src = 'assets/others/pikachu-remove-button.jpg';
     modalContent.appendChild(removedCoderAlertImage);
 
     const removedCoderAlertText = document.createElement("h2");
