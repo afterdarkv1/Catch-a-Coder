@@ -263,9 +263,7 @@ function removeCoder() {
         // Update the UI to reflect the changes
         updateNewCodersUI();
     } else {
-        console.log(
-            "The name entered does not match any coder in the newCoders list."
-        );
+        console.log('The name entered does not match any coder in the newCoders list.');
     }
     removeModal.style.display = "none";
     document.getElementById("remove-name").value = "";
@@ -324,3 +322,54 @@ const resetButton = document.getElementById("reset-button");
 resetButton.addEventListener("click", () => {
     location.reload();
 });
+
+window.sr = ScrollReveal();
+
+sr.reveal('.nav', {
+    duration: 3000,
+    origin: 'bottom',
+    distance: '-100px'
+});
+
+sr.reveal('.pockebola', {
+    duration: 3000,
+    origin: 'bottom',
+    distance: '-100px'
+});
+
+sr.reveal('.coders', {
+    duration: 3000,
+    origin: 'bottom',
+    distance: '-100px'
+});
+
+    sr.reveal('.pockebola', {
+      distance: '50px',
+      duration: 1000,
+      rotate: {
+        x: 0,
+        y: 180,
+        z: 0
+      },
+      opacity: 0,
+      scale: 0.8,
+      easing: 'ease-in-out',
+      beforeReveal: (el) => {
+        el.style.opacity = 1;
+        el.style.transform = 'scale(1)';
+      },
+      afterReveal: (el) => {
+        el.style.transform = 'scale(1.1)';
+        el.style.transition = 'transform 0.3s';
+        setTimeout(() => {
+          el.style.transform = 'scale(1)';
+        }, 300);      
+    },
+      reset: true
+    });
+  
+
+    
+  
+
+
