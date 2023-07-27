@@ -379,50 +379,45 @@ sr.reveal('.nav', {
     distance: '-100px'
 });
 
+sr.reveal('.pockebola', {
+    duration: 3000,
+    origin: 'bottom',
+    distance: '-100px'
+});
+
 sr.reveal('.coders', {
     duration: 3000,
     origin: 'bottom',
     distance: '-100px'
 });
 
-sr.reveal('.buttons', {
-    duration: 3000,
-    origin: 'bottom',
-    distance: '-100px'
-});
-
-sr.reveal('.home__div-text', {
-    duration: 3000,
-    origin: 'bottom',
-    distance: '-100px'
-});
-
-sr.reveal('.pockebola', {
-      distance: '100px',
-      duration: 4000,
+    sr.reveal('.pockebola', {
+      distance: '50px',
+      duration: 1000,
       rotate: {
         x: 0,
         y: 180,
         z: 0
       },
-      opacity: 0, 
+      opacity: 0,
       scale: 0.8,
       easing: 'ease-in-out',
       beforeReveal: (el) => {
-        // Antes de revelar el elemento, aumentamos su opacidad y escala para dar el efecto de rebote inicial
         el.style.opacity = 1;
         el.style.transform = 'scale(1)';
       },
       afterReveal: (el) => {
-        // Después de revelar el elemento, aplicamos la animación de rebote
         el.style.transform = 'scale(1.1)';
-        el.style.transition = 'transform 10s';
+        el.style.transition = 'transform 0.3s';
         setTimeout(() => {
           el.style.transform = 'scale(1)';
-        }, 5000);
-      },
+        }, 300);      
+    },
       reset: true
     });
+  
+
+    
   
 
 
